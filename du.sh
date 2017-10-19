@@ -1,5 +1,6 @@
 wget https://dl.google.com/android/repository/platform-tools-latest-linux.zip
 unzip platform-tools-latest-linux.zip -d ~
+mkdir ~/bin
 echo 'if [ -d "$HOME/platform-tools" ] ; then' >> ~/.profile
 echo '    PATH="$HOME/platform-tools:$PATH"' >> ~/.profile
 echo 'fi' >> ~/.profile
