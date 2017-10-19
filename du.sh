@@ -17,3 +17,7 @@ repo init -u http://github.com/DirtyUnicorns/android_manifest.git -b n7x-caf
 mkdir .repo/local_manifests
 wget https://mesziman.github.io/du_manifest.xml -O .repo/local_manifests/du_manifest.xml
 repo sync
+echo "export USE_CCACHE=1" >> ~/.bashrc
+source ~/.bashrc
+./prebuilts/misc/linux-x86/ccache/ccache -M 50G
+echo "add_lunch_combo du_capricorn-userdebug" >> vendor/du/caf-vendorsetup.sh
