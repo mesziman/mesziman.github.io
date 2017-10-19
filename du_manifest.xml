@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+<project name="mesziman/android_device_xiaomi_capricorn" path="device/xiaomi/capricorn" remote="github" revision="du-caf"/>
+<project name="mesziman/android_device_xiaomi_msm8996-common" path="device/xiaomi/msm8996-common" remote="github" revision="n7x-caf"/>
+<project name="TheMuppets/proprietary_vendor_xiaomi" path="vendor/xiaomi" remote="github" revision="cm-14.1" />
+
+<project name="LineageOS/android_hardware_libhardware_legacy" path="hardware/libhardware_legacy" remote="github" revision="cm-14.1" />
+<project path="hardware/ril-caf" name="LineageOS/android_hardware_ril" revision="cm-14.1-caf" remote="github" />
+<project   name="LineageOS/android_kernel_xiaomi_msm8996"   path="kernel/xiaomi/msm8996"   revision="cm-14.1" remote="github"/>
+ <project   name="DirtyUnicorns/android_vendor_nxp-nfc_opensource_frameworks"   path="vendor/nxp-nfc/opensource/frameworks"   revision="n7x-caf" remote="github"/>
+ <project   name="DirtyUnicorns/android_vendor_nxp-nfc_opensource_libnfc-nci"   path="vendor/nxp-nfc/opensource/libnfc-nci"   revision="n7x-caf" remote="github"/>
+ <project   name="DirtyUnicorns/android_vendor_nxp-nfc_opensource_Nfc"   path="vendor/nxp-nfc/opensource/Nfc"   revision="n7x-caf" remote="github"/>
+ <project   name="DirtyUnicorns/android_system_qcom"   path="system/qcom"   revision="n7x-caf" remote="github"/>
+ <project   name="DirtyUnicorns/android_external_ant-wireless_ant_service"   path="external/ant-wireless/ant_service"   revision="n7x-caf" remote="github"/>
+ <project   name="DirtyUnicorns/android_external_ant-wireless_ant_native"   path="external/ant-wireless/ant_native"   revision="n7x-caf" remote="github"/>
+ <project   name="DirtyUnicorns/android_external_ant-wireless_antradio-library"   path="external/ant-wireless/antradio-library"   revision="n7x-caf" remote="github"/>
+ <project   name="TheMuppets/proprietary_vendor_xiaomi"   path="vendor/xiaomi"   revision="cm-14.1" remote="github"/>
+ <project   name="LineageOS/android_packages_resources_devicesettings"   path="packages/resources/devicesettings"   revision="cm-14.1" remote="github" />
+ </manifest>
