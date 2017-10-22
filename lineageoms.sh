@@ -15,13 +15,21 @@ mkdir oms
 cd oms
 repo init -u https://github.com/LineageOS/android.git -b cm-14.1
 repo sync
-mkdir .repo/local_manifests
-cd .repo/local_manifests
-wget https://raw.githubusercontent.com/LineageOMS/local_manifest/master/substratum.xml
-cd ../..
-repo sync --force-sync
+mkdir -p frameworks/base ;cd frameworks/base ; git remote add oms https://github.com/LineageOMS/android_frameworks_base; git fetch oms; git pull oms/cm-14.1; cd /mnt/volume/oms;
+mkdir -p frameworks/native ;cd frameworks/native ; git remote add oms https://github.com/LineageOMS/android_frameworks_native; git fetch oms; git pull oms/cm-14.1; cd /mnt/volume/oms;
+mkdir -p packages/apps/Contacts ;cd packages/apps/Contacts ; git remote add oms https://github.com/LineageOMS/android_packages_apps_Contacts; git fetch oms; git pull oms/cm-14.1; cd /mnt/volume/oms;
+mkdir -p packages/apps/ContactsCommon ;cd packages/apps/ContactsCommon ; git remote add oms https://github.com/LineageOMS/android_packages_apps_ContactsCommon; git fetch oms; git pull oms/cm-14.1; cd /mnt/volume/oms;
+mkdir -p packages/apps/Dialer ;cd packages/apps/Dialer ; git remote add oms https://github.com/LineageOMS/android_packages_apps_Dialer; git fetch oms; git pull oms/cm-14.1; cd /mnt/volume/oms;
+mkdir -p packages/apps/ExactCalculator ;cd packages/apps/ExactCalculator ; git remote add oms https://github.com/LineageOMS/android_packages_apps_ExactCalculator; git fetch oms; git pull oms/cm-14.1; cd /mnt/volume/oms;
+mkdir -p packages/apps/PackageInstaller ;cd packages/apps/PackageInstaller ; git remote add oms https://github.com/LineageOMS/android_packages_apps_PackageInstaller; git fetch oms; git pull oms/cm-14.1; cd /mnt/volume/oms;
+mkdir -p packages/apps/PhoneCommon ;cd packages/apps/PhoneCommon ; git remote add oms https://github.com/LineageOMS/android_packages_apps_PhoneCommon; git fetch oms; git pull oms/cm-14.1; cd /mnt/volume/oms;
+mkdir -p packages/apps/Settings ;cd packages/apps/Settings ; git remote add oms https://github.com/LineageOMS/android_packages_apps_Settings; git fetch oms; git pull oms/cm-14.1; cd /mnt/volume/oms;
+mkdir -p system/sepolicy ;cd system/sepolicy ; git remote add oms https://github.com/LineageOMS/android_system_sepolicy; git fetch oms; git pull oms/cm-14.1; cd /mnt/volume/oms;
+mkdir -p vendor/cm ;cd vendor/cm ; git remote add oms https://github.com/LineageOMS/android_vendor_cm; git fetch oms; git pull oms/cm-14.1; cd /mnt/volume/oms;
+
 echo "export USE_CCACHE=1" >> ~/.bashrc
 echo "export CCACHE_COMPRESS=1" >> ~/.bashrc
 source ~/.bashrc
+source build/envsetup.sh
 ./prebuilts/misc/linux-x86/ccache/ccache -M 50G
 
