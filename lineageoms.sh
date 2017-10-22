@@ -32,4 +32,6 @@ echo "export CCACHE_COMPRESS=1" >> ~/.bashrc
 source ~/.bashrc
 source build/envsetup.sh
 ./prebuilts/misc/linux-x86/ccache/ccache -M 50G
+wget http://mesziman.github.io/buildoms.sh
+chmod +x buildoms.sh
 
