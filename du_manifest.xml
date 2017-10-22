@@ -10,7 +10,7 @@
  <project   name="DirtyUnicorns/android_external_ant-wireless_ant_native"   path="external/ant-wireless/ant_native"   revision="n7x-caf" remote="github"/>
  <project   name="DirtyUnicorns/android_external_ant-wireless_antradio-library"   path="external/ant-wireless/antradio-library"   revision="n7x-caf" remote="github"/>
  <project   name="LineageOS/android_packages_resources_devicesettings"   path="packages/resources/devicesettings"   revision="cm-14.1" remote="github" />
- 
+ <project   name="LineageOS/android_external_stagefright-plugins  path="external/stagefright-plugins"   revision="cm-14.1" remote="github" />
 <remove-project name="DirtyUnicorns/android_external_libnfc-nci" />
 <project   name="LineageOS/android_external_libnfc-nci"   path="external/libnfc-nci"   revision="cm-14.1" remote="github" />
  
