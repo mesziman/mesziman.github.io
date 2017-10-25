@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+<project name="mesziman/android_device_xiaomi_capricorn" path="device/xiaomi/capricorn" remote="github" revision="slim"/>
+<project name="mesziman/android_device_xiaomi_msm8996-common" path="device/xiaomi/msm8996-common" remote="github" revision="slim"/>
+<project name="TheMuppets/proprietary_vendor_xiaomi" path="vendor/xiaomi" remote="github" revision="cm-14.1" />
+<project   name="LineageOS/android_kernel_xiaomi_msm8996"   path="kernel/xiaomi/msm8996"   revision="cm-14.1" remote="github"/>
+ <project   name="SlimRoms/android_system_qcom"   path="system/qcom"   revision="n7x-caf" remote="ng7.1"/>
+ <project   name="SlimRoms/android_external_ant-wireless_ant_service"   path="external/ant-wireless/ant_service"   revision="ng7.1" remote="github"/>
+ <project   name="SlimRoms/android_external_ant-wireless_ant_native"   path="external/ant-wireless/ant_native"   revision="ng7.1" remote="github"/>
+ <project   name="SlimRoms/android_external_ant-wireless_antradio-library"   path="external/ant-wireless/antradio-library"   revision="ng7.1" remote="github"/>
+
+<remove-project name="SlimRoms/android_external_libnfc-nci" />
+<project   name="LineageOS/android_external_libnfc-nci"   path="external/libnfc-nci"   revision="cm-14.1" remote="github" />
+ 
+</manifest>
