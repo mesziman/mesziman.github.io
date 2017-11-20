@@ -12,14 +12,14 @@ function jack_workaround() {
     fi
 }
 function buildoms() {
-jack_workaround
+#jack_workaround
 NOW=$( date +"%Y-%m-%d-%H-%M" )
 mkdir -p build-logs
 START=$( date +%s )
 breakfast capricorn
 make installclean
 
-make -j2 bacon | tee -a build-logs/log_${NOW}.log
+make -j$( nproc --all ) bacon | tee -a build-logs/log_${NOW}.log
 END=$(date +%s)
 echo -e "DURATION: $( format_time ${END} ${START} )"
 }
