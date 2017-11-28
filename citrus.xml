@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 <project name="mesziman/android_device_xiaomi_capricorn" path="device/xiaomi/capricorn" remote="github" revision="citrus"/>
-<project name="mesziman/android_device_xiaomi_msm8996-common" path="device/xiaomi/msm8996-common" remote="github" revision="citrus"/>
+<project name="mesziman/android_device_xiaomi_msm8996-common" path="device/xiaomi/msm8996-common" remote="github" revision="citrus2"/>
 <project name="mesziman/caprivendor" path="vendor/xiaomi" remote="github" revision="meszibranch" />
 <project   name="LineageOS/android_kernel_xiaomi_msm8996"   path="kernel/xiaomi/msm8996"   revision="cm-14.1" remote="github"/>
 <project   name="Citrus-CAF/hardware_qcom_audio"   path="hardware/qcom/audio"   revision="n7x-8996" remote="github"/>
