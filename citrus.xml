@@ -7,4 +7,6 @@
 <project   name="Citrus-CAF/hardware_qcom_audio"   path="hardware/qcom/audio"   revision="n7x-8996" remote="github"/>
 <project   name="Citrus-CAF/hardware_qcom_media"   path="hardware/qcom/media"   revision="n7x-8996" remote="github"/>
 <project   name="Citrus-CAF/hardware_qcom_display"   path="hardware/qcom/display"   revision="n7x-8996" remote="github"/>
+<remove-project name="platform/vendor/qcom-opensource/wlan/qcacld-2.0"/>
+<project name="platform/vendor/qcom-opensource/wlan/qcacld-3.0" path="vendor/qcom/opensource/wlan/qcacld-3.0" revision="refs/heads/wlan-cld3.driver.lnx.1.1.r19-rel"/>
 </manifest>
