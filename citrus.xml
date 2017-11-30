@@ -10,4 +10,5 @@
 <remove-project name="platform/vendor/qcom-opensource/wlan/qcacld-2.0"/>
 <project name="platform/vendor/qcom-opensource/wlan/qcacld-3.0" path="vendor/qcom/opensource/wlan/qcacld-3.0" revision="refs/heads/wlan-cld3.driver.lnx.1.1.r19-rel"/>
 <project   name="Citrus-CAF/packages_apps_Margarita" path="packages/apps/Margarita"  revision="n7x" remote="github"/>
+<project name="platform/hardware/qcom/gps" path="hardware/qcom/gps"   revision="refs/heads/location.lnx.2.0.r5-rel"/>
 </manifest>
