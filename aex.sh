@@ -23,6 +23,7 @@ repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags;
 echo "export USE_CCACHE=1" >> ~/.bashrc
 source ~/.bashrc
 source build/envsetup.sh
+git config --global color.ui true
 wget https://mesziman.github.io/buildoms.sh
 ./prebuilts/misc/linux-x86/ccache/ccache -M 50G
 
