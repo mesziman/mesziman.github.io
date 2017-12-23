@@ -24,7 +24,5 @@ echo "export USE_CCACHE=1" >> ~/.bashrc
 source ~/.bashrc
 source build/envsetup.sh
 wget https://mesziman.github.io/buildoms.sh
-cd device/xiaomi/msm8996-common && git fetch https://github.com/LineageOS/android_device_xiaomi_msm8996-common refs/changes/03/194503/15 && git cherry-pick FETCH_HEAD &&
-git fetch https://github.com/LineageOS/android_device_xiaomi_msm8996-common refs/changes/01/194501/8 && git cherry-pick FETCH_HEAD && cd ../../..;
 ./prebuilts/misc/linux-x86/ccache/ccache -M 50G
 
