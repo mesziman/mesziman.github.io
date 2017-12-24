@@ -16,7 +16,7 @@ echo 'fi' >> ~/.profile
 source ~/.profile
 mkdir citrus
 cd citrus
-repo init -u git://github.com/AospExtended/manifest.git -b 8.x
+repo init -u git://github.com/AospExtended/manifest.git -b 8.1.x
 mkdir -p .repo/local_manifests
 wget https://mesziman.github.io/aex.xml -O .repo/local_manifests/roomservice.xml
 repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags;
