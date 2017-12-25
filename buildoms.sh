@@ -23,3 +23,14 @@ make -j$( nproc --all ) bacon | tee -a build-logs/log_${NOW}.log
 END=$(date +%s)
 echo -e "DURATION: $( format_time ${END} ${START} )"
 }
+
+function buildaex() {
+#jack_workaround
+NOW=$( date +"%Y-%m-%d-%H-%M" )
+mkdir -p build-logs
+START=$( date +%s )
+lunch aosp_capricorn-userdebug
+mka aex -j$( nproc --all ) bacon | tee -a build-logs/log_${NOW}.log
+END=$(date +%s)
+echo -e "DURATION: $( format_time ${END} ${START} )"
+}
