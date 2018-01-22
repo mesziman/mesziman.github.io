@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 <project name="mesziman/android_device_xiaomi_capricorn" path="device/xiaomi/capricorn" remote="github" revision="aex-1"/>
-<project name="mesziman/android_device_xiaomi_msm8996-common" path="device/xiaomi/msm8996-common" remote="github" revision="vox-1"/>
+<project name="mesziman/android_device_xiaomi_msm8996-common" path="device/xiaomi/msm8996-common" remote="github" revision="aex-1"/>
 
 <project  name="TheMuppets/proprietary_vendor_xiaomi" path="vendor/xiaomi" remote="github" revision="2f023371082de64cf0bc40c3d635960009909d06" />  
   <project name="EAS-Project/android_device_voxpopuli" path="device/voxpopuli" remote="github" revision="msm8996" />
