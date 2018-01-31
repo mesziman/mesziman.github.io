@@ -3,11 +3,13 @@
 <project name="mesziman/android_device_xiaomi_capricorn" path="device/xiaomi/capricorn" remote="github" revision="aex-1"/>
 <project name="mesziman/android_device_xiaomi_msm8996-common" path="device/xiaomi/msm8996-common" remote="github" revision="aex-1"/>
 
-<project  name="TheMuppets/proprietary_vendor_xiaomi" path="vendor/xiaomi" remote="github" revision="2f023371082de64cf0bc40c3d635960009909d06" />  
+<project  name="TheMuppets/proprietary_vendor_xiaomi" path="vendor/xiaomi" remote="github" revision="lineage-15.1" />  
   <project name="EAS-Project/android_device_voxpopuli" path="device/voxpopuli" remote="github" revision="msm8996" />
+<project   name="AEXmod/platform_kernel_xiaomi_msm8996  path="kernel/xiaomi/msm8996"   revision="oreo" remote="github"/>
 
-<project   name="LineageOS/android_kernel_xiaomi_msm8996"   path="kernel/xiaomi/msm8996"   revision="lineage-15.1-20180109" remote="github"/>
 <!--<remove-project name="platform/vendor/qcom-opensource/wlan/qcacld-2.0"/>
+<project  name="TheMuppets/proprietary_vendor_xiaomi" path="vendor/xiaomi" remote="github" revision="2f023371082de64cf0bc40c3d635960009909d06" />  
+<project   name="LineageOS/android_kernel_xiaomi_msm8996"   path="kernel/xiaomi/msm8996"   revision="lineage-15.1-20180109" remote="github"/>
 <project name="mesziman/caprivendor" path="vendor/xiaomi" remote="github" revision="vox" />
 <project name="platform/vendor/qcom-opensource/wlan/qcacld-3.0" path="vendor/qcom/opensource/wlan/qcacld-3.0" revision="refs/heads/wlan-cld3.driver.lnx.1.1.r19-rel"/>
 <project name="platform/hardware/qcom/gps" path="hardware/qcom/gps"   revision="refs/heads/location.lnx.2.0.r5-rel"/>
