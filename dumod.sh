@@ -16,7 +16,7 @@ echo 'fi' >> ~/.profile
 source ~/.profile
 mkdir du
 cd du
-repo init -u https://github.com/DU-Mod/android_manifest.git -b o8x
+repo init -u https://github.com/DirtyUnicorns/android_manifest -b o8x-caf
 mkdir -p .repo/local_manifests
 wget https://mesziman.github.io/dumod.xml -O .repo/local_manifests/roomservice.xml
 repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags;
