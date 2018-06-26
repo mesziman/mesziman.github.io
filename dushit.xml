@@ -6,8 +6,8 @@
 <project name="TheMuppets/proprietary_vendor_xiaomi" path="vendor/xiaomi" remote="github" revision="lineage-15.1" />
 <project   name="LineageOS/android_kernel_xiaomi_msm8996"   path="kernel/xiaomi/msm8996"   revision="lineage-15.1" remote="github"/>
  --->
-  <project name="BushidoOT/device_capricorn" path="device/xiaomi/capricorn" remote="github" revision="du"/>
-<project name="BushidoOT/xiaomi_msm8996" path="device/xiaomi/msm8996-common" remote="github" revision="du" />
+  <project name="mesziman/device_capricorn" path="device/xiaomi/capricorn" remote="github" revision="du"/>
+<project name="mesziman/xiaomi_msm8996" path="device/xiaomi/msm8996-common" remote="github" revision="du" />
 <project name="TheMuppets/proprietary_vendor_xiaomi" path="vendor/xiaomi" remote="github" revision="lineage-15.1" />
 <project   name="omnirom/android_kernel_xiaomi_msm8996"   path="kernel/xiaomi/msm8996"   revision="android-8.1" remote="github"/>
    <project path="hardware/lineage/interfaces" name="LineageOS/android_hardware_lineage_interfaces" >
