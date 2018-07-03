@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+<project name="mesziman/device_capricorn" path="device/xiaomi/capricorn" remote="github" revision="omni"/>
+<project name="/android_device_xiaomi_capri" path="device/xiaomi/msm8996-common" remote="github" revision="dupix" />
+<project name="TheMuppets/proprietary_vendor_xiaomi" path="vendor/xiaomi" remote="github" revision="lineage-15.1" />
+<project   name="omnirom/android_kernel_xiaomi_msm8996"   path="kernel/xiaomi/msm8996"   revision="android-8.1" remote="github"/>
+<project path="hardware/lineage/interfaces" name="LineageOS/android_hardware_lineage_interfaces" >
+    <copyfile dest="hardware/lineage/Android.bp" src="Android.bp"/>
+</project>
+<project name="LineageOS/android_device_lineage_sepolicy" path="device/lineage/sepolicy" revision="lineage-15.1" remote="github"/>
+</manifest>
