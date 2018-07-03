@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 <project name="mesziman/device_capricorn" path="device/xiaomi/capricorn" remote="github" revision="omni"/>
-<project name="/android_device_xiaomi_capri" path="device/xiaomi/msm8996-common" remote="github" revision="dupix" />
+<project name="mesziman/android_device_xiaomi_capri" path="device/xiaomi/msm8996-common" remote="github" revision="dupix" />
 <project name="TheMuppets/proprietary_vendor_xiaomi" path="vendor/xiaomi" remote="github" revision="lineage-15.1" />
 <project   name="mesziman/android_kernel_xiaomi_msm8996"   path="kernel/xiaomi/msm8996"   revision="omni" remote="github"/>
 <project path="hardware/lineage/interfaces" name="LineageOS/android_hardware_lineage_interfaces" >
