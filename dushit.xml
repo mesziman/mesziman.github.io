@@ -9,4 +9,8 @@
    <project path="hardware/lineage/interfaces" name="LineageOS/android_hardware_lineage_interfaces" revision="lineage-15.1" remote="github">
     <copyfile dest="hardware/lineage/Android.bp" src="Android.bp"/>
 </project>
+   <project name="LineageOS/android_external_ant-wireless_ant_service" path="external/ant-wireless/ant_service" remote="github" revision="lineage-15.1" />
+  <project name="LineageOS/android_external_ant-wireless_antradio-library" path="external/ant-wireless/antradio-library" remote="github" revision="lineage-15.1" />
+  <project name="LineageOS/android_external_ant-wireless_ant_native" path="external/ant-wireless/ant_native" remote="github" revision="lineage-15.1" />
+
 </manifest>
