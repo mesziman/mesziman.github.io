@@ -11,7 +11,12 @@ function jack_workaround() {
         ./prebuilts/sdk/tools/jack-admin start-server
     fi
 }
-function buildoms() {
+function copyrom(){
+mkdir -p /var/www/html
+cp ./out/target/product/capricorn/*.zip /var/www/html/
+
+}
+function buildrom() {
 #jack_workaround
 NOW=$( date +"%Y-%m-%d-%H-%M" )
 mkdir -p build-logs
@@ -22,6 +27,21 @@ make installclean
 make -j$( nproc --all ) bacon | tee -a build-logs/log_${NOW}.log
 END=$(date +%s)
 echo -e "DURATION: $( format_time ${END} ${START} )"
+copyrom
+}
+
+function buildomni() {
+#jack_workaround
+NOW=$( date +"%Y-%m-%d-%H-%M" )
+mkdir -p build-logs
+START=$( date +%s )
+breakfast capricorn
+make installclean
+
+make -j$( nproc --all ) cookies | tee -a build-logs/log_${NOW}.log
+END=$(date +%s)
+echo -e "DURATION: $( format_time ${END} ${START} )"
+copyrom
 }
 
 function buildaex() {
@@ -33,4 +53,5 @@ lunch aosp_capricorn-userdebug
 mka aex -j$( nproc --all ) bacon | tee -a build-logs/log_${NOW}.log
 END=$(date +%s)
 echo -e "DURATION: $( format_time ${END} ${START} )"
+copyrom
 }
