@@ -12,8 +12,8 @@ function jack_workaround() {
     fi
 }
 function copyrom(){
-mkdir -p /var/www/html
-cp ./out/target/product/capricorn/*.zip /var/www/html/
+sudo mkdir -p /var/www/html
+sudo cp ./out/target/product/capricorn/*.zip /var/www/html/
 
 }
 function buildrom() {
