@@ -4,6 +4,19 @@
 <project name="mesziman/device_capricorn" path="device/xiaomi/capricorn" remote="github" revision="omni"/>
 <project name="mesziman/android_device_xiaomi_capri" path="device/xiaomi/msm8996-common" remote="github" revision="dupix" />
 -->
+     <project name="android_hardware_qcom_display-caf-msm8996" path="hardware/qcom/display-caf-msm8996" remote="omnirom" revision="android-8.1" />
+     <project name="android_hardware_qcom_audio-caf-msm8996" path="hardware/qcom/audio-caf-msm8996" remote="omnirom" revision="android-8.1" />
+     <project name="android_hardware_qcom_media-caf-msm8996" path="hardware/qcom/media-caf-msm8996" remote="omnirom" revision="android-8.1" />
+    <project name="vendor_qcom_opensource_dataservices" path="vendor/qcom/opensource/dataservices" remote="omnirom" revision="android-8.1" />
+    <project name="android_device_qcom_caf-sepolicy" path="device/qcom/sepolicy" remote="omnirom" revision="android-8.1" />
+    <project name="android_external_ant-wireless_antradio-library" path="external/ant-wireless/antradio-library" remote="omnirom" revision="android-8.0" />
+    <project name="android_external_ant-wireless_ant_service" path="external/ant-wireless/ant_service" remote="omnirom" revision="android-8.0" />
+    <project name="android_external_ant-wireless_ant_native" path="external/ant-wireless/ant_native" remote="omnirom" revision="android-8.1" />
+   <project name="android_vendor_qcom_opensource_interfaces" path="vendor/qcom/opensource/interfaces" remote="omnirom" revision="android-8.1" />
+    <project name="android_vendor_nxp-nfc_opensource_libnfc-nci" path="vendor/nxp-nfc/opensource/libnfc-nci" remote="omnirom" revision="android-8.1" />
+    <project name="android_vendor_nxp-nfc_opensource_Nfc" path="vendor/nxp-nfc/opensource/Nfc" remote="omnirom" revision="android-8.1" />
+    <project name="android_vendor_nxp-nfc_opensource_frameworks" path="vendor/nxp-nfc/opensource/frameworks" remote="omnirom" revision="android-8.1" />
+
     <project name="lineageos/android_device_xiaomi_capricorn"  path="device/xiaomi/capricorn" remote="github" revision="lineage-15.1" />
    <project name="mesziman/android_device_xiaomi_msm8996-common-1"  path="device/xiaomi/msm8996-common" remote="github" revision="android-8.1" />
 <project name="TheMuppets/proprietary_vendor_xiaomi" path="vendor/xiaomi" remote="github" revision="lineage-15.1" />
