@@ -1,5 +1,5 @@
-apt-get update
-apt-get install bc bison build-essential curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev libesd0-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev openjdk-8-jdk
+sudo apt-get update
+sudo apt-get install bc bison build-essential curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev libesd0-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev openjdk-8-jdk
 wget https://dl.google.com/android/repository/platform-tools-latest-linux.zip
 unzip platform-tools-latest-linux.zip -d ~
 mkdir ~/bin
@@ -16,7 +16,7 @@ echo 'fi' >> ~/.profile
 source ~/.profile
 mkdir citrus
 cd citrus
-repo init -u git://github.com/AospExtended/manifest.git -b 8.1.x
+repo init -u git://github.com/AEXmod/manifest.git -b 8.1
 mkdir -p .repo/local_manifests
 wget https://mesziman.github.io/aex.xml -O .repo/local_manifests/roomservice.xml
 repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags;
