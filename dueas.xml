@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <project name="mesziman/device_capricorn" path="device/xiaomi/capricorn" remote="github" revision="du"/>
+<project name="mesziman/android_device_xiaomi_capri" path="device/xiaomi/msm8996-common" remote="github" revision="meszeas" />
+<project name="TheMuppets/proprietary_vendor_xiaomi" path="vendor/xiaomi" remote="github" revision="lineage-15.1" />
+ <project name="LineageOS/android_device_lineage_sepolicy" path="device/lineage/sepolicy" remote="github" revision="lineage-15.1" />
+<project   name="mesziman/android_kernel_xiaomi_msm8996"   path="kernel/xiaomi/msm8996"   revision="eas-meszi2" remote="github"/>
+   <project path="hardware/lineage/interfaces" name="LineageOS/android_hardware_lineage_interfaces" revision="lineage-15.1" remote="github">
+    <copyfile dest="hardware/lineage/Android.bp" src="Android.bp"/>
+</project>
+   <project name="LineageOS/android_external_ant-wireless_ant_service" path="external/ant-wireless/ant_service" remote="github" revision="lineage-15.1" />
+  <project name="LineageOS/android_external_ant-wireless_antradio-library" path="external/ant-wireless/antradio-library" remote="github" revision="lineage-15.1" />
+  <project name="LineageOS/android_external_ant-wireless_ant_native" path="external/ant-wireless/ant_native" remote="github" revision="lineage-15.1" />
+
+</manifest>
