@@ -19,7 +19,7 @@
 
     <project name="lineageos/android_device_xiaomi_capricorn"  path="device/xiaomi/capricorn" remote="github" revision="lineage-15.1" />
    <project name="mesziman/android_device_xiaomi_msm8996-common-1"  path="device/xiaomi/msm8996-common" remote="github" revision="android-8.1" />
-<project name="DonkeyCoyote/proprietary_vendor_xiaomi" path="vendor/xiaomi" remote="github" revision="android-8.1" />
+<project name="mesziman/proprietary_vendor_xiaomi-2" path="vendor/xiaomi" remote="github" revision="android-8.1" />
 <project   name="mesziman/android_kernel_xiaomi_msm8996"   path="kernel/xiaomi/msm8996"   revision="omni" remote="github"/>
 <project path="hardware/lineage/interfaces" name="LineageOS/android_hardware_lineage_interfaces"  revision="lineage-15.1" remote="github">
     <copyfile dest="hardware/lineage/Android.bp" src="Android.bp"/>
