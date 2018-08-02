@@ -4,6 +4,8 @@
 <project name="mesziman/device_capricorn" path="device/xiaomi/capricorn" remote="github" revision="omni"/>
 <project name="mesziman/android_device_xiaomi_capri" path="device/xiaomi/msm8996-common" remote="github" revision="dupix" />
 -->
+    
+    <project name="android_packages_apps_SnapdragonCamera2" path="packages/apps/SnapdragonCamera2" remote="omnirom" revision="android-8.1" />
      <project name="android_hardware_qcom_display-caf-msm8996" path="hardware/qcom/display-caf-msm8996" remote="omnirom" revision="android-8.1" />
      <project name="android_hardware_qcom_audio-caf-msm8996" path="hardware/qcom/audio-caf-msm8996" remote="omnirom" revision="android-8.1" />
      <project name="android_hardware_qcom_media-caf-msm8996" path="hardware/qcom/media-caf-msm8996" remote="omnirom" revision="android-8.1" />
