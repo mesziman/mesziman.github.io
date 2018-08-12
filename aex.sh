@@ -15,14 +15,16 @@ echo 'if [ -d "$HOME/bin" ] ; then' >> ~/.profile
 echo '    PATH="$HOME/bin:$PATH"' >> ~/.profile
 echo 'fi' >> ~/.profile
 source ~/.profile
-mkdir omni
-cd omni
+mkdir aexmod
+cd aexmod
 repo init -u git://github.com/AEXmod/manifest -b 8.1
 mkdir -p .repo/local_manifests
 wget https://mesziman.github.io/aex.xml -O .repo/local_manifests/roomservice.xml
-repo sync -c -j$( nproc --all ) --force-sync;
+repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags;
 echo "export USE_CCACHE=1" >> ~/.bashrc
 source ~/.bashrc
 source build/envsetup.sh
 wget https://mesziman.github.io/buildoms.sh
 ./prebuilts/misc/linux-x86/ccache/ccache -M 50G
+source buildoms.sh
+buildaex
