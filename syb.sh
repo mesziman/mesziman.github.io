@@ -22,8 +22,8 @@ echo 'if [ -d "$HOME/bin" ] ; then' >> ~/.profile
 echo '    PATH="$HOME/bin:$PATH"' >> ~/.profile
 echo 'fi' >> ~/.profile
 source ~/.profile
-mkdir aexmod
-cd aexmod
+mkdir syb
+cd syb
 repo init -u https://github.com/syberia-project/manifest.git -b 9.0
 mkdir -p .repo/local_manifests
 wget https://mesziman.github.io/syb.xml -O .repo/local_manifests/roomservice.xml
@@ -33,5 +33,3 @@ source ~/.bashrc
 source build/envsetup.sh
 wget https://mesziman.github.io/buildoms.sh
 ./prebuilts/misc/linux-x86/ccache/ccache -M 50G
-source buildoms.sh
-buildaex
