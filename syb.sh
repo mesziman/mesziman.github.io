@@ -31,6 +31,10 @@ echo "export USE_CCACHE=1" >> ~/.bashrc
 wget https://mesziman.github.io/buildoms.sh
 echo './prebuilts/misc/linux-x86/ccache/ccache -M 50G; cd ./prebuilts/misc/linux-x86/ccache/ && export PATH=$PATH:$PWD' >> cacheset
 chmod +x cacheset
+cd vendor/xiaomi
+git remote add s https://github.com/TheMuppets/proprietary_vendor_xiaomi
+git fetch s 
+git checkout s/lineage-16.0 -- capricorn
 tmux new -s base
 
 
