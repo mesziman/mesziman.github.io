@@ -35,6 +35,12 @@ cd vendor/xiaomi
 git remote add s https://github.com/TheMuppets/proprietary_vendor_xiaomi
 git fetch s 
 git checkout s/lineage-16.0 -- capricorn
+cd ../../device/xiaomi/capricorn
+git remote add s https://github.com/SyberiaProject-Devices/platform_device_xiaomi_gemini
+git fetch s
+cd ../../../kernel/xiaomi/msm8996/
+git remote add s https://github.com/SyberiaProject-Devices/platform_kernel_xiaomi_msm8996
+git fetch s
 tmux new -s base
 
 
