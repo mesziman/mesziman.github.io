@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+<project name="lineageos/android_device_xiaomi_capricorn"  path="device/xiaomi/capricorn" remote="github" revision="lineage-16.0" />
+<project name="lineageos/android_device_xiaomi_msm8996-common"  path="device/xiaomi/msm8996-common" remote="github" revision="lineage-16.0" />
+<project name="Themuppets/proprietary_vendor_xiaomi" path="vendor/xiaomi" remote="github" revision="lineage-16.0" />
+<project   name="lineageos/android_kernel_xiaomi_msm8996"   path="kernel/xiaomi/msm8996"   revision="lineage-16.0" remote="github"/>
+</manifest>
