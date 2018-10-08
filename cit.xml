@@ -4,8 +4,8 @@
 <project name="lineageos/android_device_xiaomi_msm8996-common"  path="device/xiaomi/msm8996-common" remote="github" revision="lineage-16.0" />
 <project name="Themuppets/proprietary_vendor_xiaomi" path="vendor/xiaomi" remote="github" revision="lineage-16.0" />
 <project   name="lineageos/android_kernel_xiaomi_msm8996"   path="kernel/xiaomi/msm8996"   revision="lineage-16.0" remote="github"/>
-<project name="platform/hardware/qcom/display"  path="hardware/qcom/display/msm8996"   revision="LA.UM.7.5.r1-02500-8x96.0" remote="caf" />
-<project name="platform/hardware/qcom/audio"  path="hardware/qcom/audio/msm8996"   revision="LA.UM.7.5.r1-02500-8x96.0" remote="caf" />
-<project name="platform/hardware/qcom/media"  path="hardware/qcom/media/msm8996"   revision="LA.UM.7.5.r1-02500-8x96.0" remote="caf" />
+<project name="LineageOS/android_hardware_qcom_display"  path="hardware/qcom/display/msm8996"   revision="lineage-16.0-caf-8996" remote="caf" />
+<project name="LineageOS/android_hardware_qcom_media"  path="hardware/qcom/media/msm8996"   revision="lineage-16.0-caf-8996" remote="caf" />
+<project name="LineageOS/android_hardware_qcom_audio"  path="hardware/qcom/audio/msm8996"   revision="lineage-16.0-caf-8996" remote="caf" />
 </manifest>
   
