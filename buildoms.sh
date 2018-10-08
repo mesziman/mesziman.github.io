@@ -56,3 +56,16 @@ END=$(date +%s)
 echo -e "DURATION: $( format_time ${END} ${START} )"
 copyrom
 }
+
+
+function buildcit() {
+#jack_workaround
+NOW=$( date +"%Y-%m-%d-%H-%M" )
+mkdir -p build-logs
+START=$( date +%s )
+lunch citrus_capricorn-userdebug
+mka lemonade -j$( nproc --all ) bacon | tee -a build-logs/log_${NOW}.log
+END=$(date +%s)
+echo -e "DURATION: $( format_time ${END} ${START} )"
+copyrom
+}
