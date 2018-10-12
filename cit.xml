@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-<project name="lineageos/android_device_xiaomi_capricorn"  path="device/xiaomi/capricorn" remote="github" revision="lineage-16.0" />
-<project name="lineageos/android_device_xiaomi_msm8996-common"  path="device/xiaomi/msm8996-common" remote="github" revision="lineage-16.0" />
+<project name="mesziman/android_device_xiaomi_capri"  path="device/xiaomi/capricorn" remote="github" revision="p9x" />
+<project name="mesziman/android_device_xiaomi_capri"  path="device/xiaomi/msm8996-common" remote="github" revision="p9x-common" />
 <project name="Themuppets/proprietary_vendor_xiaomi" path="vendor/xiaomi" remote="github" revision="lineage-16.0" />
-<project   name="lineageos/android_kernel_xiaomi_msm8996"   path="kernel/xiaomi/msm8996"   revision="lineage-16.0" remote="github"/>
+<project   name="mesziman/android_kernel_xiaomi_msm8996"   path="kernel/xiaomi/msm8996"   revision="p9x" remote="github"/>
 <project name="LineageOS/android_hardware_qcom_display"  path="hardware/qcom/display/msm8996"   revision="lineage-16.0-caf-8996" remote="github" />
 <project name="LineageOS/android_hardware_qcom_media"  path="hardware/qcom/media/msm8996"   revision="lineage-16.0-caf-8996" remote="github" />
 <project name="LineageOS/android_hardware_qcom_audio"  path="hardware/qcom/audio/msm8996"   revision="lineage-16.0-caf-8996" remote="github" />
