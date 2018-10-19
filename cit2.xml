@@ -3,8 +3,8 @@
 <project name="mesziman/android_device_xiaomi_capri"  path="device/xiaomi/capricorn" remote="github" revision="9-new2" />
 <project name="SyberiaProject-Devices/proprietary_vendor_xiaomi" path="vendor/xiaomi" remote="github" revision="9.0" />
 <project   name="mesziman/android_kernel_xiaomi_msm8996"   path="kernel/xiaomi/msm8996"   revision="9.0-caf" remote="github"/>
-<project name="syberia-project/android_hardware_qcom_display"  path="hardware/qcom/display/msm8996"   revision="lineage-16.0-caf-8996" remote="github" />
-<project name="syberia-project/android_hardware_qcom_media"  path="hardware/qcom/media/msm8996"   revision="lineage-16.0-caf-8996" remote="github" />
+<project name="syberia-project/android_hardware_qcom_display"  path="hardware/qcom/display/msm8996"   revision="9.0-caf-8996" remote="github" />
+<project name="syberia-project/android_hardware_qcom_media"  path="hardware/qcom/media/msm8996"   revision="9.0-caf-8996" remote="github" />
 <project name="syberia-project/platform_hardware_qcom_audio"  path="hardware/qcom/audio/msm8996"   revision="9.0-caf-8996" remote="github" />
 </manifest>
   
