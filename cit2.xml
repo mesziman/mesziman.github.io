@@ -6,5 +6,7 @@
 <project name="syberia-project/android_hardware_qcom_display"  path="hardware/qcom/display/msm8996"   revision="9.0-caf-8996" remote="github" />
 <project name="syberia-project/android_hardware_qcom_media"  path="hardware/qcom/media/msm8996"   revision="9.0-caf-8996" remote="github" />
 <project name="syberia-project/platform_hardware_qcom_audio"  path="hardware/qcom/audio/msm8996"   revision="9.0-caf-8996" remote="github" />
+<project name="syberia-project/DragonTC"  path="prebuilts/clang/host/linux-x86/8.0"   revision="8.0" remote="github" />
 </manifest>
+
   
