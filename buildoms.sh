@@ -25,7 +25,7 @@ START=$( date +%s )
 breakfast capricorn
 make installclean
 
-make -j$( nproc --all ) bacon | tee -a build-logs/log_${NOW}.log
+make -j$( nproc --all ) bacon  2>&1 | tee -a build-logs/log_${NOW}.log
 END=$(date +%s)
 echo -e "DURATION: $( format_time ${END} ${START} )"
 copyrom
@@ -64,7 +64,7 @@ NOW=$( date +"%Y-%m-%d-%H-%M" )
 mkdir -p build-logs
 START=$( date +%s )
 lunch citrus_capricorn-userdebug
-mka lemonade -j$( nproc --all ) bacon | tee -a build-logs/log_${NOW}.log
+mka lemonade -j$( nproc --all ) 2>&1 | tee -a build-logs/log_${NOW}.log
 END=$(date +%s)
 echo -e "DURATION: $( format_time ${END} ${START} )"
 copyrom
