@@ -25,15 +25,10 @@ cd syb
 repo init -u git://github.com/Citrus-CAF/manifest.git -b p9x -m citrus-caf.xml
 mkdir -p .repo/local_manifests
 wget https://mesziman.github.io/cit.xml -O .repo/local_manifests/roomservice.xml
-repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags;
 echo "export USE_CCACHE=1" >> ~/.bashrc
 wget https://mesziman.github.io/buildoms.sh
-echo './prebuilts/misc/linux-x86/ccache/ccache -M 50G; cd ./prebuilts/misc/linux-x86/ccache/ && export PATH=$PATH:$PWD' >> cacheset
+echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags; ./prebuilts/misc/linux-x86/ccache/ccache -M 50G; cd ./prebuilts/misc/linux-x86/ccache/ && export PATH=$PATH:$PWD' >> cacheset
 chmod +x cacheset
-cd vendor/xiaomi
-git remote add s https://github.com/TheMuppets/proprietary_vendor_xiaomi
-git fetch s 
-git checkout s/lineage-16.0 -- capricorn
 tmux new -s base
 
 
