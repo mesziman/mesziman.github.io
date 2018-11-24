@@ -26,10 +26,9 @@ cd syb
 repo init -u https://github.com/syberia-project/manifest.git -b 9.0
 mkdir -p .repo/local_manifests
 wget https://mesziman.github.io/syb.xml -O .repo/local_manifests/roomservice.xml
-repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags;
 echo "export USE_CCACHE=1" >> ~/.bashrc
 wget https://mesziman.github.io/buildoms.sh
-echo './prebuilts/misc/linux-x86/ccache/ccache -M 50G; cd ./prebuilts/misc/linux-x86/ccache/ && export PATH=$PATH:$PWD' >> cacheset
+echo './prebuilts/misc/linux-x86/ccache/ccache -M 50G; repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags;' >> cacheset
 chmod +x cacheset
 cd vendor/xiaomi
 git remote add s https://github.com/TheMuppets/proprietary_vendor_xiaomi
