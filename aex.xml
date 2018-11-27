@@ -4,9 +4,9 @@
 <project name="mesziman/android_device_xiaomi_msm8996-common-2"  path="device/xiaomi/msm8996-common" remote="github" revision="lineage-16.0" />
 <project name="TheMuppets/proprietary_vendor_xiaomi" path="vendor/xiaomi" remote="github" revision="lineage-16.0" />
 <project name="mesziman/android_kernel_xiaomi_msm8996"   path="kernel/xiaomi/msm8996"   revision="9.0-caf" remote="github"/>
-<project name="aospextended/platform_hardware_qcom_display"  path="hardware/qcom/display-caf/msm8996"   revision="8.1.x-caf-8996" remote="github" />
-<project name="aospextended/platform_hardware_qcom_media"  path="hardware/qcom/media-caf/msm8996"   revision="8.1.x-caf-8996" remote="github" />
-<project name="aospextended/platform_hardware_qcom_audio"  path="hardware/qcom/audio-caf/msm8996"   revision="8.1.x-caf-8996" remote="github" />
+<project name="lineageos/android_hardware_qcom_display"  path="hardware/qcom/display-caf/msm8996"   revision="lineage-16.0-caf-8996" remote="github" />
+<project name="lineageos/android_hardware_qcom_media"  path="hardware/qcom/media-caf/msm8996"   revision="lineage-16.0-caf-8996" remote="github" />
+<project name="lineageos/android_hardware_qcom_audio"  path="hardware/qcom/audio-caf/msm8996"   revision="lineage-16.0-caf-8996" remote="github" />
 <project path="vendor/qcom/sdclang-6.0/linux-x86" name="syberia-project/platform_vendor_qcom_sdclang-6.0" remote="github" revision="6.0"/>
 <project path="prebuilts/clang/host/linux-x86/8.0" name="syberia-project/DragonTC" remote="github" revision="8.0"/>
 </manifest>
