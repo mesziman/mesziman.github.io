@@ -1,12 +1,10 @@
 sudo apt-get update
-#sudo apt-get install --assume-yes tmux nginx bc bison build-essential curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev libesd0-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev
-sudo apt-get install --assume-yes tmux nginx git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev libgl1-mesa-dev libxml2-utils xsltproc unzip
+sudo apt-get install --assume-yes libomp-dev tmux python nginx bc binutils-aarch64-linux-gnu bison build-essential curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev
+#sudo apt-get install --assume-yes tmux nginx binutils-aarch64-linux-gnu git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev libgl1-mesa-dev libxml2-utils xsltproc unzip
 wget mesziman.github.io/tmux.conf -O ~/.tmux.conf
-sudo sed -i 's/location \/.*\n/location \/ \{\n autoindex on;/g' /etc/nginx/sites-enabled/default
+sudo sed -i 's/location \/.*/location \/ \{\n autoindex on;/g' /etc/nginx/sites-enabled/default
 sudo rm /var/www/html/index.nginx-debian.html
 sudo systemctl restart nginx
-tmux new -s base
-
 git config --global color.ui true
 git config --global user.name "Gabor Meszaros"
 git config --global user.email "meszaros.gabor.10k@gmail.com"
@@ -22,16 +20,16 @@ echo 'if [ -d "$HOME/bin" ] ; then' >> ~/.profile
 echo '    PATH="$HOME/bin:$PATH"' >> ~/.profile
 echo 'fi' >> ~/.profile
 source ~/.profile
-mkdir aexmod
-cd aexmod
-repo init -u git://github.com/AEXmod/manifest -b 8.1
+mkdir syb
+cd syb
+repo init -u git://github.com/AospExtended/manifest.git -b 9.x
 mkdir -p .repo/local_manifests
 wget https://mesziman.github.io/aex.xml -O .repo/local_manifests/roomservice.xml
-repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags;
 echo "export USE_CCACHE=1" >> ~/.bashrc
-source ~/.bashrc
-source build/envsetup.sh
 wget https://mesziman.github.io/buildoms.sh
-./prebuilts/misc/linux-x86/ccache/ccache -M 50G
-source buildoms.sh
-buildaex
+echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags; ./prebuilts/misc/linux-x86/ccache/ccache -M 50G; cd ./prebuilts/misc/linux-x86/ccache/ && export PATH=$PATH:$PWD' >> cacheset
+chmod +x cacheset
+cd device/xiaomi/msm8996-common
+git remote add s https://github.com/mesziman/android_device_xiaomi_capri
+git fetch s
+tmux new -s base
