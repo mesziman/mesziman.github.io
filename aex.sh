@@ -32,4 +32,7 @@ chmod +x cacheset
 cd device/xiaomi/msm8996-common
 git remote add s https://github.com/mesziman/android_device_xiaomi_capri
 git fetch s
+cd ../capricorn
+git remote add s https://github.com/lineageos/android_device_xiaomi_capricorn
+git fetch s
 tmux new -s base
