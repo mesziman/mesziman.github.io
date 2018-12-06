@@ -29,10 +29,16 @@ echo "export USE_CCACHE=1" >> ~/.bashrc
 wget https://mesziman.github.io/buildoms.sh
 echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags; ./prebuilts/misc/linux-x86/ccache/ccache -M 50G; cd ./prebuilts/misc/linux-x86/ccache/ && export PATH=$PATH:$PWD' >> cacheset
 chmod +x cacheset
+echo '
 cd device/xiaomi/msm8996-common
-git remote add s https://github.com/mesziman/android_device_xiaomi_capri
+git remote add s https://github.com/lineageos/android_device_xiaomi_msm8996-common
 git fetch s
 cd ../capricorn
 git remote add s https://github.com/lineageos/android_device_xiaomi_capricorn
 git fetch s
+cd ../../../vendor/xiaomi
+git remote add x https://github.com/mesziman/vendor_xiaomi_asd
+git remote add y https://github.com/SyberiaProject-Devices/proprietary_vendor_xiaomi
+git fetch x
+git fetch y' > syncsome
 tmux new -s base
