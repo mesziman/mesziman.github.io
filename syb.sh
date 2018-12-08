@@ -30,7 +30,7 @@ echo "export USE_CCACHE=1" >> ~/.bashrc
 wget https://mesziman.github.io/buildoms.sh
 tmux new -s base
 echo ' repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags;
-chmod +x cacheset
+
 cd vendor/xiaomi
 git remote add s https://github.com/TheMuppets/proprietary_vendor_xiaomi
 git fetch s 
@@ -42,6 +42,7 @@ cd ../../../kernel/xiaomi/msm8996/
 git remote add s https://github.com/SyberiaProject-Devices/platform_kernel_xiaomi_msm8996
 git fetch s
 ./prebuilts/misc/linux-x86/ccache/ccache -M 50G;
-' >> 
+' >> cacheset 
+chmod +x cacheset
 
 
