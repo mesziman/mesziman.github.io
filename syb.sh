@@ -28,7 +28,8 @@ mkdir -p .repo/local_manifests
 wget https://mesziman.github.io/syb.xml -O .repo/local_manifests/roomservice.xml
 echo "export USE_CCACHE=1" >> ~/.bashrc
 wget https://mesziman.github.io/buildoms.sh
-echo './prebuilts/misc/linux-x86/ccache/ccache -M 50G; repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags;' >> cacheset
+tmux new -s base
+echo ' repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags;
 chmod +x cacheset
 cd vendor/xiaomi
 git remote add s https://github.com/TheMuppets/proprietary_vendor_xiaomi
@@ -40,6 +41,7 @@ git fetch s
 cd ../../../kernel/xiaomi/msm8996/
 git remote add s https://github.com/SyberiaProject-Devices/platform_kernel_xiaomi_msm8996
 git fetch s
-tmux new -s base
+./prebuilts/misc/linux-x86/ccache/ccache -M 50G;
+' >> 
 
 
