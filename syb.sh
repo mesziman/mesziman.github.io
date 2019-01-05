@@ -39,6 +39,8 @@ git fetch s
 cd ../../../kernel/xiaomi/msm8996/
 git remote add s https://github.com/SyberiaProject-Devices/platform_kernel_xiaomi_msm8996
 git fetch s
+git remote add up https://android.googlesource.com/kernel/common.git
+git fetch up upstream-linux-3.18.y
 ./prebuilts/misc/linux-x86/ccache/ccache -M 50G;
 ' >> cacheset 
 chmod +x cacheset
