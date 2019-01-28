@@ -37,8 +37,13 @@ cd ../capricorn
 git remote add s https://github.com/lineageos/android_device_xiaomi_capricorn
 git fetch s
 cd ../../../vendor/xiaomi
-git remote add x https://github.com/mesziman/vendor_xiaomi_asd
 git remote add y https://github.com/SyberiaProject-Devices/proprietary_vendor_xiaomi
+git remote add x https://github.com/TheMuppets/proprietary_vendor_xiaomi
 git fetch x
-git fetch y' > syncsome
+git fetch y
+git fetch z
+cd ../../kernel/xiaomi/msm8996
+git remote add up https://android.googlesource.com/kernel/common.git
+git fetch up upstream-linux-3.18.y
+' > syncsome
 tmux new -s base
