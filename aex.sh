@@ -45,5 +45,7 @@ git fetch z
 cd ../../kernel/xiaomi/msm8996
 git remote add up https://android.googlesource.com/kernel/common.git
 git fetch up upstream-linux-3.18.y
+git remote add clang https://github.com/nathanchance/android-kernel-clang
+git fetch clang msm-3.18-pie
 ' > syncsome
 tmux new -s base
