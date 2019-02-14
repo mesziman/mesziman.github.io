@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+<project name="mesziman/android_device_xiaomi_capri"  path="device/xiaomi/capricorn" remote="github" revision="aex9" />
+<project name="mesziman/android_device_xiaomi_capri"  path="device/xiaomi/msm8996-common" remote="github" revision="aex-common-eas" />
+<project name="mesziman/vendor_xiaomi_asd" path="vendor/xiaomi" remote="github" revision="eas" />
+<project name="Darkness-Devices/Android_Kernel_Xiaomi_MSM8996"   path="kernel/xiaomi/msm8996"   revision="lineage-16.0" remote="github"/>
+
+  <project path="prebuilts/snapdragon-llvm/toolchains/llvm-Snapdragon_LLVM_for_Android_6.0/prebuilt/linux-x86_64" name="nvertigo/llvm-Snapdragon_LLVM_for_Android" remote="github" revision="6.0.9" />
+<!--project path="vendor/qcom/sdclang-6.0/linux-x86" name="syberia-project/platform_vendor_qcom_sdclang-6.0" remote="github" revision="6.0"/-->
+</manifest>
