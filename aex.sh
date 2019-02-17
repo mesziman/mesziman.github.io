@@ -31,16 +31,16 @@ echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags; 
 chmod +x cacheset
 echo '
 cd device/xiaomi/msm8996-common
-git remote add s https://github.com/lineageos/android_device_xiaomi_msm8996-common
-git fetch s
+git remote add los https://github.com/lineageos/android_device_xiaomi_msm8996-common
+git remote add jaw https://github.com/Jawor245/android_device_xiaomi_msm8996-common
+git fetch los
+git fetch jaw
 cd ../capricorn
 git remote add s https://github.com/lineageos/android_device_xiaomi_capricorn
 git fetch s
 cd ../../../vendor/xiaomi
-git remote add y https://github.com/SyberiaProject-Devices/proprietary_vendor_xiaomi
 git remote add x https://github.com/TheMuppets/proprietary_vendor_xiaomi
 git fetch x
-git fetch y
 cd ../../kernel/xiaomi/msm8996
 git remote add up https://android.googlesource.com/kernel/common.git
 git fetch up upstream-linux-3.18.y
