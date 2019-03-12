@@ -27,20 +27,20 @@ mkdir -p .repo/local_manifests
 wget https://mesziman.github.io/aex.xml -O .repo/local_manifests/roomservice.xml
 echo "export USE_CCACHE=1" >> ~/.bashrc
 wget https://mesziman.github.io/buildoms.sh
-echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags; ./prebuilts/misc/linux-x86/ccache/ccache -M 50G; cd ./prebuilts/misc/linux-x86/ccache/ && export PATH=$PATH:$PWD' >> cacheset
+echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags ' >> cacheset
 chmod +x cacheset
 echo '
 cd device/xiaomi/msm8996-common
 git remote add los https://github.com/lineageos/android_device_xiaomi_msm8996-common
-git remote add jaw https://github.com/Jawor245/android_device_xiaomi_msm8996-common
 git fetch los
-git fetch jaw
 cd ../capricorn
 git remote add s https://github.com/lineageos/android_device_xiaomi_capricorn
 git fetch s
 cd ../../../vendor/xiaomi
 git remote add x https://github.com/TheMuppets/proprietary_vendor_xiaomi
 git fetch x
+git remote add y https://github.com/SyberiaProject-Devices/proprietary_vendor_xiaomi
+git fetch y
 cd ../../kernel/xiaomi/msm8996
 git remote add up https://android.googlesource.com/kernel/common.git
 git fetch up upstream-linux-3.18.y
@@ -48,5 +48,7 @@ git remote add clang https://github.com/nathanchance/android-kernel-clang
 git fetch clang msm-3.18-pie
 git remote add hlc https://github.com/Hlcpereira/kernel_xiaomi_msm8996
 git fetch hlc
+./prebuilts/misc/linux-x86/ccache/ccache -M 50G;
 ' > syncsome
+chmod +x syncsome
 tmux new -s base
