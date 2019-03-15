@@ -41,6 +41,8 @@ git remote add x https://github.com/TheMuppets/proprietary_vendor_xiaomi
 git fetch x
 git remote add y https://github.com/SyberiaProject-Devices/proprietary_vendor_xiaomi
 git fetch y
+git remote add z https://github.com/mesziman/vendor_xiaomi_asd/
+git fetch z
 cd ../../kernel/xiaomi/msm8996
 git remote add up https://android.googlesource.com/kernel/common.git
 git fetch up upstream-linux-3.18.y
