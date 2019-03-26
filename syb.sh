@@ -43,7 +43,8 @@ git remote add s https://github.com/SyberiaProject-Devices/platform_kernel_xiaom
 git fetch s
 git remote add up https://android.googlesource.com/kernel/common.git
 git fetch up upstream-linux-3.18.y
-./prebuilts/misc/linux-x86/ccache/ccache -M 50G;
+export PATH=$PATH:/root/syb/prebuilts/misc/linux-x86/ccache;
+./prebuilts/misc/linux-x86/ccache/ccache -M 50G
 ' >> cacheset 
 chmod +x cacheset
 tmux new -s base
