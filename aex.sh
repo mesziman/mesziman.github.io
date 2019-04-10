@@ -35,6 +35,8 @@ git remote add los https://github.com/lineageos/android_device_xiaomi_msm8996-co
 git fetch los
 git remote add syb https://github.com/SyberiaProject-Devices/platform_device_xiaomi_capricorn
 git fetch syb
+git remote add rad https://github.com/RadixCube/platform_device_xiaomi_gemini
+git fetch rad
 cd ../capricorn
 git remote add s https://github.com/lineageos/android_device_xiaomi_capricorn
 git fetch s
