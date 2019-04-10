@@ -51,7 +51,7 @@ NOW=$( date +"%Y-%m-%d-%H-%M" )
 mkdir -p build-logs
 START=$( date +%s )
 lunch aosp_capricorn-userdebug
-mka aex -j$( nproc --all ) bacon 2>&1 | tee -a build-logs/log_${NOW}.log
+mka aex -j$( nproc --all ) 2>&1 | tee -a build-logs/log_${NOW}.log
 END=$(date +%s)
 echo -e "DURATION: $( format_time ${END} ${START} )"
 copyrom
