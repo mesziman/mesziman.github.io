@@ -37,6 +37,8 @@ git remote add syb https://github.com/SyberiaProject-Devices/platform_device_xia
 git fetch syb
 git remote add rad https://github.com/RadixCube/platform_device_xiaomi_gemini
 git fetch rad
+git remote add mhk https://github.com/mhkjahromi/device_xiaomi_gemini
+git fetch mhk
 cd ../capricorn
 git remote add s https://github.com/lineageos/android_device_xiaomi_capricorn
 git fetch s
