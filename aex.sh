@@ -47,8 +47,6 @@ git remote add x https://github.com/TheMuppets/proprietary_vendor_xiaomi
 git fetch x
 git remote add y https://github.com/SyberiaProject-Devices/proprietary_vendor_xiaomi
 git fetch y
-git remote add z https://github.com/mesziman/vendor_xiaomi_asd/
-git fetch z
 git remote add hell https://github.com/HellfireProject/proprietary_vendor_xiaomi
 git fetch hell
 cd ../../
