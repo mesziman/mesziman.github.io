@@ -6,6 +6,6 @@
 <project name="kdrag0n/aarch64-elf-gcc"   path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-9.1"   revision="master" remote="github"/>
 <project name="kdrag0n/arm-eabi-gcc"   path="prebuilts/gcc/linux-x86/arm-eabi/arm-eabi-gcc-9.1"   revision="master" remote="github"/>
 <project name="mesziman/android_kernel_xiaomi_msm8996"   path="kernel/xiaomi/msm8996"   revision="darkness" remote="github"/>
-<project path="prebuilts/snapdragon-llvm/linux-x86_64" name="ThankYouMario/proprietary_vendor_qcom_sdclang-8.0_linux-x86" remote="github" revision="pie" />
+<project name="ThankYouMario/proprietary_vendor_qcom_sdclang-8.0_linux-x86" path="prebuilts/snapdragon-llvm/linux-x86_64" remote="github" revision="pie" />
 <!--project path="vendor/qcom/sdclang-6.0/linux-x86" name="syberia-project/platform_vendor_qcom_sdclang-6.0" remote="github" revision="6.0"/-->
 </manifest>
