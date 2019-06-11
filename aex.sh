@@ -35,6 +35,8 @@ git remote add los https://github.com/lineageos/android_device_xiaomi_msm8996-co
 git fetch los
 git remote add syb https://github.com/SyberiaProject-Devices/platform_device_xiaomi_capricorn
 git fetch syb
+git remote add eco https://github.com/LineageOS/android_device_leeco_msm8996-common
+git fetch eco
 git remote add rad https://github.com/RadixCube/platform_device_xiaomi_gemini
 git fetch rad
 git remote add mhk https://github.com/mhkjahromi/device_xiaomi_gemini
@@ -49,6 +51,8 @@ git remote add y https://github.com/SyberiaProject-Devices/proprietary_vendor_xi
 git fetch y
 git remote add hell https://github.com/HellfireProject/proprietary_vendor_xiaomi
 git fetch hell
+git remote add eco https://github.com/TheMuppets/proprietary_vendor_leeco
+git fetch eco
 cd ../../
 ./prebuilts/misc/linux-x86/ccache/ccache -M 50G;
 cd build/soong
