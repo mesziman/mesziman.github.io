@@ -2,7 +2,7 @@
 <manifest>
 <project name="mesziman/android_device_xiaomi_capri"  path="device/xiaomi/capricorn" remote="github" revision="aex9" />
 <project name="mesziman/android_device_xiaomi_capri"  path="device/xiaomi/msm8996-common" remote="github" revision="aex-common-eas" />
-<project name="mesziman/vendor_xiaomi_asd" path="vendor/xiaomi" remote="github" revision="aex-eas" />
+<project name="mesziman/vendor_xiaomi_asd" path="vendor/xiaomi" remote="github" revision="aex-eas-new" />
 <project name="mesziman/android_kernel_xiaomi_msm8996"   path="kernel/xiaomi/msm8996"   revision="darkness-rebase" remote="github"/>
  <project path="prebuilts/clang/host/linux-x86/8.0" name="syberia-project/DragonTC" remote="github" revision="9.0"/>
   <project path="prebuilts/snapdragon-llvm/toolchains/llvm-Snapdragon_LLVM_for_Android_6.0/prebuilt/linux-x86_64" name="nvertigo/llvm-Snapdragon_LLVM_for_Android"  remote="github" revision="6.0.9" />
