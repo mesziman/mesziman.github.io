@@ -55,7 +55,11 @@ git remote add eco https://github.com/TheMuppets/proprietary_vendor_leeco
 git fetch eco
 cd ../../
 ./prebuilts/misc/linux-x86/ccache/ccache -M 50G;
-cd build/soong
+cd build/core
+git remote add car https://github.com/CarbonROM/android_build_make/
+git fetch car
+git cherry-pick 2fd111f469cc66b0a98f1764c67f53e345eb8d3e^..cda5ba429f59078f5d26bd18a2f509d5d5084000
+cd ../soong
 git remote add x https://github.com/CarbonROM/android_build_soong
 git fetch x
 git cherry-pick a81c68efc0225c7e23de2d591953307ff567f6b8^..1d4ff7e84a63cfe8d0a4a8a2c0e09ea3639cd6dd
