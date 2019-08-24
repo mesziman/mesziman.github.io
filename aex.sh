@@ -30,30 +30,16 @@ wget https://mesziman.github.io/buildoms.sh
 echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags ' >> cacheset
 chmod +x cacheset
 echo '
-cd device/xiaomi/msm8996-common
-git remote add los https://github.com/lineageos/android_device_xiaomi_msm8996-common
+cd device/xiaomi/cepheus
+git remote add los https://github.com/Demon000/device_xiaomi_sm8150-common
 git fetch los
-git remote add syb https://github.com/SyberiaProject-Devices/platform_device_xiaomi_capricorn
-git fetch syb
-git remote add eco https://github.com/LineageOS/android_device_leeco_msm8996-common
-git fetch eco
-git remote add rad https://github.com/RadixCube/platform_device_xiaomi_gemini
-git fetch rad
-git remote add mhk https://github.com/mhkjahromi/device_xiaomi_gemini
-git fetch mhk
-cd ../capricorn
-git remote add s https://github.com/lineageos/android_device_xiaomi_capricorn
-git fetch s
-cd ../../../vendor/xiaomi
-git remote add x https://github.com/TheMuppets/proprietary_vendor_xiaomi
-git fetch x
-git remote add y https://github.com/SyberiaProject-Devices/proprietary_vendor_xiaomi
-git fetch y
-git remote add hell https://github.com/HellfireProject/proprietary_vendor_xiaomi
-git fetch hell
-git remote add eco https://github.com/TheMuppets/proprietary_vendor_leeco
-git fetch eco
-cd ../../
+git remote add los2 https://github.com/Demon000/device_xiaomi_cepheus
+git fetch los2
+git remote add mark https://github.com/markakash/device_xiaomi_cepheus/
+git fetch mark
+git remote add beast https://github.com/BeastRoms-Devices/device_xiaomi_cepheus
+git fetch beast
+cd../../
 ./prebuilts/misc/linux-x86/ccache/ccache -M 50G;
 cd build/core
 git remote add car https://github.com/CarbonROM/android_build_make/
