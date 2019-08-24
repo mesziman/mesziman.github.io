@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-<project name="mesziman/android_device_xiaomi_capri"  path="device/xiaomi/capricorn" remote="github" revision="aex9" />
-<project name="mesziman/android_device_xiaomi_capri"  path="device/xiaomi/msm8996-common" remote="github" revision="aex-common-eas" />
-<project name="mesziman/vendor_xiaomi_asd" path="vendor/xiaomi" remote="github" revision="aex-eas-new" />
-<project name="mesziman/android_kernel_xiaomi_msm8996"   path="kernel/xiaomi/msm8996"   revision="darkness-rebase" remote="github"/>
- <project path="prebuilts/clang/host/linux-x86/8.0" name="syberia-project/DragonTC" remote="github" revision="9.0"/>
-  <project path="prebuilts/snapdragon-llvm/toolchains/llvm-Snapdragon_LLVM_for_Android_6.0/prebuilt/linux-x86_64" name="nvertigo/llvm-Snapdragon_LLVM_for_Android"  remote="github" revision="6.0.9" />
- <project path="prebuilts/snapdragon-llvm/toolchains/sd8" name="ThankYouMario/proprietary_vendor_qcom_sdclang-8.0_linux-x86" remote="github" revision="pie" />
- <project path="prebuilts/gcc/host/linux-x86/9.1" name="syberia-project/platform_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-9.1" remote="github" revision="9.0"/>
-  <project path="prebuilts/gcc/host/linux/9.1"  name="kdrag0n/arm-eabi-gcc" remote="github" revision="master"/>
- 
-<!--project path="vendor/qcom/sdclang-6.0/linux-x86" name="syberia-project/platform_vendor_qcom_sdclang-6.0" remote="github" revision="6.0"/-->
+<project name="mesziman/device_xiaomi_cepheus-2"  path="device/xiaomi/cepheus" remote="github" revision="pie" />
+<project name="mesziman/kernel_xiaomi_sm8150"  path="kernel/xiaomi/cepheus" remote="github" revision="meszi" />
+<project name="mesziman/vendor_xiaomi_cepheus-1" path="vendor/xiaomi/cepheus" remote="github" revision="pie" />
+<project path="prebuilts/snapdragon-llvm/toolchains/llvm-Snapdragon_LLVM_for_Android_6.0/prebuilt/linux-x86_64" name="nvertigo/llvm-Snapdragon_LLVM_for_Android"  remote="github" revision="6.0.9" />
+<project path="prebuilts/snapdragon-llvm/toolchains/sd8" name="ThankYouMario/proprietary_vendor_qcom_sdclang-8.0_linux-x86" remote="github" revision="pie" />
+<project path="prebuilts/gcc/host/linux-x86/9.1" name="syberia-project/platform_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-9.1" remote="github" revision="9.0"/>
+<project path="prebuilts/gcc/host/linux/9.1"  name="kdrag0n/arm-eabi-gcc" remote="github" revision="master"/>
 
 </manifest>
