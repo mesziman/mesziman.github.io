@@ -6,6 +6,6 @@
 <project path="prebuilts/snapdragon/sd6" name="nvertigo/llvm-Snapdragon_LLVM_for_Android"  remote="github" revision="6.0.9" />
 <project path="prebuilts/snapdragon/sd8" name="ThankYouMario/proprietary_vendor_qcom_sdclang-8.0_linux-x86" remote="github" revision="pie" />
 <project path="prebuilts/gcc/host/linux-x86/9.1" name="syberia-project/platform_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-9.1" remote="github" revision="9.0"/>
-<project path="prebuilts/gcc/host/linux/9.1"  name="kdrag0n/arm-eabi-gcc" remote="github" revision="master"/>
+<project path="prebuilts/gcc/host/linux/9.1"  name="kdrag0n/arm-eabi-gcc" remote="github" revision="9.x"/>
 
 </manifest>
