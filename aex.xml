@@ -3,8 +3,8 @@
 <project name="mesziman/device_xiaomi_cepheus-2"  path="device/xiaomi/cepheus" remote="github" revision="pie" />
 <project name="mesziman/kernel_xiaomi_sm8150"  path="kernel/xiaomi/cepheus" remote="github" revision="beast-meszi" />
 <project name="mesziman/vendor_xiaomi_cepheus-1" path="vendor/xiaomi/cepheus" remote="github" revision="pie" />
-<project path="prebuilts/snapdragon-llvm/toolchains/llvm-Snapdragon_LLVM_for_Android_6.0/prebuilt/linux-x86_64" name="nvertigo/llvm-Snapdragon_LLVM_for_Android"  remote="github" revision="6.0.9" />
-<project path="prebuilts/snapdragon-llvm/toolchains/sd8" name="ThankYouMario/proprietary_vendor_qcom_sdclang-8.0_linux-x86" remote="github" revision="pie" />
+<project path="prebuilts/snapdragon/sd6" name="nvertigo/llvm-Snapdragon_LLVM_for_Android"  remote="github" revision="6.0.9" />
+<project path="prebuilts/snapdragon/sd8" name="ThankYouMario/proprietary_vendor_qcom_sdclang-8.0_linux-x86" remote="github" revision="pie" />
 <project path="prebuilts/gcc/host/linux-x86/9.1" name="syberia-project/platform_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-9.1" remote="github" revision="9.0"/>
 <project path="prebuilts/gcc/host/linux/9.1"  name="kdrag0n/arm-eabi-gcc" remote="github" revision="master"/>
 
