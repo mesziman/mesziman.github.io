@@ -39,7 +39,7 @@ git remote add mark https://github.com/markakash/device_xiaomi_cepheus/
 git fetch mark
 git remote add beast https://github.com/BeastRoms-Devices/device_xiaomi_cepheus
 git fetch beast
-cd../../
+cd ../../../
 ./prebuilts/misc/linux-x86/ccache/ccache -M 50G;
 cd build/core
 git remote add car https://github.com/CarbonROM/android_build_make/
