@@ -24,7 +24,7 @@ mkdir syb
 cd syb
 repo init -u git://github.com/AospExtended/manifest.git -b 9.x
 mkdir -p .repo/local_manifests
-wget https://mesziman.github.io/aex.xml -O .repo/local_manifests/roomservice.xml
+wget https://mesziman.github.io/aex.xml -O .repo/local_manifests/aex_manifest.xml
 echo "export USE_CCACHE=1" >> ~/.bashrc
 wget https://mesziman.github.io/buildoms.sh
 echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags ' >> cacheset
