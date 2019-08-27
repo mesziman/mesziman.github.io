@@ -44,16 +44,12 @@ cd ../../../
 cd build/core
 git remote add car https://github.com/CarbonROM/android_build_make/
 git fetch car
-git cherry-pick 2fd111f469cc66b0a98f1764c67f53e345eb8d3e^..cda5ba429f59078f5d26bd18a2f509d5d5084000
 cd ../soong
 git remote add x https://github.com/CarbonROM/android_build_soong
 git fetch x
-git cherry-pick a81c68efc0225c7e23de2d591953307ff567f6b8^..1d4ff7e84a63cfe8d0a4a8a2c0e09ea3639cd6dd
-git revert ec9e0ee40d5a1e3c386babb60a641b327f22ac62
 cd ../../vendor/aosp/
-git remote add x https://github.com/syberia-project/platform_vendor_syberia
+git remote add x https://github.com/mesziman/platform_vendor_aosp
 git fetch x
-rm -rf sdclang && git checkout x/9.0 -- sdclang
 ' > syncsome
 chmod +x syncsome
 tmux new -s base
