@@ -35,10 +35,10 @@ git remote add los https://github.com/Demon000/device_xiaomi_sm8150-common
 git fetch los
 git remote add los2 https://github.com/Demon000/device_xiaomi_cepheus
 git fetch los2
-git remote add mark https://github.com/markakash/device_xiaomi_cepheus/
-git fetch mark
 git remote add beast https://github.com/BeastRoms-Devices/device_xiaomi_cepheus
 git fetch beast
+git remote add kd https://github.com/kdrag0n/proton_zf6
+git fetch kd
 cd ../../../
 ./prebuilts/misc/linux-x86/ccache/ccache -M 50G;
 cd build/core
