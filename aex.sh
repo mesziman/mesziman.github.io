@@ -39,8 +39,9 @@ git remote add beast https://github.com/BeastRoms-Devices/device_xiaomi_cepheus
 git fetch beast
 git remote add kd https://github.com/kdrag0n/proton_zf6
 git fetch kd
+git remote add arter https://github.com/arter97/android_kernel_oneplus_sm8150
+git fetch arter
 cd ../../../
-./prebuilts/misc/linux-x86/ccache/ccache -M 50G;
 cd build/core
 git remote add car https://github.com/CarbonROM/android_build_make/
 git fetch car
@@ -50,6 +51,7 @@ git fetch x
 cd ../../vendor/aosp/
 git remote add x https://github.com/mesziman/platform_vendor_aosp
 git fetch x
+./prebuilts/misc/linux-x86/ccache/ccache -M 50G;
 ' > syncsome
 chmod +x syncsome
 tmux new -s base
