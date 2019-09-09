@@ -2,5 +2,6 @@
 <manifest>
 <project name="mesziman/android_device_xiaomi_capri"  path="device/xiaomi/capricorn" remote="github" revision="9.0-4.4" />
 <project name="mesziman/vendor_xiaomi_asd" path="vendor/xiaomi" remote="github" revision="9.0-syb" />
-<project   name="mesziman/android_kernel_xiaomi_msm8996"   path="kernel/xiaomi/msm8996"   revision="syb-rebase" remote="github"/>
+<project   name="mesziman/android_kernel_xiaomi_msm8996"   path="kernel/xiaomi/msm8996"   revision="4.4-eas" remote="github"/>
+<project   name="LineageOS/android_hardware_qcom_media"   path="hardware/qcom/media-caf/msm8998"   revision="lineage-16.0-caf-8998" remote="github"/>
 </manifest>
