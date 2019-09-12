@@ -22,8 +22,8 @@
 <project name="BeastRoms/platform_vendor_nxp_opensource_halimpl"  path="vendor/nxp/opensource/halimpl" remote="github" revision="pie-sm8150" />
 <project name="BeastRoms/platform_vendor_nxp_opensource_hidlimpl"  path="vendor/nxp/opensource/hidlimpl" remote="github" revision="pie-sm8150" />
 
-  <remove-project name="platform/build" />
-  <remove-project name="platform/build/soong" />
+  <remove-project name="platform_build" />
+  <remove-project name="platform_build_soong" />
 
 <project path="build/make" name="mesziman/platform_build" groups="pdk" remote="github" revision="9.x" >
     <copyfile src="core/root.mk" dest="Makefile" />
