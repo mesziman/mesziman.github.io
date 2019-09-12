@@ -41,6 +41,8 @@ git remote add kd https://github.com/kdrag0n/proton_zf6
 git fetch kd
 git remote add arter https://github.com/arter97/android_kernel_oneplus_sm8150
 git fetch arter
+git remote add demon https://github.com/Demon000/kernel_xiaomi_sm8150
+git fetch demon
 cd ../../../
 cd build/core
 git remote add car https://github.com/CarbonROM/android_build_make/
