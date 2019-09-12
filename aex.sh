@@ -51,7 +51,7 @@ cd ../soong
 git remote add x https://github.com/CarbonROM/android_build_soong
 git fetch x
 cd ../../vendor/aosp/
-git remote add x https://github.com/mesziman/platform_vendor_aosp
+git remote add x https://github.com/aospextended/platform_vendor_aosp
 git fetch x
 ./prebuilts/misc/linux-x86/ccache/ccache -M 50G;
 ' > syncsome
