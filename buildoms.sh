@@ -17,6 +17,14 @@ sudo cp ./out/target/product/capricorn/*.zip /var/www/html/
 sudo cp ./out/target/product/capricorn/*.zip.md5sum /var/www/html/
 
 }
+
+function copyromcep(){
+sudo mkdir -p /var/www/html
+sudo cp ./out/target/product/cepheus/*.zip /var/www/html/
+sudo cp ./out/target/product/cepheus/*.zip.md5sum /var/www/html/
+
+}
+
 function buildrom() {
 #jack_workaround
 NOW=$( date +"%Y-%m-%d-%H-%M" )
@@ -45,7 +53,7 @@ echo -e "DURATION: $( format_time ${END} ${START} )"
 copyrom
 }
 
-function buildaex() {
+function buildcapaex() {
 #jack_workaround
 NOW=$( date +"%Y-%m-%d-%H-%M" )
 mkdir -p build-logs
@@ -55,6 +63,19 @@ mka aex -j$( nproc --all ) 2>&1 | tee -a build-logs/log_${NOW}.log
 END=$(date +%s)
 echo -e "DURATION: $( format_time ${END} ${START} )"
 copyrom
+}
+
+
+function buildaex() {
+#jack_workaround
+NOW=$( date +"%Y-%m-%d-%H-%M" )
+mkdir -p build-logs
+START=$( date +%s )
+lunch aosp_cepheus-userdebug
+mka aex -j$( nproc --all ) 2>&1 | tee -a build-logs/log_${NOW}.log
+END=$(date +%s)
+echo -e "DURATION: $( format_time ${END} ${START} )"
+copyromcep
 }
 
 
