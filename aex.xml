@@ -7,6 +7,20 @@
 <project path="prebuilts/snapdragon/sd8" name="ThankYouMario/proprietary_vendor_qcom_sdclang-8.0_linux-x86" remote="github" revision="pie" />
 <project path="prebuilts/gcc/host/linux-x86/9.1" name="syberia-project/platform_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-9.1" remote="github" revision="9.0"/>
 <project path="prebuilts/gcc/host/linux/9.1"  name="kdrag0n/arm-eabi-gcc" remote="github" revision="9.x"/>
+   <remove-project name="android_vendor_nxp_interfaces_opensource_nfc" />
+    <remove-project name="android_vendor_nxp_opensource_external_libnfc-nci" />
+    <remove-project name="android_vendor_nxp_opensource_frameworks" />
+    <remove-project name="android_vendor_nxp_opensource_packages_apps_Nfc" />
+    <remove-project name="android_vendor_nxp_opensource_halimpl" />
+    <remove-project name="android_vendor_nxp_opensource_hidlimpl" />
+  
+<project name="LineageOS/android_hardware_qcom_display"  path="hardware/qcom/display-caf/sm8150" remote="github" revision="lineage-16.0-caf-8150" />
+<project name="BeastRoms/platform_vendor_nxp_interfaces_opensource_nfc"  path="vendor/nxp/opensource/interfaces/nfc" remote="github" revision="pie-sm8150" />
+<project name="BeastRoms/platform_vendor_nxp_opensource_external_libnfc-nci"  path="vendor/nxp/opensource/commonsys/external/libnfc-nci" remote="github" revision="pie-sm8150" />
+<project name="BeastRoms/platform_vendor_nxp_opensource_frameworks"  path="vendor/nxp/opensource/commonsys/frameworks" remote="github" revision="pie-sm8150" />
+<project name="BeastRoms/platform_vendor_nxp_opensource_packages_apps_Nfc"  path="vendor/nxp/opensource/commonsys/packages/apps/Nfc" remote="github" revision="pie-sm8150" />
+<project name="BeastRoms/platform_vendor_nxp_opensource_halimpl"  path="vendor/nxp/opensource/halimpl" remote="github" revision="pie-sm8150" />
+<project name="BeastRoms/platform_vendor_nxp_opensource_hidlimpl"  path="vendor/nxp/opensource/hidlimpl" remote="github" revision="pie-sm8150" />
 
   <remove-project name="platform/build" />
   <remove-project name="platform/build/soong" />
