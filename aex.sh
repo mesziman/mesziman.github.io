@@ -60,23 +60,23 @@ chmod +x syncsome
 echo '
 ADRDIR=$PWD
 cd external/skia && git remote add aosp https://android.googlesource.com/platform/external/skia/ && git fetch aosp && git cherry-pick 9ba1c8b8a9e
-cd ADRDIR
+cd $ADRDIR
 cd external/llvm && git remote add aosp https://android.googlesource.com/platform/external/llvm/ && git fetch aosp && git cherry-pick 1d7a9aa3e733
-cd ADRDIR
+cd $ADRDIR
 cd external/compiler-rt && git remote add aosp https://android.googlesource.com/platform/external/compiler-rt && git fetch aosp && git cherry-pick 9454620fc
-cd ADRDIR
+cd $ADRDIR
 cd system/netd && git remote add aosp https://android.googlesource.com/platform/system/netd/  && git fetch aosp && git cherry-pick b7fe2dba46b0 58fd6cf4c0ff8e
-cd ADRDIR
+cd $ADRDIR
 cd system/security && git remote add aosp https://android.googlesource.com/platform/system/security/ && git fetch aosp && git cherry-pick 53b02f78bd 
-cd ADRDIR
+cd $ADRDIR
 cd art && git remote add aosp https://android.googlesource.com/platform/art/ && git fetch aosp && git cherry-pick ec3adef6e4a 1a727b090e7d
-cd ADRDIR
+cd $ADRDIR
 cd frameworks/rs && git remote add aosp https://android.googlesource.com/platform/frameworks/rs && git fetch aosp && git cherry-pick ee700c98316e
-cd ADRDIR
+cd $ADRDIR
 cd frameworks/av && git remote add aosp https://android.googlesource.com/platform/frameworks/av && git fetch aosp && git cherry-pick db19f572b941
-cd ADRDIR
+cd $ADRDIR
 cd frameworks/native && git remote add aosp https://android.googlesource.com/platform/frameworks/native && git fetch aosp && git cherry-pick bcc6c92 9f2d531 904bf99 f43b02c 5ca1ea4  aaf6216 79e7f1b5f 87ad435 515f2d35c05b
-cd ADRDIR
+cd $ADRDIR
 sed -i "s/misc_undefined.*/never: true,/g" frameworks/native/libs/binder/Android.bp
 sed -i "s/misc_undefined.*/never: true,/g" system/libhwbinder/Android.bp
 sed -i "s/misc_undefined.*/never: true,/g" system/core/base/Android.bp
