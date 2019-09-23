@@ -78,6 +78,8 @@ cd frameworks/av ; git remote add aosp https://android.googlesource.com/platform
 cd $ANDRCUCC
 cd frameworks/native ; git remote add aosp https://android.googlesource.com/platform/frameworks/native ; git fetch aosp ; git cherry-pick bcc6c92 9f2d531 904bf99 f43b02c 5ca1ea4 aaf6216 79e7f1b5f 87ad435 515f2d35
 cd $ANDRCUCC
+cd build/soong ; git remote add aosp https://android.googlesource.com/platform/build/soong/ ; git fetch aosp; 
+git cherry-pick ae6ae1d880 8fec83a8b 3ede294 d7feb380c13 30485c920 c91ab9eb6 14b3cb0ab  53ed59e 538be1f 3567e62f a910d83a
 sed -i "s/misc_undefined.*/never: true,/g" frameworks/native/libs/binder/Android.bp
 sed -i "s/misc_undefined.*/never: true,/g" system/libhwbinder/Android.bp
 sed -i "s/misc_undefined.*/never: true,/g" system/core/base/Android.bp
