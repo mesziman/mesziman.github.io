@@ -22,9 +22,9 @@ echo 'fi' >> ~/.profile
 source ~/.profile
 mkdir syb
 cd syb
-repo init -u https://github.com/syberia-project/manifest.git -b 9.0
+repo init -u https://github.com/syberia-project/manifest.git -b 10.0
 mkdir -p .repo/local_manifests
-wget https://mesziman.github.io/aex.xml -O  .repo/local_manifests/roomservice.xml
+wget https://mesziman.github.io/syb.xml -O  .repo/local_manifests/roomservice.xml
 echo "export USE_CCACHE=1" >> ~/.bashrc
 wget https://mesziman.github.io/buildoms.sh
 echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags ' >> cacheset
@@ -44,16 +44,6 @@ git fetch arter
 git remote add demon https://github.com/Demon000/kernel_xiaomi_sm8150
 git fetch demon
 cd ../../../
-cd build/core
-git remote add car https://github.com/CarbonROM/android_build_make/
-git fetch car
-cd ../soong
-git remote add x https://github.com/CarbonROM/android_build_soong
-git fetch x
-cd ../../vendor/aosp/
-git remote add x https://github.com/mesziman/platform_vendor_aosp
-git fetch x
-git cherry-pick a6173144a0c 6838b72c da128efa 51f9fdc7
 ./prebuilts/misc/linux-x86/ccache/ccache -M 100G;
 ' > syncsome
 chmod +x syncsome
