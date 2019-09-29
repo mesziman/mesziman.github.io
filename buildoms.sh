@@ -30,13 +30,13 @@ function buildrom() {
 NOW=$( date +"%Y-%m-%d-%H-%M" )
 mkdir -p build-logs
 START=$( date +%s )
-breakfast capricorn
+lunch syberia_cepheus-userdebug
 make installclean
 
 make -j$( nproc --all ) bacon  2>&1 | tee -a build-logs/log_${NOW}.log
 END=$(date +%s)
 echo -e "DURATION: $( format_time ${END} ${START} )"
-copyrom
+copyromcep
 }
 
 function buildomni() {
