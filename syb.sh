@@ -30,6 +30,9 @@ wget https://mesziman.github.io/buildoms.sh
 echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags ' >> cacheset
 chmod +x cacheset
 echo '
+export $lofasz=$pwd,
+cd build/core/ ; git remote add b https://github.com/BeastRoms/platform_build_make; git fetch b; git cherry-pick 86768a3e38d8db2c6d6669b30f7b828dd7a38072
+cd $lofasz
 cd device/xiaomi/cepheus
 git remote add los https://github.com/Demon000/device_xiaomi_sm8150-common
 git fetch los
