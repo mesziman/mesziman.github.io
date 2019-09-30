@@ -1,9 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 <project name="syberiaproject-devices/device_xiaomi_cepheus"  path="device/xiaomi/cepheus" remote="github" revision="10.0" />
-<project name="beastroms/kernel_xiaomi_sm8150"  path="kernel/xiaomi/cepheus" remote="github" revision="pie" />
-<project name="mesziman/vendor_xiaomi_cepheus-1" path="vendor/xiaomi/cepheus" remote="github" revision="q" />
-
-  
-<project name="LineageOS/android_hardware_qcom_display"  path="hardware/qcom/display-caf/sm8150" remote="github" revision="lineage-17.0-caf-sd845" />
 </manifest>
