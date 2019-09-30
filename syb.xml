@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-<project name="syberiaproject-devices/device_xiaomi_cepheus"  path="device/xiaomi/cepheus" remote="github" revision="10.0" />
+<project name="syberiaproject-devices/platform_device_xiaomi_cepheus"  path="device/xiaomi/cepheus" remote="github" revision="10.0" />
 </manifest>
