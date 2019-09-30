@@ -31,7 +31,8 @@ echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags '
 chmod +x cacheset
 echo '
 export $lofasz=$pwd,
-cd build/core/ ; git remote add b https://github.com/BeastRoms/platform_build_make; git fetch b; git cherry-pick 86768a3e38d8db2c6d6669b30f7b828dd7a38072
+cd build/core/ ; git remote add b https://github.com/BeastRoms/platform_build_make; git fetch b; 
+git cherry-pick  86768a3e38d8db2c6d6669b30f7b828dd7a38072 86ea8f297decd8bff110e2a8668db5f3ea656253
 cd $lofasz
 cd device/xiaomi/cepheus
 git remote add los https://github.com/Demon000/device_xiaomi_sm8150-common
