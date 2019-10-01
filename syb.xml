@@ -11,4 +11,8 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
+ 
+ <remove-project name="platform_vendor_syberia" />
+ <project name="mesziman/platform_vendor_syberia"  path="vendor/syberia" remote="github" revision="10.0" />
+
 </manifest>
