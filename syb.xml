@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 <project name="syberiaproject-devices/platform_device_xiaomi_cepheus"  path="device/xiaomi/cepheus" remote="github" revision="10.0" />
- <project name="AndroidDumps/xiaomi_cepheus_dump"  path="vendor/dump/cepheus" remote="github" revision="cepheus-user-10-QKQ1.190716.003-9.9.3-release-keys" />
+ <project name="AndroidDumps/xiaomi_cepheus_dump"  path="vendor/dump/cepheus" remote="github" revision="cepheus-user-10-QKQ1.190716.003-9.8.8-release-keys" />
 
  
  <remove-project name="platform_build" />
