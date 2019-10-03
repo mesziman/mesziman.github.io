@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 <project name="syberiaproject-devices/platform_device_xiaomi_cepheus"  path="device/xiaomi/cepheus" remote="github" revision="10.0" />
-<project name="mesziman/vendor_xiaomi_cepheus-1"  path="vendor/xiaomi/cepheus" remote="github" revision="q" />
+<project name="mesziman/vendor_xiaomi_cepheus-1"  path="vendor/xiaomi/cepheus" remote="github" revision="q2" />
 <project name="mesziman/kernel_xiaomi_cepheus"  path="kernel/xiaomi/cepheus" remote="github" revision="pie" />
 <project name="mesziman/hardware_qcom_display-caf_sm8150"  path="hardware/qcom/display-caf/sm8150" remote="github" revision="ten" />
 
