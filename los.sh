@@ -32,15 +32,16 @@ echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags '
 chmod +x cacheset
 echo '
 export $lofasz=$pwd
-wget https://gist.github.com/cmorlok/2e024297ece2399804576e681c371748/raw/3fc0f69832b71cdde8af858542b5dafc7e4d8189/system.core.0001-dnm-disable-pstore.patch
-wget https://gist.github.com/cmorlok/2e024297ece2399804576e681c371748/raw/3fc0f69832b71cdde8af858542b5dafc7e4d8189/system.sepolicy.0001-dnm-remove-devices-virtual-block-from-genfs_contexts.patch
-set -e
-source build/envsetup.sh
-repopick 257182 # build: Support system-as-root A-only backuptool
-repopick 257183 # build: Allow mounting system properly for A-only system-as-root devices
-
-cd system/core; git am $lofasz/system.core.0001-dnm-disable-pstore.patch; cd $lofasz
-cd system/sepolicy; git am $lofasz/system.sepolicy.0001-dnm-remove-devices-virtual-block-from-genfs_contexts.patch; cd $lofasz
+wget https://gist.github.com/cmorlok/2e024297ece2399804576e681c371748/raw/3fc0f69832b71cdde8af858542b5dafc7e4d8189/system.core.0001-dnm-disable-pstore.patch;
+wget https://gist.github.com/cmorlok/2e024297ece2399804576e681c371748/raw/3fc0f69832b71cdde8af858542b5dafc7e4d8189/system.sepolicy.0001-dnm-remove-devices-virtual-block-from-genfs_contexts.patch;
+set -e;
+source build/envsetup.sh;
+repopick 259308;
+repopick 259309;
+repopick 259310;
+cd $lofasz/system/core; git am $lofasz/system.core.0001-dnm-disable-pstore.patch; 
+cd $lofasz/system/sepolicy; git am $lofasz/system.sepolicy.0001-dnm-remove-devices-virtual-block-from-genfs_contexts.patch; 
+cd $lofasz
 ccache -M 100G;
 ' > syncsome
 chmod +x syncsome
