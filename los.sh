@@ -40,7 +40,7 @@ wget https://gist.github.com/cmorlok/2e024297ece2399804576e681c371748/raw/3fc0f6
 wget https://gist.github.com/cmorlok/2e024297ece2399804576e681c371748/raw/3fc0f69832b71cdde8af858542b5dafc7e4d8189/system.sepolicy.0001-dnm-remove-devices-virtual-block-from-genfs_contexts.patch;
 set -e;
 source build/envsetup.sh;
-wget https://gist.github.com/mikeNG/4c74a16b14e15abf442c422e9251c7bd/raw/04d22602a0928b94a7fd7e1a9ff6c48fdf033f9f/updates.sh
+wget https://gist.githubusercontent.com/mikeNG/4c74a16b14e15abf442c422e9251c7bd/raw/53e8e2b117e2b596db6504a053b97707c301b51c/updates.sh
 chmod +x updates.sh
 cd $lofasz/system/core; git am $lofasz/system.core.0001-dnm-disable-pstore.patch; 
 cd $lofasz/system/sepolicy; git am $lofasz/system.sepolicy.0001-dnm-remove-devices-virtual-block-from-genfs_contexts.patch; 
