@@ -28,7 +28,7 @@ cd los
 repo init -u git://github.com/LineageOS/android.git -b lineage-17.0
 mkdir -p .repo/local_manifests
 wget https://mesziman.github.io/los.xml -O  .repo/local_manifests/roomservice.xml
-wget https://gist.githubusercontent.com/mikeNG/4c74a16b14e15abf442c422e9251c7bd/raw/04d22602a0928b94a7fd7e1a9ff6c48fdf033f9f/bringup.xml
+wget https://gist.githubusercontent.com/mikeNG/4c74a16b14e15abf442c422e9251c7bd/raw/53e8e2b117e2b596db6504a053b97707c301b51c/bringup.xml
 echo "export USE_CCACHE=1" >> ~/.bashrc
 echo "export CCACHE_EXEC=/usr/bin/ccache" >>  ~/.bashrc
 wget https://mesziman.github.io/buildoms.sh
