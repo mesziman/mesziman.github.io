@@ -20,8 +20,10 @@ echo 'if [ -d "$HOME/bin" ] ; then' >> ~/.profile
 echo '    PATH="$HOME/bin:$PATH"' >> ~/.profile
 echo 'fi' >> ~/.profile
 source ~/.profile
-git clone https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-firmware-creator.py memefirm
-wget https://bigota.d.miui.com/V11.0.2.0.QFACNXM/miui_CEPHEUS_V11.0.2.0.QFACNXM_eb6e5d0b57_10.0.zip
+mkdir meme
+cd meme ; git clone https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-firmware-creator.py memefirm
+wget https://bigota.d.miui.com/V11.0.2.0.QFACNXM/miui_CEPHEUS_V11.0.2.0.QFACNXM_eb6e5d0b57_10.0.zip;
+cd ..;
 mkdir los
 cd los
 
