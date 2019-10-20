@@ -2,8 +2,8 @@
 <manifest>
 <project name="mesziman/device_xiaomi_cepheus-2"  path="device/xiaomi/cepheus" remote="github" revision="l17" />
 <project name="mesziman/vendor_xiaomi_cepheus-1"  path="vendor/xiaomi/cepheus" remote="github" revision="android-q" />
-<project name="mesziman/kernel_xiaomi_cepheus"  path="kernel/xiaomi/cepheus" remote="github" revision="pie" />
-<project name="GZOSP/hardware_qcom_display"  path="hardware/qcom-caf/sm8150/display" remote="github" revision="10.0-caf-8150" />
+<project name="mesziman/kernel_xiaomi_sm8150-1"  path="kernel/xiaomi/cepheus" remote="github" revision="lineage-16.0" />
+<project name="pe-wip/hardware_qcom_display-caf_sm8150"  path="hardware/qcom-caf/sm8150/display" remote="github" revision="ten" />
  <project path="packages/resources/devicesettings" name="LineageOS/android_packages_resources_devicesettings" />
   
 </manifest>
