@@ -28,7 +28,7 @@ cd los
 repo init -u git://github.com/LineageOS/android.git -b lineage-17.0
 mkdir -p .repo/local_manifests
 wget https://mesziman.github.io/los.xml -O  .repo/local_manifests/roomservice.xml
-wget https://gist.githubusercontent.com/mikeNG/4c74a16b14e15abf442c422e9251c7bd/raw/439c8143e5fa2b8e08e69c0df01908f71b4e534e/bringup.xml
+wget https://gist.githubusercontent.com/mikeNG/4c74a16b14e15abf442c422e9251c7bd/raw/d3381caf6f9680127c2028b4e7040c9b0a4f6c64/bringup.xml
 echo "export USE_CCACHE=1" >> ~/.bashrc
 echo "export CCACHE_EXEC=/usr/bin/ccache" >>  ~/.bashrc
 wget https://mesziman.github.io/buildoms.sh
@@ -40,7 +40,7 @@ wget https://gist.github.com/cmorlok/2e024297ece2399804576e681c371748/raw/3fc0f6
 wget https://gist.github.com/cmorlok/2e024297ece2399804576e681c371748/raw/3fc0f69832b71cdde8af858542b5dafc7e4d8189/system.sepolicy.0001-dnm-remove-devices-virtual-block-from-genfs_contexts.patch;
 set -e;
 source build/envsetup.sh;
-wget https://gist.githubusercontent.com/mikeNG/4c74a16b14e15abf442c422e9251c7bd/raw/439c8143e5fa2b8e08e69c0df01908f71b4e534e/updates.sh
+wget https://gist.githubusercontent.com/mikeNG/4c74a16b14e15abf442c422e9251c7bd/raw/d3381caf6f9680127c2028b4e7040c9b0a4f6c64/updates.shh
 chmod +x updates.sh
 cd $lofasz/system/core; git am $lofasz/system.core.0001-dnm-disable-pstore.patch; 
 cd $lofasz/system/sepolicy; git am $lofasz/system.sepolicy.0001-dnm-remove-devices-virtual-block-from-genfs_contexts.patch; 
