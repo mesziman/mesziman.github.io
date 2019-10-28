@@ -25,24 +25,25 @@ cd syb
 repo init -u https://github.com/syberia-project/manifest.git -b 10.0
 mkdir -p .repo/local_manifests
 wget https://mesziman.github.io/syb.xml -O  .repo/local_manifests/roomservice.xml
+wget https://gist.githubusercontent.com/mikeNG/4c74a16b14e15abf442c422e9251c7bd/raw/d3381caf6f9680127c2028b4e7040c9b0a4f6c64/bringup.xml
 echo "export USE_CCACHE=1" >> ~/.bashrc
 echo "export CCACHE_EXEC=/usr/bin/ccache" >>  ~/.bashrc
 wget https://mesziman.github.io/buildoms.sh
 echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags ' >> cacheset
 chmod +x cacheset
 echo '
-export $lofasz=$pwd,
+export $lofasz=$PWD
+wget https://gist.github.com/cmorlok/2e024297ece2399804576e681c371748/raw/3fc0f69832b71cdde8af858542b5dafc7e4d8189/system.core.0001-dnm-disable-pstore.patch;
+wget https://gist.github.com/cmorlok/2e024297ece2399804576e681c371748/raw/3fc0f69832b71cdde8af858542b5dafc7e4d8189/system.sepolicy.0001-dnm-remove-devices-virtual-block-from-genfs_contexts.patch;
+set -e;
+source build/envsetup.sh;
+wget https://gist.githubusercontent.com/mikeNG/4c74a16b14e15abf442c422e9251c7bd/raw/d3381caf6f9680127c2028b4e7040c9b0a4f6c64/updates.shh
+chmod +x updates.sh
+sed -i "s/repopick/repopick -g https:\/\/review.lineageos.org/g"
+cd $lofasz/system/core; git am $lofasz/system.core.0001-dnm-disable-pstore.patch; 
+cd $lofasz/system/sepolicy; git am $lofasz/system.sepolicy.0001-dnm-remove-devices-virtual-block-from-genfs_contexts.patch; 
 cd $lofasz
-cd kernel/xiaomi/cepheus
-git remote add kd https://github.com/kdrag0n/proton_zf6
-git fetch kd
-git remote add arter https://github.com/arter97/android_kernel_oneplus_sm8150
-git fetch arter
-git remote add demon https://github.com/Demon000/kernel_xiaomi_sm8150
-git fetch demon
-cd ../../../https://raw.githubusercontent.com/mesziman/device_xiaomi_cepheus-2/pie/p.txt
 ccache -M 100G;
-wget 
 ' > syncsome
 chmod +x syncsome
 echo '
