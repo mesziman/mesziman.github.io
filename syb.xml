@@ -4,6 +4,12 @@
 <project name="mesziman/vendor_xiaomi_cepheus-1"  path="vendor/xiaomi/cepheus" remote="github" revision="q2" />
 <project name="mesziman/kernel_xiaomi_sm8150-1"  path="kernel/xiaomi/cepheus" remote="github" revision="lineage-17.0" />
 <project name="mesziman/hardware_qcom_display-caf_sm8150"  path="hardware/qcom-caf/sm8150/display" remote="github" revision="ten" />
+<project name="LineageOS/android_vendor_nxp_interfaces_opensource_nfc"  path="vendor/nxp/opensource/interfaces/nfc" remote="github" revision="lineage-17.0" />
+<project name="LineageOS/android_vendor_nxp_opensource_external_libnfc-nci"  path="vendor/nxp/opensource/commonsys/external/libnfc-nci" remote="github" revision="lineage-17.0" />
+<project name="LineageOS/android_vendor_nxp_opensource_frameworks"  path="vendor/nxp/opensource/commonsys/frameworks" remote="github" revision="lineage-17.0" />
+<project name="LineageOS/android_vendor_nxp_opensource_packages_apps_Nfc"  path="vendor/nxp/opensource/commonsys/packages/apps/Nfc" remote="github" revision="lineage-17.0" />
+<project name="LineageOS/android_vendor_nxp_opensource_halimpl"  path="vendor/nxp/opensource/sn100x/halimpl" remote="github" revision="lineage-17.0-sn100x" />
+<project name="LineageOS/android_vendor_nxp_opensource_hidlimpl"  path="vendor/nxp/opensource/sn100x/hidlimpl" remote="github" revision="lineage-17.0-sn100x" />
  
  <remove-project name="platform_build" />
  <project path="build/make" name="mesziman/platform_build-1" groups="pdk" remote="github" revision="10.0" >
