@@ -31,7 +31,7 @@ changes=(
 259748 # recovery: Add runtime checks for A/B vs traditional updates
 255830 # Make adb use a custom prop for adb root
 )
-repopick ${changes[@]}&
+repopick -P bootable/recovery ${changes[@]}&
 
 # build/blueprint
 changes=(
@@ -57,7 +57,7 @@ changes=(
 257099 # Make PRODUCT_BUILD_PROP_OVERRIDES bit more powerful
 260346 # build: Remove su inclusion
 )
-repopick ${changes[@]}&
+repopick -P build/make ${changes[@]}&
 
 # build/soong
 changes=(
@@ -78,26 +78,26 @@ changes=(
 259516 # Comment out broken android_app_imports tests
 261076 # soong: Give priority to modules in exported namespaces for bootjars
 )
-repopick ${changes[@]}&
+repopick -P build/soong ${changes[@]}&
 
 # external/mksh
 changes=(
 259638 # mksh: Mark mkshrc as recovery_available
 )
-repopick ${changes[@]}&
+repopick -P external/mksh ${changes[@]}&
 
 # external/tinycompress
 changes=(
 256308 # tinycompress: Enable extended compress format
 )
-repopick ${changes[@]}&
+repopick -P external/tinycompress ${changes[@]}&
 
 # frameworks/av
 changes=(
 256899 # camera: Allow devices to load custom CameraParameter code
-258812 # CameraService: Support hooks for motorized camera
+#258812 # CameraService: Support hooks for motorized camera
 )
-repopick ${changes[@]}&
+repopick -P frameworks/av ${changes[@]}&
 
 # frameworks/base
 changes=(
@@ -137,7 +137,7 @@ changes=(
 255651 # TypeClockController: Make it compile with new plugin API
 256192 # [DNM] IS_DEBUGGABLE -> IS_ENG
 )
-repopick ${changes[@]}&
+repopick -P ${changes[@]}&
 
 # frameworks/native
 changes=(
@@ -258,14 +258,14 @@ changes=(
 261075 # Revert "Format formattable partitions if mount fails"
 259650 # Make adb use a custom prop for adb root
 )
-repopick ${changes[@]}&
+repopick -P system/core ${changes[@]}&
 
 # system/netd
 changes=(
 256959 # netd: Allow devices to force-add directly-connected routes
 260003 # system/netd: Squash of app fw restriction commits
 )
-repopick ${changes[@]}&
+repopick -P system/netd ${changes[@]}&
 
 
 # system/vold
@@ -299,7 +299,7 @@ changes=(
 258178 # vold: Accept Linux GPT partitions on external SD cards
 258179 # Add "changepw" command to vdc.
 )
-repopick ${changes[@]}&
+repopick -P system/vold ${changes[@]}&
 
 # vendor/lineage
 # changes=(
@@ -403,4 +403,4 @@ repopick ${changes[@]}&
 wait
 
 # build/make
-repopick -f 259858 # Sorry bro: 6 -> 3
+repopick -P build/make -f 259858 # Sorry bro: 6 -> 3
