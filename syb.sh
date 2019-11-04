@@ -23,6 +23,8 @@ source ~/.profile
 mkdir meme
 cd meme ; git clone https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-firmware-creator.py memefirm
 wget https://bigota.d.miui.com/V11.0.1.0.QFAMIXM/miui_CEPHEUSGlobal_V11.0.1.0.QFAMIXM_fe2e2306cc_10.0.zip;
+#EU FINALLY
+#wget https://bigota.d.miui.com/V11.0.5.0.QFAEUXM/miui_CEPHEUSEEAGlobal_V11.0.5.0.QFAEUXM_b75c33b811_10.0.zip
 cd ..;
 mkdir syb
 cd syb
