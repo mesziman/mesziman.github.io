@@ -1,40 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-<project name="mesziman/device_xiaomi_cepheus-2"  path="device/xiaomi/cepheus" remote="github" revision="pie" />
-<project name="mesziman/kernel_xiaomi_sm8150"  path="kernel/xiaomi/cepheus" remote="github" revision="beast-meszi" />
-<project name="mesziman/vendor_xiaomi_cepheus-1" path="vendor/xiaomi/cepheus" remote="github" revision="meszi" />
-<project path="prebuilts/snapdragon/sd8" name="ThankYouMario/proprietary_vendor_qcom_sdclang-8.0_linux-x86" remote="github" revision="pie" />
-<project path="prebuilts/gcc/host/linux-x86/9.1" name="syberia-project/platform_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-9.1" remote="github" revision="9.0"/>
-<project path="prebuilts/gcc/host/linux/9.1"  name="kdrag0n/arm-eabi-gcc" remote="github" revision="9.x"/>
-   <remove-project name="android_vendor_nxp_interfaces_opensource_nfc" />
-    <remove-project name="android_vendor_nxp_opensource_external_libnfc-nci" />
-    <remove-project name="android_vendor_nxp_opensource_frameworks" />
-    <remove-project name="android_vendor_nxp_opensource_packages_apps_Nfc" />
-    <remove-project name="android_vendor_nxp_opensource_halimpl" />
-    <remove-project name="android_vendor_nxp_opensource_hidlimpl" />
-  
-<project name="LineageOS/android_hardware_qcom_display"  path="hardware/qcom/display-caf/sm8150" remote="github" revision="lineage-16.0-caf-8150" />
-<project name="BeastRoms/platform_vendor_nxp_interfaces_opensource_nfc"  path="vendor/nxp/opensource/interfaces/nfc" remote="github" revision="pie-sm8150" />
-<project name="BeastRoms/platform_vendor_nxp_opensource_external_libnfc-nci"  path="vendor/nxp/opensource/commonsys/external/libnfc-nci" remote="github" revision="pie-sm8150" />
-<project name="BeastRoms/platform_vendor_nxp_opensource_frameworks"  path="vendor/nxp/opensource/commonsys/frameworks" remote="github" revision="pie-sm8150" />
-<project name="BeastRoms/platform_vendor_nxp_opensource_packages_apps_Nfc"  path="vendor/nxp/opensource/commonsys/packages/apps/Nfc" remote="github" revision="pie-sm8150" />
-<project name="BeastRoms/platform_vendor_nxp_opensource_halimpl"  path="vendor/nxp/opensource/halimpl" remote="github" revision="pie-sm8150" />
-<project name="BeastRoms/platform_vendor_nxp_opensource_hidlimpl"  path="vendor/nxp/opensource/hidlimpl" remote="github" revision="pie-sm8150" />
-
-  <remove-project name="platform_build" />
-  <remove-project name="platform_build_soong" />
-
-<project path="build/make" name="mesziman/platform_build" groups="pdk" remote="github" revision="9.x" >
-    <copyfile src="core/root.mk" dest="Makefile" />
-    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
-    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
-    <linkfile src="core" dest="build/core" />
-    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
-    <linkfile src="target" dest="build/target" />
-    <linkfile src="tools" dest="build/tools" />
-  </project>
-  <project path="build/soong" name="mesziman/platform_build_soong-1" groups="pdk,tradefed" remote="github" revision="9.x" >
-    <linkfile src="root.bp" dest="Android.bp" />
-    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
-  </project>
+<project name="mesziman/device_xiaomi_cepheus-2"  path="device/xiaomi/cepheus" remote="github" revision="l17" />
+<project name="mesziman/vendor_xiaomi_cepheus-1"  path="vendor/xiaomi/cepheus" remote="github" revision="q2" />
+<project name="mesziman/kernel_xiaomi_sm8150-1"  path="kernel/xiaomi/cepheus" remote="github" revision="lineage-17.0" />
+<project name="mesziman/hardware_qcom_display-caf_sm8150"  path="hardware/qcom-caf/sm8150/display" remote="github" revision="ten" />
+<project path="packages/resources/devicesettings" name="LineageOS/android_packages_resources_devicesettings" />
+  <project name="LineageOS/android_vendor_nxp_interfaces_opensource_nfc"  path="vendor/nxp/opensource/interfaces/nfc" remote="github" revision="lineage-17.0" />
+<project name="LineageOS/android_vendor_nxp_opensource_external_libnfc-nci"  path="vendor/nxp/opensource/commonsys/external/libnfc-nci" remote="github" revision="lineage-17.0" />
+<project name="LineageOS/android_vendor_nxp_opensource_frameworks"  path="vendor/nxp/opensource/commonsys/frameworks" remote="github" revision="lineage-17.0" />
+<project name="LineageOS/android_vendor_nxp_opensource_packages_apps_Nfc"  path="vendor/nxp/opensource/commonsys/packages/apps/Nfc" remote="github" revision="lineage-17.0" />
+<project name="LineageOS/android_vendor_nxp_opensource_halimpl"  path="vendor/nxp/opensource/sn100x/halimpl" remote="github" revision="lineage-17.0-sn100x" />
+<project name="LineageOS/android_vendor_nxp_opensource_hidlimpl"  path="vendor/nxp/opensource/sn100x/hidlimpl" remote="github" revision="lineage-17.0-sn100x" />
+ 
 </manifest>
