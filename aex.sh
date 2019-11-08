@@ -20,8 +20,12 @@ echo 'if [ -d "$HOME/bin" ] ; then' >> ~/.profile
 echo '    PATH="$HOME/bin:$PATH"' >> ~/.profile
 echo 'fi' >> ~/.profile
 source ~/.profile
-mkdir syb
-cd syb
+mkdir meme
+cd meme ; git clone https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-firmware-creator.py memefirm
+wget https://bigota.d.miui.com/V11.0.5.0.QFAEUXM/miui_CEPHEUSEEAGlobal_V11.0.5.0.QFAEUXM_b75c33b811_10.0.zip
+cd ..;
+mkdir aex
+cd aex
 repo init -u git://github.com/AospExtended/manifest.git -b 9.x
 mkdir -p .repo/local_manifests
 wget https://mesziman.github.io/aex.xml -O .repo/local_manifests/aex_manifest.xml
@@ -30,60 +34,18 @@ wget https://mesziman.github.io/buildoms.sh
 echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags ' >> cacheset
 chmod +x cacheset
 echo '
-cd device/xiaomi/cepheus
-git remote add los https://github.com/Demon000/device_xiaomi_sm8150-common
-git fetch los
-git remote add los2 https://github.com/Demon000/device_xiaomi_cepheus
-git fetch los2
-git remote add beast https://github.com/BeastRoms-Devices/device_xiaomi_cepheus
-git fetch beast
-git remote add kd https://github.com/kdrag0n/proton_zf6
-git fetch kd
-git remote add arter https://github.com/arter97/android_kernel_oneplus_sm8150
-git fetch arter
-git remote add demon https://github.com/Demon000/kernel_xiaomi_sm8150
-git fetch demon
-cd ../../../
-cd build/core
-git remote add car https://github.com/CarbonROM/android_build_make/
-git fetch car
-cd ../soong
-git remote add x https://github.com/CarbonROM/android_build_soong
-git fetch x
-cd ../../vendor/aosp/
-git remote add x https://github.com/mesziman/platform_vendor_aosp
-git fetch x
-git cherry-pick a6173144a0c 6838b72c da128efa 51f9fdc7
-./prebuilts/misc/linux-x86/ccache/ccache -M 100G;
+export lofasz=$PWD
+wget https://gist.github.com/cmorlok/2e024297ece2399804576e681c371748/raw/3fc0f69832b71cdde8af858542b5dafc7e4d8189/system.core.0001-dnm-disable-pstore.patch;
+wget https://gist.github.com/cmorlok/2e024297ece2399804576e681c371748/raw/3fc0f69832b71cdde8af858542b5dafc7e4d8189/system.sepolicy.0001-dnm-remove-devices-virtual-block-from-genfs_contexts.patch;
+set -e;
+source build/envsetup.sh;
+wget https://gist.githubusercontent.com/mikeNG/4c74a16b14e15abf442c422e9251c7bd/raw/d3381caf6f9680127c2028b4e7040c9b0a4f6c64/updates.shh
+chmod +x updates.sh
+cd $lofasz/system/core; git am $lofasz/system.core.0001-dnm-disable-pstore.patch; 
+cd $lofasz/system/sepolicy; git am $lofasz/system.sepolicy.0001-dnm-remove-devices-virtual-block-from-genfs_contexts.patch; 
+cd $lofasz
+ccache -M 100G;
 ' > syncsome
 chmod +x syncsome
-echo '
 
-ANDRCUCC=$PWD
-cd external/skia ; git remote add aosp https://android.googlesource.com/platform/external/skia/ ; git fetch aosp ; git cherry-pick 9ba1c8b8a9e
-cd $ANDRCUCC
-cd external/llvm ; git remote add aosp https://android.googlesource.com/platform/external/llvm/ ; git fetch aosp ; git cherry-pick 1d7a9aa3e733
-cd $ANDRCUCC
-cd external/compiler-rt ; git remote add aosp https://android.googlesource.com/platform/external/compiler-rt ; git fetch aosp ; git cherry-pick 9454620fc
-cd $ANDRCUCC
-cd system/netd ; git remote add aosp https://android.googlesource.com/platform/system/netd/  ; git fetch aosp ; git cherry-pick b7fe2dba46b0 58fd6cf4c0ff8e
-cd $ANDRCUCC
-cd system/security ; git remote add aosp https://android.googlesource.com/platform/system/security/ ; git fetch aosp ; git cherry-pick 53b02f78bd
-cd $ANDRCUCC
-cd art ; git remote add aosp https://android.googlesource.com/platform/art/ ; git fetch aosp ; git cherry-pick ec3adef6e4a 1a727b090e7d
-cd $ANDRCUCC
-cd frameworks/rs ; git remote add aosp https://android.googlesource.com/platform/frameworks/rs ; git fetch aosp ; git cherry-pick ee700c98316e
-cd $ANDRCUCC
-cd frameworks/av ; git remote add aosp https://android.googlesource.com/platform/frameworks/av ; git fetch aosp ; git cherry-pick db19f572b941
-cd $ANDRCUCC
-cd frameworks/native ; git remote add aosp https://android.googlesource.com/platform/frameworks/native ; git fetch aosp ; git cherry-pick bcc6c92 9f2d531 904bf99 f43b02c 5ca1ea4 aaf6216 79e7f1b5f 87ad435 515f2d35
-cd $ANDRCUCC
-cd build/soong ; git remote add aosp https://android.googlesource.com/platform/build/soong/ ; git fetch aosp; 
-git cherry-pick ae6ae1d880 8fec83a8b 3ede294 d7feb380c13 30485c920 c91ab9eb6 14b3cb0ab  53ed59e 538be1f 3567e62f a910d83a
-sed -i "s/misc_undefined.*/never: true,/g" frameworks/native/libs/binder/Android.bp
-sed -i "s/misc_undefined.*/never: true,/g" system/libhwbinder/Android.bp
-sed -i "s/misc_undefined.*/never: true,/g" system/core/base/Android.bp
-sed -i "s/misc_undefined.*/never: true,/g" system/core/qemu_pipe/Android.bp
-' > upstreamforclang8
-chmod +x upstreamforclang8
 tmux new -s base
