@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 <project name="mesziman/device_xiaomi_cepheus-3"  path="device/xiaomi/cepheus" remote="github" revision="ten" />
+<project name="mesziman/device_xiaomi_sm8150-common-1" path="device/xiaomi/sm8150-common" remote="github" revision="ten" />
 <project name="mesziman/vendor_xiaomi_cepheus-2"  path="vendor/xiaomi/cepheus" remote="github" revision="ten" />
 <project name="mesziman/kernel_xiaomi_sm8150-2"  path="kernel/xiaomi/cepheus" remote="github" revision="ten-rice" />
 <project name="mesziman/hardware_qcom_display-caf_sm8150"  path="hardware/qcom/display-caf/sm8150" remote="github" revision="ten" />
