@@ -25,6 +25,19 @@ sudo cp ./out/target/product/cepheus/*.zip.md5sum /var/www/html/
 
 }
 
+function buildkernel() {
+#jack_workaround
+NOW=$( date +"%Y-%m-%d-%H-%M" )
+mkdir -p build-logs
+START=$( date +%s )
+lunch syberia_cepheus-userdebug
+make installclean
+make -j$( nproc --all ) bootimage  2>&1 | tee -a build-logs/kernel_${NOW}.log
+END=$(date +%s)
+echo -e "DURATION: $( format_time ${END} ${START} )"
+}
+
+
 function buildrom() {
 #jack_workaround
 NOW=$( date +"%Y-%m-%d-%H-%M" )
