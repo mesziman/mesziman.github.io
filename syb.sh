@@ -26,6 +26,8 @@ wget https://bigota.d.miui.com/V11.0.1.0.QFAMIXM/miui_CEPHEUSGlobal_V11.0.1.0.QF
 #EU FINALLY
 #wget https://bigota.d.miui.com/V11.0.5.0.QFAEUXM/miui_CEPHEUSEEAGlobal_V11.0.5.0.QFAEUXM_b75c33b811_10.0.zip
 cd ..;
+git clone https://github.com/kdrag0n/arm-eabi-gcc;
+git clone https://github.com/kdrag0n/aarch64-elf-gcc;
 mkdir syb
 cd syb
 repo init -u https://github.com/syberia-project/manifest.git -b 10.0
