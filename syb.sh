@@ -25,14 +25,15 @@ cd meme ; git clone https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-fi
 git clone https://github.com/LineageOS/android_vendor_lineage vendor/lineage;
 git clone https://github.com/LineageOS/android_prebuilts_tools-lineage prebuilts/tools-lineage;
 mkdir miui; cd miui
+git clone https://github.com/AndroidDumps/xiaomi_cepheus_dump/ -b cepheus-user-10-QKQ1.190825.002-V11.0.7.0.QFAEUXM-release-keys miui
 #wget https://bigota.d.miui.com/V11.0.5.0.QFAEUXM/miui_CEPHEUSEEAGlobal_V11.0.5.0.QFAEUXM_b75c33b811_10.0.zip;
-wget https://bigota.d.miui.com/V11.0.6.0.QFAEUXM/miui_CEPHEUSEEAGlobal_V11.0.6.0.QFAEUXM_1647340073_10.0.zip
-unzip miui_CEPHEUSEEAGlobal_V11.0.5.0.QFAEUXM_b75c33b811_10.0.zip
-brotli -d system.new.dat.br;
-brotli -d vendor.new.dat.br;
-python ..vendor/lineage/build/tools/sdat2img.py vendor.transfer.list vendor.new.dat;
-mv system.img vendor.img;
-python ..vendor/lineage/build/tools/sdat2img.py system.transfer.list system.new.dat
+#wget https://bigota.d.miui.com/V11.0.6.0.QFAEUXM/miui_CEPHEUSEEAGlobal_V11.0.6.0.QFAEUXM_1647340073_10.0.zip
+#unzip miui_CEPHEUSEEAGlobal_V11.0.5.0.QFAEUXM_b75c33b811_10.0.zip
+#brotli -d system.new.dat.br;
+#brotli -d vendor.new.dat.br;
+#python ..vendor/lineage/build/tools/sdat2img.py vendor.transfer.list vendor.new.dat;
+#mv system.img vendor.img;
+#python ..vendor/lineage/build/tools/sdat2img.py system.transfer.list system.new.dat
 cd /root/;
 git clone https://github.com/kdrag0n/arm-eabi-gcc;
 git clone https://github.com/kdrag0n/aarch64-elf-gcc;
