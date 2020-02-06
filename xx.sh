@@ -4,6 +4,7 @@ git clone https://github.com/mesziman/kernel_xiaomi_sm8150-2 k ;
 cd k ; 
 git remote add aka https://github.com/markakash/kernel_xiaomi_sm8150
 git remote add demon https://github.com/demon000/kernel_xiaomi_sm8150
+git remote add derp https://github.com/DerpFest-Devices/kernel_xiaomi_sm8150
 git config --global color.ui true ;
 git config --global user.name "Gabor Meszaros" ;
 git config --global user.email "meszaros.gabor.10k@gmail.com" ;
