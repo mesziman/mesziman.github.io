@@ -4,7 +4,7 @@
 <project name="mesziman/device_xiaomi_sm8150-common-1" path="device/xiaomi/sm8150-common" remote="github" revision="ten" />
 <project name="mesziman/vendor_xiaomi_cepheus-2"  path="vendor/xiaomi" remote="github" revision="ten-new" />
 <project name="mesziman/kernel_xiaomi_sm8150-2"  path="kernel/xiaomi/sm8150" remote="github" revision="ten-rice-new" />
-<project name="SOVIET-ANDROID/platform_hardware_qcom_display"  path="hardware/qcom/display-caf/sm8150" remote="github" revision="10.0-8150" />
+<project name="SOVIET-ANDROID/platform_hardware_qcom_display"  path="hardware/qcom-caf/sm8150/display" remote="github" revision="10.0-8150" />
 <project name="LineageOS/android_vendor_nxp_interfaces_opensource_nfc"  path="vendor/nxp/opensource/interfaces/nfc" remote="github" revision="lineage-17.0" />
 <project name="mesziman/android_vendor_nxp_opensource_external_libnfc-nci"  path="vendor/nxp/opensource/commonsys/external/libnfc-nci" remote="github" revision="lineage-17.0" />
 <project name="mesziman/android_vendor_nxp_opensource_frameworks"  path="vendor/nxp/opensource/commonsys/frameworks" remote="github" revision="lineage-17.0" />
