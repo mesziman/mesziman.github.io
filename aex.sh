@@ -41,6 +41,10 @@ echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags;
 set -e;
 source build/envsetup.sh;
 ccache -M 100G;
+sed -i "s/KERNEL_TOOLCHAIN_arm64.*/KERNEL_TOOLCHAIN_arm64 := /\/root\/aarch64-elf-gcc\/bin/g" vendor/aosp/config/BoardConfigKernel.mk
+sed -i "s/KERNEL_TOOLCHAIN_PREFIX_arm64.*/KERNEL_TOOLCHAIN_arm64 := /aarch64-elf-/g" vendor/aosp/config/BoardConfigKernel.mk
+sed -i "s/KERNEL_TOOLCHAIN_arm.*/KERNEL_TOOLCHAIN_arm := /\/root\/arm-eabi-gcc\/bin/g" vendor/aosp/config/BoardConfigKernel.mk
+sed -i "s/KERNEL_TOOLCHAIN_PREFIX_arm.*/KERNEL_TOOLCHAIN_arm := /arm-eabi-/g" vendor/aosp/config/BoardConfigKernel.mk
 ' >> cacheset
 chmod +x cacheset
 
