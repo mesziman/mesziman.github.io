@@ -4,4 +4,6 @@
 <project name="mesziman/proprietary_vendor_xiaomi-4"  path="vendor/xiaomi/cepheus" remote="github" revision="quartz" />
 <project name="mesziman/kernel_xiaomi_sm8150-2"  path="kernel/xiaomi/cepheus" remote="github" revision="ten-aka2020" />
 
+<project path="packages/resources/devicesettings" name="LineageOS/android_packages_resources_devicesettings" remote="github" revision="lineage-17.0" />
+ 
 </manifest>
