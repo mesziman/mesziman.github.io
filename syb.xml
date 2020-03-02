@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-<project name="mesziman/device_xiaomi_cepheus-3"  path="device/xiaomi/cepheus" remote="github" revision="ten" />
-<project name="mesziman/device_xiaomi_sm8150-common-1" path="device/xiaomi/sm8150-common" remote="github" revision="ten" />
-<project name="mesziman/vendor_xiaomi_cepheus-2"  path="vendor/xiaomi" remote="github" revision="ten-new" />
-<project name="mesziman/kernel_xiaomi_sm8150-2"  path="kernel/xiaomi/sm8150" remote="github" revision="ten-rice-new" />
-<project name="SOVIET-ANDROID/platform_hardware_qcom_display"  path="hardware/qcom-caf/sm8150/display" remote="github" revision="10.0-8150" />
-<project name="LineageOS/android_vendor_nxp_interfaces_opensource_nfc"  path="vendor/nxp/opensource/interfaces/nfc" remote="github" revision="lineage-17.0" />
+<project name="mesziman/device_xiaomi_sm8150-common-1"  path="device/xiaomi/cepheus" remote="github" revision="ten-cep" />
+<project name="mesziman/proprietary_vendor_xiaomi-4"  path="vendor/xiaomi/cepheus" remote="github" revision="quartz" />
+<project name="mesziman/kernel_xiaomi_sm8150-2"  path="kernel/xiaomi/cepheus" remote="github" revision="ten-aka2020" /><project name="LineageOS/android_vendor_nxp_interfaces_opensource_nfc"  path="vendor/nxp/opensource/interfaces/nfc" remote="github" revision="lineage-17.0" />
 <project name="mesziman/android_vendor_nxp_opensource_external_libnfc-nci"  path="vendor/nxp/opensource/commonsys/external/libnfc-nci" remote="github" revision="lineage-17.0" />
 <project name="mesziman/android_vendor_nxp_opensource_frameworks"  path="vendor/nxp/opensource/commonsys/frameworks" remote="github" revision="lineage-17.0" />
 <project name="mesziman/android_vendor_nxp_opensource_packages_apps_Nfc"  path="vendor/nxp/opensource/commonsys/packages/apps/Nfc" remote="github" revision="lineage-17.0" />
 <project name="mesziman/android_vendor_nxp_opensource_halimpl"  path="vendor/nxp/opensource/sn100x/halimpl" remote="github" revision="lineage-17.0-sn100x" />
 <project name="LineageOS/android_vendor_nxp_opensource_hidlimpl"  path="vendor/nxp/opensource/sn100x/hidlimpl" remote="github" revision="lineage-17.0-sn100x" />
- 
+  <project path="hardware/qcom/audio-caf/sm8150" name="android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk-qcom" remote="los" revision="lineage-17.1-caf-sm8150" />
+  <project path="hardware/qcom/display-caf/sm8150" name="android_hardware_qcom_display" groups="pdk-qcom,qcom,qcom_display" remote="los" revision="lineage-17.1-caf-sm8150" />
+  <project path="hardware/qcom/media-caf/sm8150" name="android_hardware_qcom_media" groups="qcom,pdk-qcom" remote="los" revision="lineage-17.1-caf-sm8150" />
 <project path="packages/resources/devicesettings" name="LineageOS/android_packages_resources_devicesettings" remote="github" revision="lineage-17.0" />
  
 </manifest>
