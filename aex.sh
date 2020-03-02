@@ -45,6 +45,12 @@ sed -i "s/KERNEL_TOOLCHAIN_arm64.*/KERNEL_TOOLCHAIN_arm64 := /\/root\/aarch64-el
 sed -i "s/KERNEL_TOOLCHAIN_PREFIX_arm64.*/KERNEL_TOOLCHAIN_arm64 := /aarch64-elf-/g" vendor/aosp/config/BoardConfigKernel.mk
 sed -i "s/KERNEL_TOOLCHAIN_arm.*/KERNEL_TOOLCHAIN_arm := /\/root\/arm-eabi-gcc\/bin/g" vendor/aosp/config/BoardConfigKernel.mk
 sed -i "s/KERNEL_TOOLCHAIN_PREFIX_arm.*/KERNEL_TOOLCHAIN_arm := /arm-eabi-/g" vendor/aosp/config/BoardConfigKernel.mk
+cd /root/aex/device/xiaomi/cepheus;;
+git remote add derp https://github.com/DerpFest-Devices/device_xiaomi_cepheus;git fetch derp;
+cd  /root/aex/vendor/xiaomi/cepheus;
+git remote add derp https://github.com/DerpFest-Devices/vendor_xiaomi_cepheus; git fetch derp;
+cd  /root/aex/kernel/xiaomi/cepheus;
+git remote add dark https://github.com/DarkDampSquib/kernel_xiaomi_cepheus ; git fetch dark;
 ' >> cacheset
 chmod +x cacheset
 
