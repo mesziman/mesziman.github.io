@@ -33,7 +33,7 @@ mkdir syb
 cd syb
 repo init -u https://github.com/syberia-project/manifest.git -b 10.0
 mkdir -p .repo/local_manifests
-wget https://mesziman.github.io/aex.xml -O .repo/local_manifests/roomservice.xml
+wget https://mesziman.github.io/syb.xml -O .repo/local_manifests/roomservice.xml
 echo "export USE_CCACHE=1" >> ~/.bashrc
 echo "export CCACHE_EXEC=/usr/bin/ccache" >>  ~/.bashrc
 wget https://mesziman.github.io/buildoms.sh
