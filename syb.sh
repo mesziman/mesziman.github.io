@@ -43,6 +43,7 @@ source build/envsetup.sh;
 ccache -M 100G;
 ln -s /usr/lib/x86_64-linux-gnu/libncurses.so.6 /usr/lib/libncurses.so.5
 ln -s /usr/lib/x86_64-linux-gnu/libtinfo.so.6 /usr/lib/libtinfo.so.5
+repopick 3929
 rm -rf vendor/qcom/opensource/dataservices/
 git clone https://github.com/TRINKET-ANDROID/platform_vendor_qcom_opensource_dataservices vendor/qcom/opensource/dataservices/
 cd /root/syb/device/xiaomi/cepheus;
