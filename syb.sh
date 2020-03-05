@@ -45,11 +45,6 @@ ln -s /usr/lib/x86_64-linux-gnu/libncurses.so.6 /usr/lib/libncurses.so.5
 ln -s /usr/lib/x86_64-linux-gnu/libtinfo.so.6 /usr/lib/libtinfo.so.5
 rm -rf vendor/qcom/opensource/dataservices/
 git clone https://github.com/TRINKET-ANDROID/platform_vendor_qcom_opensource_dataservices vendor/qcom/opensource/dataservices/
-echo "deb http://http.debian.net/debian/ testing main contrib non-free" >> /etc/apt/sources.list
-gpg --recv-keys 04EE7237B7D453EC  648ACFD622F3D138
-gpg --export 04EE7237B7D453EC  648ACFD622F3D138  | apt-key add -
-apt-get update
-apt-get install libc6 binutils
 cd /root/syb/device/xiaomi/cepheus;
 git remote add derp https://github.com/DerpFest-Devices/device_xiaomi_cepheus;git fetch derp;
 cd  /root/syb/vendor/xiaomi/cepheus;
