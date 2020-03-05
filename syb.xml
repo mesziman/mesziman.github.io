@@ -13,5 +13,5 @@
   <project path="hardware/qcom/display-caf/sm8150" name="mesziman/hardware_qcom_display-caf_sm8150" remote="github" revision="10.0-caf-sm8150" />
   <project path="hardware/qcom/media-caf/sm8150" name="LineageOS/android_hardware_qcom_media" remote="github" revision="lineage-17.1-caf-sm8150" />
 <project path="packages/resources/devicesettings" name="LineageOS/android_packages_resources_devicesettings" remote="github" revision="lineage-17.0" />
- 
+ <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="TRINKET-ANDROID/platform_vendor_qcom_opensource_data-ipa-cfg-mgr" remote="github" revision="10.0" />
 </manifest>
