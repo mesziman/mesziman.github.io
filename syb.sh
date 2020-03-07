@@ -40,9 +40,10 @@ wget https://mesziman.github.io/buildoms.sh
 echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags;
 set -e;
 source build/envsetup.sh;
-ccache -M 100G;
+ccache -M 150G;
 ln -s /usr/lib/x86_64-linux-gnu/libncurses.so.6 /usr/lib/libncurses.so.5;
 ln -s /usr/lib/x86_64-linux-gnu/libtinfo.so.6 /usr/lib/libtinfo.so.5;
+repopick 3926;
 repopick 3929;
 repopick 3930;
 repopick 3931;
