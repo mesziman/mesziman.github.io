@@ -21,11 +21,11 @@ echo '    PATH="$HOME/bin:$PATH"' >> ~/.profile
 echo 'fi' >> ~/.profile
 source ~/.profile
 mkdir meme
-cd meme ; git clone https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-firmware-creator.py memefirm
-git clone https://github.com/LineageOS/android_vendor_lineage vendor/lineage;
-git clone https://github.com/mesziman/proprietary_vendor_xiaomi-4 vendor/xiaomi;
-git clone https://github.com/LineageOS/android_prebuilts_tools-lineage prebuilts/tools-lineage;
-git clone https://github.com/AndroidDumps/xiaomi_cepheus_dump/ -b cepheus-user-10-QKQ1.190825.002-V11.0.7.0.QFAEUXM-release-keys miui
+#cd meme ; git clone https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-firmware-creator.py memefirm
+#git clone https://github.com/LineageOS/android_vendor_lineage vendor/lineage;
+#git clone https://github.com/mesziman/proprietary_vendor_xiaomi-4 vendor/xiaomi;
+#git clone https://github.com/LineageOS/android_prebuilts_tools-lineage prebuilts/tools-lineage;
+#git clone https://github.com/AndroidDumps/xiaomi_cepheus_dump/ -b cepheus-user-10-QKQ1.190825.002-V11.0.7.0.QFAEUXM-release-keys miui
 cd /root/;
 git clone https://github.com/kdrag0n/arm-eabi-gcc;
 git clone https://github.com/kdrag0n/aarch64-elf-gcc;
@@ -41,11 +41,9 @@ echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags;
 set -e;
 source build/envsetup.sh;
 ccache -M 100G;
-ln -s /usr/lib/x86_64-linux-gnu/libncurses.so.6 /usr/lib/libncurses.so.5
-ln -s /usr/lib/x86_64-linux-gnu/libtinfo.so.6 /usr/lib/libtinfo.so.5
-repopick 3929
-rm -rf vendor/qcom/opensource/dataservices/
-git clone https://github.com/TRINKET-ANDROID/platform_vendor_qcom_opensource_dataservices vendor/qcom/opensource/dataservices/
+ln -s /usr/lib/x86_64-linux-gnu/libncurses.so.6 /usr/lib/libncurses.so.5;
+ln -s /usr/lib/x86_64-linux-gnu/libtinfo.so.6 /usr/lib/libtinfo.so.5;
+repopick 3929;
 cd /root/syb/device/xiaomi/cepheus;
 git remote add derp https://github.com/DerpFest-Devices/device_xiaomi_cepheus;git fetch derp;
 cd  /root/syb/vendor/xiaomi/cepheus;
