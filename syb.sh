@@ -36,7 +36,7 @@ mkdir -p .repo/local_manifests
 wget https://mesziman.github.io/syb.xml -O .repo/local_manifests/roomservice.xml
 echo "export USE_CCACHE=1" >> ~/.bashrc
 echo "export CCACHE_EXEC=/usr/bin/ccache" >>  ~/.bashrc
-wget https://mesziman.github.io/buildoms.sh
+wget https://mesziman.github.io/buildoms.sh 
 echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags;
 set -e;
 source build/envsetup.sh;
@@ -44,13 +44,6 @@ ccache -M 150G;
 ln -s /usr/lib/x86_64-linux-gnu/libncurses.so.6 /usr/lib/libncurses.so.5;
 ln -s /usr/lib/x86_64-linux-gnu/libtinfo.so.6 /usr/lib/libtinfo.so.5;
 echo "11.0.0" > prebuilts/clang/host/linux-x86/clang-11/AndroidVersion.txt
-repopick 3926;
-repopick 3929;
-repopick 3930;
-repopick 3931;
-repopick 3932;
-repopick 3933;
-repopick 3934;
 cd /root/syb/device/xiaomi/cepheus;
 git remote add derp https://github.com/DerpFest-Devices/device_xiaomi_cepheus;git fetch derp;
 cd  /root/syb/vendor/xiaomi/cepheus;
