@@ -2,6 +2,8 @@
 <manifest>
 <project name="mesziman/device_xiaomi_sm8150-common-1"  path="device/xiaomi/cepheus" remote="github" revision="syb" />
 <project name="mesziman/proprietary_vendor_xiaomi-4"  path="vendor/xiaomi/cepheus" remote="github" revision="derp-riced2" />
+ <remove-project name="platform/prebuilts/clang/host/linux-x86" />
+  <project name="DerpLab/platform_prebuilts_clang_host_linux-x86" path="prebuilts/clang/host/linux-x86" remote="github" revision="ten" clone-depth="1"/>
 <project name="kdrag0n/proton-clang" path="prebuilts/clang/host/linux-x86/clang-11" remote="github" revision="11" />
 <project name="mesziman/kernel_xiaomi_sm8150-2"  path="kernel/xiaomi/cepheus" remote="github" revision="rice20" /><project name="LineageOS/android_vendor_nxp_interfaces_opensource_nfc"  path="vendor/nxp/opensource/interfaces/nfc" remote="github" revision="lineage-17.0" />
 <project name="mesziman/android_vendor_nxp_opensource_external_libnfc-nci"  path="vendor/nxp/opensource/commonsys/external/libnfc-nci" remote="github" revision="lineage-17.0" />
