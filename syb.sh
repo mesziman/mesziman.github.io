@@ -43,6 +43,7 @@ source build/envsetup.sh;
 ccache -M 150G;
 ln -s /usr/lib/x86_64-linux-gnu/libncurses.so.6 /usr/lib/libncurses.so.5;
 ln -s /usr/lib/x86_64-linux-gnu/libtinfo.so.6 /usr/lib/libtinfo.so.5;
+echo "11.0.0" > prebuilts/clang/host/linux-x86/clang-11/AndroidVersion.txt
 repopick 3926;
 repopick 3929;
 repopick 3930;
