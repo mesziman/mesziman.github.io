@@ -20,12 +20,12 @@ echo 'if [ -d "$HOME/bin" ] ; then' >> ~/.profile
 echo '    PATH="$HOME/bin:$PATH"' >> ~/.profile
 echo 'fi' >> ~/.profile
 source ~/.profile
-mkdir meme
-cd meme ; git clone https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-firmware-creator.py memefirm
-git clone https://github.com/LineageOS/android_vendor_lineage vendor/lineage;
-git clone https://github.com/mesziman/proprietary_vendor_xiaomi-4 vendor/xiaomi;
-git clone https://github.com/LineageOS/android_prebuilts_tools-lineage prebuilts/tools-lineage;
-git clone https://github.com/AndroidDumps/xiaomi_cepheus_dump/ -b cepheus-user-10-QKQ1.190825.002-V11.0.8.0.QFAEUXM-release-keys miui
+#mkdir meme
+#cd meme ; git clone https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-firmware-creator.py memefirm
+#git clone https://github.com/LineageOS/android_vendor_lineage vendor/lineage;
+#git clone https://github.com/mesziman/proprietary_vendor_xiaomi-4 vendor/xiaomi;
+#git clone https://github.com/LineageOS/android_prebuilts_tools-lineage prebuilts/tools-lineage;
+#git clone https://github.com/AndroidDumps/xiaomi_cepheus_dump/ -b cepheus-user-10-QKQ1.190825.002-V11.0.8.0.QFAEUXM-release-keys miui
 cd /root/;
 git clone https://github.com/kdrag0n/arm-eabi-gcc;
 git clone https://github.com/kdrag0n/aarch64-elf-gcc;
@@ -33,11 +33,12 @@ mkdir syb
 cd syb
 repo init -u https://github.com/syberia-project/manifest.git -b 10.0
 mkdir -p .repo/local_manifests
-wget https://mesziman.github.io/syb.xml -O .repo/local_manifests/roomservice.xml
+#wget https://mesziman.github.io/syb.xml -O .repo/local_manifests/roomservice.xml
 echo "export USE_CCACHE=1" >> ~/.bashrc
 echo "export CCACHE_EXEC=/usr/bin/ccache" >>  ~/.bashrc
 wget https://mesziman.github.io/buildoms.sh 
 echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags;
+git clone -b 10.0 https://github.com/SyberiaProject-Devices/platform_device_xiaomi_cepheus device/xiaomi/cepheus
 set -e;
 source build/envsetup.sh;
 ccache -M 150G;
