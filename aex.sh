@@ -21,11 +21,7 @@ echo '    PATH="$HOME/bin:$PATH"' >> ~/.profile
 echo 'fi' >> ~/.profile
 source ~/.profile
 mkdir meme
-cd meme ; git clone https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-firmware-creator.py memefirm
-git clone https://github.com/LineageOS/android_vendor_lineage vendor/lineage;
-git clone https://github.com/mesziman/proprietary_vendor_xiaomi-4 vendor/xiaomi;
-git clone https://github.com/LineageOS/android_prebuilts_tools-lineage prebuilts/tools-lineage;
-git clone https://github.com/AndroidDumps/xiaomi_cepheus_dump/ -b cepheus-user-10-QKQ1.190825.002-V11.0.7.0.QFAEUXM-release-keys miui
+
 cd /root/;
 git clone https://github.com/kdrag0n/arm-eabi-gcc;
 git clone https://github.com/kdrag0n/aarch64-elf-gcc;
@@ -41,16 +37,10 @@ echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags;
 set -e;
 source build/envsetup.sh;
 ccache -M 100G;
-sed -i "s/KERNEL_TOOLCHAIN_arm64.*/KERNEL_TOOLCHAIN_arm64 := /\/root\/aarch64-elf-gcc\/bin/g" vendor/aosp/config/BoardConfigKernel.mk
-sed -i "s/KERNEL_TOOLCHAIN_PREFIX_arm64.*/KERNEL_TOOLCHAIN_arm64 := /aarch64-elf-/g" vendor/aosp/config/BoardConfigKernel.mk
-sed -i "s/KERNEL_TOOLCHAIN_arm.*/KERNEL_TOOLCHAIN_arm := /\/root\/arm-eabi-gcc\/bin/g" vendor/aosp/config/BoardConfigKernel.mk
-sed -i "s/KERNEL_TOOLCHAIN_PREFIX_arm.*/KERNEL_TOOLCHAIN_arm := /arm-eabi-/g" vendor/aosp/config/BoardConfigKernel.mk
-cd /root/aex/device/xiaomi/cepheus;;
-git remote add derp https://github.com/DerpFest-Devices/device_xiaomi_cepheus;git fetch derp;
-cd  /root/aex/vendor/xiaomi/cepheus;
-git remote add derp https://github.com/DerpFest-Devices/vendor_xiaomi_cepheus; git fetch derp;
-cd  /root/aex/kernel/xiaomi/cepheus;
-git remote add dark https://github.com/DarkDampSquib/kernel_xiaomi_cepheus ; git fetch dark;
+git clone https://github.com/LineageOS/android_external_libnfc-nci external/libnfc-nci
+git clone https://github.com/LineageOS/android_external_libnfc-nxp external/libnfc-nxp
+rm -rf packages/apps/Nfc ;git clone https://github.com/LineageOS/android_packages_apps_Nfc packages/apps/Nfc
+
 ' >> cacheset
 chmod +x cacheset
 
