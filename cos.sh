@@ -48,7 +48,7 @@ ccache -M 150G;
 cd /root/syb/device/xiaomi/cepheus;
 git remote add derp https://github.com/DerpFest-Devices/device_xiaomi_cepheus;git fetch derp;
 cd  /root/syb/vendor/xiaomi/cepheus;
-git remote add derp https://github.com/DerpFest-Devices/vendor_xiaomi_cepheus; git fetch derp;
+git remote add derp https://github.com/markakash/proprietary_vendor_xiaomi; git fetch derp;
 cd  /root/syb/kernel/xiaomi/cepheus;
 git remote add dark https://github.com/DarkDampSquib/kernel_xiaomi_cepheus ; git fetch dark;
 ' >> cacheset
