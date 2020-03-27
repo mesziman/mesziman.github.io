@@ -41,7 +41,8 @@ ccache -M 100G;
 git clone https://github.com/LineageOS/android_external_libnfc-nci external/libnfc-nci
 git clone https://github.com/LineageOS/android_external_libnfc-nxp external/libnfc-nxp
 rm -rf packages/apps/Nfc ;git clone https://github.com/LineageOS/android_packages_apps_Nfc packages/apps/Nfc
-
+cd /root/aex/frameworks/base; git fetch "https://github.com/LineageOS/android_frameworks_base" refs/changes/96/256596/5 && git cherry-pick FETCH_HEAD;
+cd /root/aex
 ' >> cacheset
 chmod +x cacheset
 
