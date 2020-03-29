@@ -22,10 +22,12 @@ echo 'fi' >> ~/.profile
 source ~/.profile
 git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 mkdir meme
-
+cd meme ; git clone https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-firmware-creator.py memefirm
+git clone https://github.com/LineageOS/android_vendor_lineage vendor/lineage;
+git clone https://github.com/mesziman/proprietary_vendor_xiaomi-4 vendor/xiaomi;
+git clone https://github.com/LineageOS/android_prebuilts_tools-lineage prebuilts/tools-lineage;
+git clone https://github.com/AndroidDumps/xiaomi_cepheus_dump/ -b cepheus-user-10-QKQ1.190825.002-V11.0.8.0.QFAEUXM-release-keys miui
 cd /root/;
-git clone https://github.com/kdrag0n/arm-eabi-gcc;
-git clone https://github.com/kdrag0n/aarch64-elf-gcc;
 mkdir aex
 cd aex
 repo init -u git://github.com/AospExtended/manifest.git -b 10.x
@@ -41,8 +43,13 @@ ccache -M 100G;
 git clone https://github.com/LineageOS/android_external_libnfc-nci external/libnfc-nci
 git clone https://github.com/LineageOS/android_external_libnfc-nxp external/libnfc-nxp
 rm -rf packages/apps/Nfc ;git clone https://github.com/LineageOS/android_packages_apps_Nfc packages/apps/Nfc
-cd /root/aex/frameworks/base; git fetch "https://github.com/LineageOS/android_frameworks_base" refs/changes/96/256596/5 && git cherry-pick FETCH_HEAD;
 cd /root/aex
+repopick -g https://review.lineageos.org/ 271778;
+repopick -g https://review.lineageos.org/ 256596;
+repopick -t ten-aosp-wfd
+repopick -t lock_styles
+#repopick -t smart_pixels
+repopick 1241 1303 1301
 ' >> cacheset
 chmod +x cacheset
 
