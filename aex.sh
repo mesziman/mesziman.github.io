@@ -26,7 +26,7 @@ cd meme ; git clone https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-fi
 git clone https://github.com/LineageOS/android_vendor_lineage vendor/lineage;
 git clone https://github.com/mesziman/proprietary_vendor_xiaomi-4 vendor/xiaomi;
 git clone https://github.com/LineageOS/android_prebuilts_tools-lineage prebuilts/tools-lineage;
-git clone https://github.com/AndroidDumps/xiaomi_cepheus_dump/ -b cepheus-user-10-QKQ1.190825.002-V11.0.8.0.QFAEUXM-release-keys miui
+git clone --depth 1 --single-branch https://github.com/AndroidDumps/xiaomi_cepheus_dump/ -b cepheus-user-10-QKQ1.190825.002-V11.0.8.0.QFAEUXM-release-keys miui
 cd /root/;
 mkdir aex
 cd aex
