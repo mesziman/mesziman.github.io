@@ -50,8 +50,10 @@ repopick -t ten-aosp-wfd
 repopick -t lock_styles
 repopick -t themes
 #repopick -t smart_pixels
-repopick 1241 1303 1301
-cd device/xiaomi/cepheus;git remote add demon https://github.com/Demon000/device_xiaomi_sm8150-common; git fetch demon
+repopick 1241 1303 1301 643
+cd device/xiaomi/cepheus;git remote add demon https://github.com/Demon000/device_xiaomi_sm8150-common; git fetch demon;
+git remote add eco https://github.com/EcrosoftXiao/device_xiaomi_cepheus/ ; git fetch eco; 
+cd /root/aex
 ' >> cacheset
 chmod +x cacheset
 
