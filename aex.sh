@@ -51,6 +51,7 @@ repopick -t lock_styles
 repopick -t themes
 #repopick -t smart_pixels
 repopick 1241 1303 1301
+cd device/xiaomi/cepheus;git remote add demon https://github.com/Demon000/device_xiaomi_sm8150-common; git fetch demon
 ' >> cacheset
 chmod +x cacheset
 
