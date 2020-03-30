@@ -48,6 +48,7 @@ repopick -g https://review.lineageos.org/ 271778;
 repopick -g https://review.lineageos.org/ 256596;
 repopick -t ten-aosp-wfd
 repopick -t lock_styles
+repopick -t themes
 #repopick -t smart_pixels
 repopick 1241 1303 1301
 ' >> cacheset
