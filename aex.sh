@@ -43,7 +43,9 @@ ccache -M 100G;
 git clone https://github.com/LineageOS/android_external_libnfc-nci external/libnfc-nci
 git clone https://github.com/LineageOS/android_external_libnfc-nxp external/libnfc-nxp
 rm -rf packages/apps/Nfc ;git clone https://github.com/LineageOS/android_packages_apps_Nfc packages/apps/Nfc
-cd /root/aex
+cd /root/aex;
+cd build/core; git fetch "http://gerrit.syberiaos.com/syberia-project/platform_build" refs/changes/26/4126/1 && git cherry-pick FETCH_HEAD
+cd /root/aex;
 repopick -g https://review.lineageos.org/ 271778;
 repopick -g https://review.lineageos.org/ 256596;
 repopick -t ten-aosp-wfd
