@@ -11,6 +11,16 @@ git config --global user.email "meszaros.gabor.10k@gmail.com"
 wget https://dl.google.com/android/repository/platform-tools-latest-linux.zip
 unzip platform-tools-latest-linux.zip -d ~
 mkdir ~/bin
+echo '
+# avoid duplicates..
+export HISTCONTROL=ignoredups:erasedups
+
+# append history entries..
+shopt -s histappend
+
+# After each command, save and reload history
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+'  >> ~/.bashrc
 echo 'if [ -d "$HOME/platform-tools" ] ; then' >> ~/.profile
 echo '    PATH="$HOME/platform-tools:$PATH"' >> ~/.profile
 echo 'fi' >> ~/.profile
