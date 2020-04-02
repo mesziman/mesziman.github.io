@@ -57,7 +57,8 @@ cd /root/aex;
 cd build/core; git fetch "http://gerrit.syberiaos.com/syberia-project/platform_build" refs/changes/26/4126/1 && git cherry-pick FETCH_HEAD
 cd /root/aex;
 repopick -g https://review.lineageos.org/ 271778;
-repopick -g https://review.lineageos.org/ 256596;
+cd /root/aex/frameworks/base; git fetch "https://github.com/LineageOS/android_frameworks_base" refs/changes/96/256596/5 && git cherry-pick FETCH_HEAD;
+cd /root/aex
 repopick -t ten-aosp-wfd
 repopick -t lock_styles
 repopick -t themes
