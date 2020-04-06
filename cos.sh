@@ -33,7 +33,7 @@ mkdir cos
 cd cos
 repo init -u https://github.com/Cosmic-OS/platform_manifest.git -b quasar-release
 mkdir -p .repo/local_manifests
-#wget https://mesziman.github.io/aex.xml -O .repo/local_manifests/roomservice.xml
+wget https://mesziman.github.io/cos.xml -O .repo/local_manifests/roomservice.xml
 echo "export USE_CCACHE=1" >> ~/.bashrc
 echo "export CCACHE_EXEC=/usr/bin/ccache" >>  ~/.bashrc
 wget https://mesziman.github.io/buildoms.sh 
