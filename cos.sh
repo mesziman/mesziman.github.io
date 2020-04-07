@@ -45,11 +45,12 @@ ccache -M 150G;
 #ln -s /usr/lib/x86_64-linux-gnu/libtinfo.so.6 /usr/lib/libtinfo.so.5;
 #echo "11.0.0" > prebuilts/clang/host/linux-x86/clang-11/AndroidVersion.txt
 cd /root/syb/device/xiaomi/cepheus;
-git remote add derp https://github.com/DerpFest-Devices/device_xiaomi_cepheus;git fetch derp;
+git remote add -f derp https://github.com/DerpFest-Devices/device_xiaomi_cepheus;
+git remote add -f ma https://github.com/markakash/device_xiaomi_cepheus;
 cd  /root/syb/vendor/xiaomi/cepheus;
-git remote add derp https://github.com/markakash/proprietary_vendor_xiaomi; git fetch derp;
+git remote add -f derp https://github.com/markakash/proprietary_vendor_xiaomi; 
 cd  /root/syb/kernel/xiaomi/cepheus;
-git remote add dark https://github.com/DarkDampSquib/kernel_xiaomi_cepheus ; git fetch dark;
+git remote add -f dark https://github.com/DarkDampSquib/kernel_xiaomi_cepheus ;
 ' >> cacheset
 chmod +x cacheset
 
