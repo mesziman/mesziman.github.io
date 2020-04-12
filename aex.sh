@@ -60,13 +60,15 @@ repopick -g https://review.lineageos.org/ 271778;
 cd /root/aex/frameworks/base; git fetch "https://github.com/LineageOS/android_frameworks_base" refs/changes/96/256596/5 && git cherry-pick FETCH_HEAD;
 cd /root/aex
 repopick -t ten-aosp-wfd
-repopick -t lock_styles
-repopick -t themes
+#repopick -t lock_styles
+#repopick -t themes
 #repopick -t smart_pixels
 repopick 1241 1303 1301 643
 cd device/xiaomi/cepheus;git remote add demon https://github.com/Demon000/device_xiaomi_sm8150-common; git fetch demon;
 git remote add eco https://github.com/EcrosoftXiao/device_xiaomi_cepheus/ ; git fetch eco; 
 cd /root/aex
+cd frameworks/av ; git remote add -f syb https://github.com/syberia-project/platform_frameworks_av ; git cherry-pick fc31fde5df903f5ffa24deaddb4efccaa60d355e 52546307659c7526a4da5112d6d03a1dbe9f1401
+git remote add -f syb https://github.com/syberia-project/platform_frameworks_av
 cd kernel/xiaomi/cepheus; git remote add dark -f https://github.com/DarkDampSquib/kernel_xiaomi_cepheus;
 cd /root/aex;
 ' >> cacheset;
