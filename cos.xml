@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-<project name="mesziman/device_xiaomi_sm8150-common-1"  path="device/xiaomi/cepheus" remote="github" revision="aex-merge" />
+<project name="mesziman/device_xiaomi_sm8150-common-1"  path="device/xiaomi/cepheus" remote="github" revision="cos" />
 <project name="kdrag0n/proton-clang" path="prebuilts/clang/host/linux-x86/clang-11" remote="github" revision="master" clone-depth="1"  />
 <project name="mesziman/proprietary_vendor_xiaomi-4"  path="vendor/xiaomi/cepheus" remote="github" revision="new20-perf" />
-<project name="mesziman/kernel_xiaomi_sm8150-2"  path="kernel/xiaomi/cepheus" remote="github" revision="rice20-rebase-march" />
+<project name="mesziman/kernel_xiaomi_sm8150-2"  path="kernel/xiaomi/cepheus" remote="github" revision="apr-rebase-perf" />
  <project name="mesziman/proprietary_vendor_qcom_common" path="vendor/qcom/common" remote="github" revision="quartz" />
  <project name="LineageOS/android_vendor_nxp_interfaces_opensource_nfc"  path="vendor/nxp/opensource/interfaces/nfc" remote="github" revision="lineage-17.1" />
 <project name="LineageOS/android_vendor_nxp_opensource_external_libnfc-nci"  path="vendor/nxp/opensource/commonsys/external/libnfc-nci" remote="github" revision="lineage-17.1" />
@@ -11,9 +11,9 @@
 <project name="LineageOS/android_vendor_nxp_opensource_packages_apps_Nfc"  path="vendor/nxp/opensource/commonsys/packages/apps/Nfc" remote="github" revision="lineage-17.1" />
 <project name="LineageOS/android_vendor_nxp_opensource_halimpl"  path="vendor/nxp/opensource/sn100x/halimpl" remote="github" revision="lineage-17.1-sn100x" />
 <project name="LineageOS/android_vendor_nxp_opensource_hidlimpl"  path="vendor/nxp/opensource/sn100x/hidlimpl" remote="github" revision="lineage-17.1-sn100x" />
-  <project path="hardware/qcom/audio-caf/sm8150" name="LineageOS/android_hardware_qcom_audio"  remote="github" revision="lineage-17.1-caf-sm8150" />
-  <project path="hardware/qcom/display-caf/sm8150" name="mesziman/hardware_qcom_display-caf_sm8150" remote="github" revision="10.0-caf-sm8150" />
-  <project path="hardware/qcom/media-caf/sm8150" name="LineageOS/android_hardware_qcom_media" remote="github" revision="lineage-17.1-caf-sm8150" />
+  <project path="hardware/qcom/display/sm8150" name="sagarshah1729/hardware_qcom-caf_sm8150_display"  remote="github" revision="ten" />
+  <project path="hardware/qcom/audio/sm8150" name="sagarshah1729/hardware_qcom-caf_sm8150_audio" remote="github" revision="ten" />
+  <project path="hardware/qcom/media/sm8150" name="sagarshah1729/hardware_qcom-caf_sm8150_media" remote="github" revision="ten" />
 
 
 </manifest>
