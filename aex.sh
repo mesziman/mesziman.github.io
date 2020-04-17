@@ -84,6 +84,8 @@ cd vendor/aosp;
 git remote add -f syb https://github.com/syberia-project/platform_vendor_syberia;
 git cherry-pick 6079a840c0 81ee30e7df10;
 cd /root/aex;
+sed -i "s/armv8.2a/armv8.2a+crypto/g" build/soong/cc/config/arm64_device.go;
+sed -i "s/armv8.2a/armv8.2a+crypto/g" build/soong/cc/config/arm_device.go;
 ' >> cacheset;
 chmod +x cacheset
 
