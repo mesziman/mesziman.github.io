@@ -50,6 +50,12 @@ echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags;
 set -e;
 source build/envsetup.sh;
 ccache -M 100G;
+cd /root/aex;
+cd build/core/;
+git remote add -f syb https://github.com/syberia-project/platform_build;
+git cherry-pick 412eb35b4 11e8a967d 91b6cb2cad ee22994ebf;
+git revert 2b63a858;
+cd /root/aex;
 git clone https://github.com/LineageOS/android_external_libnfc-nci external/libnfc-nci
 git clone https://github.com/LineageOS/android_external_libnfc-nxp external/libnfc-nxp
 rm -rf packages/apps/Nfc ;git clone https://github.com/LineageOS/android_packages_apps_Nfc packages/apps/Nfc
@@ -63,12 +69,14 @@ repopick -t ten-aosp-wfd
 #repopick -t lock_styles
 #repopick -t themes
 #repopick -t smart_pixels
-repopick 1241 1303 1301 643
+repopick 1241 
+repopick 1301
+#repopick 643
 cd device/xiaomi/cepheus;git remote add demon https://github.com/Demon000/device_xiaomi_sm8150-common; git fetch demon;
 git remote add eco https://github.com/EcrosoftXiao/device_xiaomi_cepheus/ ; git fetch eco; 
 cd /root/aex
 cd frameworks/av ; git remote add -f syb https://github.com/syberia-project/platform_frameworks_av ; git cherry-pick fc31fde5df903f5ffa24deaddb4efccaa60d355e 52546307659c7526a4da5112d6d03a1dbe9f1401
-git remote add -f syb https://github.com/syberia-project/platform_frameworks_av
+cd /root/aex
 cd kernel/xiaomi/cepheus; git remote add dark -f https://github.com/DarkDampSquib/kernel_xiaomi_cepheus;
 cd /root/aex;
 ' >> cacheset;
