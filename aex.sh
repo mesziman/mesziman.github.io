@@ -64,7 +64,8 @@ cd build/core; git fetch "http://gerrit.syberiaos.com/syberia-project/platform_b
 cd /root/aex;
 repopick -g https://review.lineageos.org/ 271778;
 cd /root/aex/frameworks/base; git fetch "https://github.com/LineageOS/android_frameworks_base" refs/changes/96/256596/5 && git cherry-pick FETCH_HEAD;
-cd /root/aex
+cd /root/aex;
+
 repopick -t ten-aosp-wfd
 #repopick -t lock_styles
 #repopick -t themes
@@ -78,6 +79,10 @@ cd /root/aex
 cd frameworks/av ; git remote add -f syb https://github.com/syberia-project/platform_frameworks_av ; git cherry-pick fc31fde5df903f5ffa24deaddb4efccaa60d355e 52546307659c7526a4da5112d6d03a1dbe9f1401
 cd /root/aex
 cd kernel/xiaomi/cepheus; git remote add dark -f https://github.com/DarkDampSquib/kernel_xiaomi_cepheus;
+cd /root/aex;
+cd vendor/aosp;
+git remote add -f syb https://github.com/syberia-project/platform_vendor_syberia;
+git cherry-pick 6079a840c0 81ee30e7df10;
 cd /root/aex;
 ' >> cacheset;
 chmod +x cacheset
