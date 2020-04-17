@@ -64,6 +64,7 @@ cd build/core; git fetch "http://gerrit.syberiaos.com/syberia-project/platform_b
 cd /root/aex;
 repopick -g https://review.lineageos.org/ 271778;
 cd /root/aex/frameworks/base; git fetch "https://github.com/LineageOS/android_frameworks_base" refs/changes/96/256596/5 && git cherry-pick FETCH_HEAD;
+git revert d92a9b158e8a473cd7860f2ea6cc9090fc294f78;
 cd /root/aex;
 
 repopick -t ten-aosp-wfd
