@@ -55,9 +55,9 @@ cd build/core/;
 git remote add -f syb https://github.com/syberia-project/platform_build;
 git cherry-pick 412eb35b4  91b6cb2cad ee22994ebf; 
 #11e8a967d
-git revert 2b63a858;
+git revert 2b63a858 --no-edit;
 cd /root/aex;
-git clone https://github.com/LineageOS/android_external_libnfc-nci external/libnfc-nci
+git clone https://github.com/LineagaeOS/android_external_libnfc-nci external/libnfc-nci
 git clone https://github.com/LineageOS/android_external_libnfc-nxp external/libnfc-nxp
 rm -rf packages/apps/Nfc ;git clone https://github.com/LineageOS/android_packages_apps_Nfc packages/apps/Nfc
 cd /root/aex;
@@ -65,7 +65,7 @@ cd build/core; git fetch "http://gerrit.syberiaos.com/syberia-project/platform_b
 cd /root/aex;
 repopick -g https://review.lineageos.org/ 271778;
 cd /root/aex/frameworks/base; git fetch "https://github.com/LineageOS/android_frameworks_base" refs/changes/96/256596/5 && git cherry-pick FETCH_HEAD;
-git revert d92a9b158e8a473cd7860f2ea6cc9090fc294f78;
+git revert d92a9b158e8a --no-edit;
 cd /root/aex;
 
 repopick -t ten-aosp-wfd
@@ -87,7 +87,7 @@ git remote add -f syb https://github.com/syberia-project/platform_vendor_syberia
 git cherry-pick 6079a840c0 81ee30e7df10;
 cd /root/aex;
 sed -i "s/march=armv8.2a/march=armv8.2a+crypto/g" build/soong/cc/config/arm64_device.go;
-sed -i "s/march=armv8.2a/march=armv8.2a+crypto/g" build/soong/cc/config/arm_device.go;
+sed -i "s/march=armv8.2-a/march=armv8.2-a+crypto/g" build/soong/cc/config/arm_device.go;
 ' >> cacheset;
 chmod +x cacheset
 
