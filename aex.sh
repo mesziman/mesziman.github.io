@@ -53,7 +53,8 @@ ccache -M 100G;
 cd /root/aex;
 cd build/core/;
 git remote add -f syb https://github.com/syberia-project/platform_build;
-git cherry-pick 412eb35b4 11e8a967d 91b6cb2cad ee22994ebf;
+git cherry-pick 412eb35b4  91b6cb2cad ee22994ebf; 
+#11e8a967d
 git revert 2b63a858;
 cd /root/aex;
 git clone https://github.com/LineageOS/android_external_libnfc-nci external/libnfc-nci
