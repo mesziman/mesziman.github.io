@@ -1,3 +1,4 @@
+
 function jack_workaround() {
     # Only allow one stream of compilation
     export SERVER_NB_COMPILE=1
@@ -24,6 +25,8 @@ sudo cp ./out/target/product/cepheus/*.zip /var/www/html/
 sudo cp ./out/target/product/cepheus/*.zip.md5sum /var/www/html/
 
 }
+corenumber=$( nproc --all )
+buildspeed=$(( $corenumber + 2 ))
 
 function buildkernel() {
 #jack_workaround
@@ -32,7 +35,7 @@ mkdir -p build-logs
 START=$( date +%s )
 lunch syberia_cepheus-userdebug
 make installclean
-make -j$( nproc --all ) bootimage  2>&1 | tee -a build-logs/kernel_${NOW}.log
+make -j$buildspeed bootimage  2>&1 | tee -a build-logs/kernel_${NOW}.log
 END=$(date +%s)
 echo -e "DURATION: $( format_time ${END} ${START} )"
 }
@@ -45,7 +48,7 @@ mkdir -p build-logs
 START=$( date +%s )
 lunch syberia_cepheus-userdebug
 make installclean
-make -j$( nproc --all ) bacon  2>&1 | tee -a build-logs/log_${NOW}.log
+make -j$buildspeed bacon  2>&1 | tee -a build-logs/log_${NOW}.log
 END=$(date +%s)
 echo -e "DURATION: $( format_time ${END} ${START} )"
 copyromcep
@@ -59,7 +62,7 @@ START=$( date +%s )
 breakfast capricorn
 make installclean
 
-make -j$( nproc --all ) cookies 2>&1 | tee -a build-logs/log_${NOW}.log
+make -j$buildspeed cookies 2>&1 | tee -a build-logs/log_${NOW}.log
 END=$(date +%s)
 echo -e "DURATION: $( format_time ${END} ${START} )"
 copyrom
@@ -71,7 +74,7 @@ NOW=$( date +"%Y-%m-%d-%H-%M" )
 mkdir -p build-logs
 START=$( date +%s )
 lunch aosp_capricorn-userdebug
-make  aex -j$( nproc --all ) 2>&1 | tee -a build-logs/log_${NOW}.log
+make  aex -j$buildspeed 2>&1 | tee -a build-logs/log_${NOW}.log
 END=$(date +%s)
 echo -e "DURATION: $( format_time ${END} ${START} )"
 copyrom
@@ -88,7 +91,7 @@ mkdir -p build-logs
 START=$( date +%s )
 lunch aosp_cepheus-userdebug
 make installclean
-make aex -j$( nproc --all ) 2>&1 | tee -a build-logs/log_${NOW}.log
+make aex -j$buildspeed 2>&1 | tee -a build-logs/log_${NOW}.log
 END=$(date +%s)
 echo -e "DURATION: $( format_time ${END} ${START} )"
 copyromcep
@@ -101,7 +104,7 @@ NOW=$( date +"%Y-%m-%d-%H-%M" )
 mkdir -p build-logs
 START=$( date +%s )
 lunch cos_cepheus-userdebug
-make -j$( nproc --all ) 2>&1 | tee -a build-logs/log_${NOW}.log
+make -j$buildspeed 2>&1 | tee -a build-logs/log_${NOW}.log
 END=$(date +%s)
 echo -e "DURATION: $( format_time ${END} ${START} )"
 copyromcep
