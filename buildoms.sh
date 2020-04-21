@@ -45,7 +45,6 @@ mkdir -p build-logs
 START=$( date +%s )
 lunch syberia_cepheus-userdebug
 make installclean
-
 make -j$( nproc --all ) bacon  2>&1 | tee -a build-logs/log_${NOW}.log
 END=$(date +%s)
 echo -e "DURATION: $( format_time ${END} ${START} )"
@@ -72,34 +71,38 @@ NOW=$( date +"%Y-%m-%d-%H-%M" )
 mkdir -p build-logs
 START=$( date +%s )
 lunch aosp_capricorn-userdebug
-mka aex -j$( nproc --all ) 2>&1 | tee -a build-logs/log_${NOW}.log
+make  aex -j$( nproc --all ) 2>&1 | tee -a build-logs/log_${NOW}.log
 END=$(date +%s)
 echo -e "DURATION: $( format_time ${END} ${START} )"
 copyrom
 }
 
-
+function cleanlogs ()
+{
+rm -f build-logs/*
+}
 function buildaex() {
 #jack_workaround
 NOW=$( date +"%Y-%m-%d-%H-%M" )
 mkdir -p build-logs
 START=$( date +%s )
 lunch aosp_cepheus-userdebug
-mka aex -j$( nproc --all ) 2>&1 | tee -a build-logs/log_${NOW}.log
+make installclean
+make aex -j$( nproc --all ) 2>&1 | tee -a build-logs/log_${NOW}.log
 END=$(date +%s)
 echo -e "DURATION: $( format_time ${END} ${START} )"
 copyromcep
 }
 
 
-function buildcit() {
+function buildcos() {
 #jack_workaround
 NOW=$( date +"%Y-%m-%d-%H-%M" )
 mkdir -p build-logs
 START=$( date +%s )
-lunch citrus_capricorn-userdebug
-mka lemonade -j$( nproc --all ) 2>&1 | tee -a build-logs/log_${NOW}.log
+lunch cos_cepheus-userdebug
+make -j$( nproc --all ) 2>&1 | tee -a build-logs/log_${NOW}.log
 END=$(date +%s)
 echo -e "DURATION: $( format_time ${END} ${START} )"
-copyrom
+copyromcep
 }
