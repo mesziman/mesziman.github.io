@@ -5,6 +5,6 @@ for line in $findwhat
 do
     if [[ -z $(find out/target/product/cepheus/ -name $line) ]]
     then
-        echo "not found $line";
+        echo "$1 is missing file: $line";
     fi
 done
