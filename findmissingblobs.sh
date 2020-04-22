@@ -1,5 +1,5 @@
 #!/bin/bash
-EXCLUDE_REGEX="^(*.acdb|*.apk|*.b00|*.b01|*.b02|*.b03|*.b04|*.bin|*.cfg|*.cng|*.conf|*.config|*.dat|*.db|*.elf|*.fw|*.jar|*.json|*.mdt|*.mk|*.pem|*.qwsp|*.rc|*.sql|*.tflite|*.txt|*.widevine|*.wmfw|*.xml)"
+EXCLUDE_REGEX="(\.acdb|\.apk|\.b00|\.b01|\.b02|\.b03|\.b04|\.bin|\.cfg|\.cng|\.conf|\.config|\.dat|\.db|\.elf|\.fw|\.jar|\.json|\.mdt|\.mk|\.pem|\.qwsp|\.rc|\.sql|\.tflite|\.txt|\.widevine|\.wmfw|\.xml)$"
 if [[ $1 =~ $EXCLUDE_REGEX ]]
 then
   exit
