@@ -66,6 +66,7 @@ cd /root/aex;
 repopick -g https://review.lineageos.org/ 271778;
 cd /root/aex/frameworks/base; git fetch "https://github.com/LineageOS/android_frameworks_base" refs/changes/96/256596/5 && git cherry-pick FETCH_HEAD;
 git revert d92a9b158e8a --no-edit;
+git fetch "https://github.com/LineageOS/android_frameworks_base" refs/changes/03/272303/7 && git cherry-pick FETCH_HEAD;
 cd /root/aex;
 
 repopick -t ten-aosp-wfd
