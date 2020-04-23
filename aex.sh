@@ -32,10 +32,10 @@ echo 'fi' >> ~/.profile
 source ~/.profile
 git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 mkdir meme
-cd meme ; git clone https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-firmware-creator.py memefirm
-git clone https://github.com/LineageOS/android_vendor_lineage vendor/lineage;
+cd meme ; git clone --depth 1 --single-branch https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-firmware-creator.py memefirm
+git clone --depth 1 --single-branch https://github.com/LineageOS/android_vendor_lineage vendor/lineage;
 git clone --depth 1 --single-branch -b new20 https://github.com/mesziman/proprietary_vendor_xiaomi-4 vendor/xiaomi/cepheus;
-git clone https://github.com/LineageOS/android_prebuilts_tools-lineage prebuilts/tools-lineage;
+git clone --depth 1 --single-branch https://github.com/LineageOS/android_prebuilts_tools-lineage prebuilts/tools-lineage;
 git clone --depth 1 --single-branch https://github.com/AndroidDumps/xiaomi_cepheus_dump/ -b cepheus-user-10-QKQ1.190825.002-V11.0.8.0.QFAEUXM-release-keys miui
 cd /root/;
 mkdir aex
