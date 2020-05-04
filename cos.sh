@@ -31,7 +31,7 @@ cd /root/;
 #git clone https://github.com/kdrag0n/aarch64-elf-gcc;
 mkdir cos
 cd cos
-repo init -u https://github.com/Cosmic-OS/platform_manifest.git -b quasar-release
+repo init -u https://github.com/mesziman/platform_manifest.git -b quasar-release
 mkdir -p .repo/local_manifests
 wget https://mesziman.github.io/cos.xml -O .repo/local_manifests/roomservice.xml
 echo "export USE_CCACHE=1" >> ~/.bashrc
