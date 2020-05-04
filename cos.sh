@@ -20,12 +20,12 @@ echo 'if [ -d "$HOME/bin" ] ; then' >> ~/.profile
 echo '    PATH="$HOME/bin:$PATH"' >> ~/.profile
 echo 'fi' >> ~/.profile
 source ~/.profile
-#mkdir meme
-#cd meme ; git clone https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-firmware-creator.py memefirm
-#git clone https://github.com/LineageOS/android_vendor_lineage vendor/lineage;
-#git clone https://github.com/mesziman/proprietary_vendor_xiaomi-4 vendor/xiaomi;
-#git clone https://github.com/LineageOS/android_prebuilts_tools-lineage prebuilts/tools-lineage;
-#git clone https://github.com/AndroidDumps/xiaomi_cepheus_dump/ -b cepheus-user-10-QKQ1.190825.002-V11.0.8.0.QFAEUXM-release-keys miui
+mkdir meme
+cd meme ; git clone https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-firmware-creator.py memefirm
+git clone https://github.com/LineageOS/android_vendor_lineage vendor/lineage;
+git clone https://github.com/mesziman/proprietary_vendor_xiaomi-4 vendor/xiaomi;
+git clone https://github.com/LineageOS/android_prebuilts_tools-lineage prebuilts/tools-lineage;
+git clone https://github.com/AndroidDumps/xiaomi_cepheus_dump/ -b cepheus-user-10-QKQ1.190825.002-V11.0.9.0.QFAEUXM-release-keys miui
 cd /root/;
 #git clone https://github.com/kdrag0n/arm-eabi-gcc;
 #git clone https://github.com/kdrag0n/aarch64-elf-gcc;
