@@ -3,7 +3,7 @@
 <project name="mesziman/device_xiaomi_sm8150-common-1"  path="device/xiaomi/cepheus" remote="github" revision="cos2" />
 <project name="kdrag0n/proton-clang" path="prebuilts/clang/host/linux-x86/clang-11" remote="github" revision="master" clone-depth="1"  />
 <project name="mesziman/proprietary_vendor_xiaomi-4"  path="vendor/xiaomi/cepheus" remote="github" revision="new20-oss-display" />
-<project name="mesziman/kernel_xiaomi_sm8150-2"  path="kernel/xiaomi/cepheus" remote="github" revision="apr-rebase-perf" />
+<project name="mesziman/kernel_xiaomi_sm8150-2"  path="kernel/xiaomi/cepheus" remote="github" revision="perf" />
  <project name="mesziman/proprietary_vendor_qcom_common" path="vendor/qcom/common" remote="github" revision="quartz" />
   <project path="hardware/qcom/display/sm8150" name="sagarshah1729/hardware_qcom-caf_sm8150_display"  remote="github" revision="ten" />
   <project path="hardware/qcom/audio/sm8150" name="sagarshah1729/hardware_qcom-caf_sm8150_audio" remote="github" revision="ten" />
