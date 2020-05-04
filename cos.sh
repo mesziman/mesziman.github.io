@@ -31,6 +31,8 @@ cd /root/;
 #git clone https://github.com/kdrag0n/aarch64-elf-gcc;
 mkdir cos
 cd cos
+wget https://github.com/mesziman/scripts-1/raw/master/merge-caf-tag.sh
+chmod +x merge-caf-tag.sh
 repo init -u https://github.com/mesziman/platform_manifest.git -b quasar-release
 mkdir -p .repo/local_manifests
 wget https://mesziman.github.io/cos.xml -O .repo/local_manifests/roomservice.xml
