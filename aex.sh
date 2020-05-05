@@ -36,7 +36,7 @@ cd meme ; git clone --depth 1 --single-branch https://github.com/XiaomiFirmwareU
 git clone --depth 1 --single-branch https://github.com/LineageOS/android_vendor_lineage vendor/lineage;
 git clone --depth 1 --single-branch -b new20 https://github.com/mesziman/proprietary_vendor_xiaomi-4 vendor/xiaomi/cepheus;
 git clone --depth 1 --single-branch https://github.com/LineageOS/android_prebuilts_tools-lineage prebuilts/tools-lineage;
-git clone --depth 1 --single-branch https://github.com/AndroidDumps/xiaomi_cepheus_dump/ -b cepheus-user-10-QKQ1.190825.002-V11.0.8.0.QFAEUXM-release-keys miui
+git clone --depth 1 --single-branch https://github.com/AndroidDumps/xiaomi_cepheus_dump/ -b cepheus-user-10-QKQ1.190825.002-V11.0.9.0.QFAEUXM-release-keys miui
 cd /root/;
 mkdir aex
 cd aex
@@ -69,11 +69,11 @@ git fetch "https://github.com/LineageOS/android_frameworks_base" refs/changes/03
 cd /root/aex;
 
 repopick -t ten-aosp-wfd
+repopick -t Longshot
 #repopick -t lock_styles
-#repopick -t themes
+repopick -t themes
 #repopick -t smart_pixels
-repopick 1241 
-repopick 1301
+#repopick 1241 
 #repopick 643
 cd device/xiaomi/cepheus;git remote add demon https://github.com/Demon000/device_xiaomi_sm8150-common; git fetch demon;
 git remote add eco https://github.com/EcrosoftXiao/device_xiaomi_cepheus/ ; git fetch eco; 
