@@ -40,18 +40,19 @@ git clone --depth 1 --single-branch https://github.com/AndroidDumps/xiaomi_cephe
 cd /root/;
 mkdir aex
 cd aex
-repo init -u git://github.com/AospExtended/manifest.git -b 10.x
+repo init --depth=1  -u git://github.com/AospExtended/manifest.git -b 10.x
 mkdir -p .repo/local_manifests
 wget https://mesziman.github.io/aex.xml -O .repo/local_manifests/aex_manifest.xml
 echo "export USE_CCACHE=1" >> ~/.bashrc
 echo "export CCACHE_EXEC=/usr/bin/ccache" >>  ~/.bashrc
 wget https://mesziman.github.io/buildoms.sh
-echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags;
+echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune;
 set -e;
 source build/envsetup.sh;
 ccache -M 100G;
 cd /root/aex;
 cd build/core/;
+git fetch --unshallow;
 git remote add -f syb https://github.com/syberia-project/platform_build;
 git cherry-pick 412eb35b4  91b6cb2cad ee22994ebf; 
 #11e8a967d
@@ -63,7 +64,9 @@ rm -rf packages/apps/Nfc ;git clone https://github.com/LineageOS/android_package
 cd /root/aex;
 cd /root/aex;
 repopick -g https://review.lineageos.org/ 271778;
-cd /root/aex/frameworks/base; git fetch "https://github.com/LineageOS/android_frameworks_base" refs/changes/96/256596/5 && git cherry-pick FETCH_HEAD;
+cd /root/aex/frameworks/base; 
+git fetch --unshallow;
+git fetch "https://github.com/LineageOS/android_frameworks_base" refs/changes/96/256596/5 && git cherry-pick FETCH_HEAD;
 git revert d92a9b158e8a --no-edit;
 git fetch "https://github.com/LineageOS/android_frameworks_base" refs/changes/03/272303/7 && git cherry-pick FETCH_HEAD;
 cd /root/aex;
@@ -83,6 +86,7 @@ cd /root/aex
 cd kernel/xiaomi/cepheus; git remote add dark -f https://github.com/DarkDampSquib/kernel_xiaomi_cepheus;
 cd /root/aex;
 cd vendor/aosp;
+git fetch --unshallow;
 git remote add -f syb https://github.com/syberia-project/platform_vendor_syberia;
 git cherry-pick 6079a840c0 81ee30e7df10;
 cd /root/aex;
