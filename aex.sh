@@ -58,7 +58,7 @@ git cherry-pick 412eb35b4  91b6cb2cad ee22994ebf;
 #11e8a967d
 git revert 2b63a858 --no-edit;
 cd /root/aex;
-git clone https://github.com/LineagaeOS/android_external_libnfc-nci external/libnfc-nci
+git clone https://github.com/LineageOS/android_external_libnfc-nci external/libnfc-nci
 git clone https://github.com/LineageOS/android_external_libnfc-nxp external/libnfc-nxp
 rm -rf packages/apps/Nfc ;git clone https://github.com/LineageOS/android_packages_apps_Nfc packages/apps/Nfc
 cd /root/aex;
