@@ -72,10 +72,7 @@ git fetch "https://github.com/LineageOS/android_frameworks_base" refs/changes/03
 cd /root/aex;
 
 repopick -t ten-aosp-wfd
-repopick -t Longshot
 #repopick -t lock_styles
-repopick -t themes
-#repopick -t smart_pixels
 #repopick 1241 
 #repopick 643
 cd device/xiaomi/cepheus;git remote add demon https://github.com/Demon000/device_xiaomi_sm8150-common; git fetch demon;
