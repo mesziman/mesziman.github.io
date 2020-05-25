@@ -71,7 +71,8 @@ git fetch "https://github.com/LineageOS/android_frameworks_base" refs/changes/96
 git fetch "https://github.com/LineageOS/android_frameworks_base" refs/changes/03/272303/7 && git cherry-pick FETCH_HEAD;
 cd /root/aex;
 git clone https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/dpm-commonsys -b LA.UM.8.1.r1-14900-sm8150.0 vendor/qcom/opensource/dpm-commonsys;
-
+git clone https://github.com/syberia-project/platform_vendor_google_customization vendor/google/customization ;
+git clone https://github.com/mesziman/vendor_MiuiCamera vendor/MiuiCamera;
 repopick -t ten-aosp-wfd
 #repopick -t lock_styles
 #repopick 1241 
