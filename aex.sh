@@ -52,9 +52,9 @@ source build/envsetup.sh;
 ccache -M 100G;
 cd /root/aex;
 cd build/core/;
-git fetch --unshallow;
+git fetch --depth=100000 aex;
 git remote add -f syb https://github.com/syberia-project/platform_build;
-git cherry-pick 412eb35b4  91b6cb2cad ee22994ebf; 
+git cherry-pick 412eb35b4  91b6cb2cad ;  # ee22994ebf; 
 #11e8a967d
 git revert 2b63a858 --no-edit;
 cd /root/aex;
@@ -67,9 +67,10 @@ repopick -g https://review.lineageos.org/ 271778;
 cd /root/aex/frameworks/base; 
 git fetch --unshallow;
 git fetch "https://github.com/LineageOS/android_frameworks_base" refs/changes/96/256596/5 && git cherry-pick FETCH_HEAD;
-git revert d92a9b158e8a --no-edit;
+# git revert d92a9b158e8a --no-edit;
 git fetch "https://github.com/LineageOS/android_frameworks_base" refs/changes/03/272303/7 && git cherry-pick FETCH_HEAD;
 cd /root/aex;
+git clone https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/dpm-commonsys -b LA.UM.8.1.r1-14900-sm8150.0 vendor/qcom/opensource/dpm-commonsys;
 
 repopick -t ten-aosp-wfd
 #repopick -t lock_styles
