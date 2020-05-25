@@ -18,7 +18,9 @@ sudo cp ./out/target/product/capricorn/*.zip /var/www/html/
 sudo cp ./out/target/product/capricorn/*.zip.md5sum /var/www/html/
 
 }
-
+function uploadtome(){
+rsync -avP -e ssh zip root@178.62.238.57:/var/www/html/cepheus/AospExtended/test/
+}
 function copyromcep(){
 sudo mkdir -p /var/www/html
 sudo cp ./out/target/product/cepheus/*.zip /var/www/html/
