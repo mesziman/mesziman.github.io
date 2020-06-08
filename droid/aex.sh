@@ -69,6 +69,8 @@ git fetch --unshallow;
 git fetch "https://github.com/LineageOS/android_frameworks_base" refs/changes/96/256596/5 && git cherry-pick FETCH_HEAD;
 # git revert d92a9b158e8a --no-edit;
 git fetch "https://github.com/LineageOS/android_frameworks_base" refs/changes/03/272303/7 && git cherry-pick FETCH_HEAD;
+git fetch "https://github.com/LineageOS/android_frameworks_base" refs/changes/43/273243/11 && git cherry-pick FETCH_HEAD;
+git fetch "https://github.com/LineageOS/android_frameworks_base" refs/changes/24/274424/2 && git cherry-pick FETCH_HEAD;
 cd /root/aex;
 git clone https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/dpm-commonsys -b LA.UM.8.1.r1-14900-sm8150.0 vendor/qcom/opensource/dpm-commonsys;
 git clone https://github.com/syberia-project/platform_vendor_google_customization vendor/google/customization ;
