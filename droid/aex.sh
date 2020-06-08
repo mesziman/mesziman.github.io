@@ -49,7 +49,7 @@ wget https://mesziman.github.io/buildoms.sh
 echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune;
 set -e;
 source build/envsetup.sh;
-ccache -M 100G;
+ccache -M 150G;
 cd /root/aex;
 cd build/core/;
 git fetch --depth=1000 aex 10.x:10.x;
