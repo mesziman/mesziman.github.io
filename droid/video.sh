@@ -1,6 +1,9 @@
   
 sudo apt-get update
-sudo apt-get install --assume-yes ffmpeg transmission-cli midori xbase-clients tmux handbrake-cli handbrake
+sudo apt-get install --assume-yes ffmpeg transmission-cli midori xbase-clients tmux handbrake-cli handbrake nginx
+sudo sed -i 's/location \/.*/location \/ \{\n autoindex on;/g' /etc/nginx/sites-enabled/default
+sudo rm /var/www/html/index.nginx-debian.html
+sudo systemctl restart nginx
 
 wget mesziman.github.io/droid/tmux.conf -O ~/.tmux.conf
 echo "
