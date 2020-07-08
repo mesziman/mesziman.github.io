@@ -10,6 +10,11 @@ echo "
 function convertmp5() {
 ffmpeg -i $1 -c:v libx265 -preset medium -crf 23 -c:a libopus -b:a 96K "${f%.*}.mkv"
 }
+function batchconvert() {
+for %%a in ("*.mp4") do ffmpeg -i "%%a" -c:v libx265 -preset slow -crf 22 -c:a libopus -b:a 96K "newfiles\%%~na.mp4"
+pause
+}
+
 
 function handbrakeconvertmp5() {
 HandBrakeCLI -i $1 -o x265_"$1" -e x265 -q 22 -E opus -B 96
