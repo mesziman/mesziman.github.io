@@ -10,16 +10,18 @@ echo "
 
 function convertstring() {
 file=$1
-str="${str// /_}"
+str="${file// /_}"
+str="${str//-/}"
 strfin=$(echo $str | tr -cd '[:alnum:]._-')
-return $strfin
+echo $strfin
 
 }
 function convertmp5() {
 file=$1
-str="${str// /_}"
+str="${file// /_}"
+str="${str//-/}"
 strfin=$(echo $str | tr -cd '[:alnum:]._-')
-ffmpeg -i $file -c:v libx265 -preset medium -crf 21 -c:a libopus -b:a 96K "${file%.*}.mkv"
+ffmpeg -i $file -c:v libx265 -preset medium -crf 21 -c:a libopus -b:a 96K "${strfin%.*}_x265.mkv"
 }
 function batchconvert() {
 for %%a in ("*.mp4") do ffmpeg -i "%%a" -c:v libx265 -preset slow -crf 22 -c:a libopus -b:a 96K "newfiles\%%~na.mp4"
