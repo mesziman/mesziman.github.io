@@ -9,7 +9,7 @@ wget mesziman.github.io/droid/tmux.conf -O ~/.tmux.conf
 echo "
 function convertmp5() {
 file=$1
-ffmpeg -i $file -c:v libx265 -preset medium -crf 21 -c:a libopus -b:a 96K "${ffile%.*}.mkv"
+ffmpeg -i $file -c:v libx265 -preset medium -crf 21 -c:a libopus -b:a 96K "${file%.*}.mkv"
 }
 function batchconvert() {
 for %%a in ("*.mp4") do ffmpeg -i "%%a" -c:v libx265 -preset slow -crf 22 -c:a libopus -b:a 96K "newfiles\%%~na.mp4"
