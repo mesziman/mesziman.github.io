@@ -7,8 +7,18 @@ sudo systemctl restart nginx
 
 wget mesziman.github.io/droid/tmux.conf -O ~/.tmux.conf
 echo "
+
+function convertstring() {
+file=$1
+str="${str// /_}"
+strfin=$(echo $str | tr -cd '[:alnum:]._-')
+return $strfin
+
+}
 function convertmp5() {
 file=$1
+str="${str// /_}"
+strfin=$(echo $str | tr -cd '[:alnum:]._-')
 ffmpeg -i $file -c:v libx265 -preset medium -crf 21 -c:a libopus -b:a 96K "${file%.*}.mkv"
 }
 function batchconvert() {
