@@ -13,20 +13,13 @@ sudo systemctl restart nginx
 wget mesziman.github.io/droid/tmux.conf -O ~/.tmux.conf
 echo "
 
-function convertstring() {
-file=$1
-str="${file// /_}"
-str="${str//-/}"
-strfin=$(echo $str | tr -cd '[:alnum:]._-')
-echo $strfin
-
-}
 function convertmp5() {
 file=$1
 str="${file// /_}"
 str="${str//-/}"
 strfin=$(echo $str | tr -cd '[:alnum:]._-')
-ffmpeg -i $file -c:v libx265 -preset slower -crf 21 -c:a libopus -b:a 96K "${strfin%.*}_x265.mkv"
+strfinl=$(echo $strfin | tr '[:upper:]' '[:lower:]')
+ffmpeg -i $file -c:v libx265 -preset slower -crf $2 -c:a libopus -b:a 96K "${strfinl%.*}_x265.mkv"
 }
 function batchconvert() {
 for %%a in ("*.mp4") do ffmpeg -i "%%a" -c:v libx265 -preset slow -crf 22 -c:a libopus -b:a 96K "newfiles\%%~na.mp4"
