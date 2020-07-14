@@ -40,6 +40,7 @@ echo "export USE_CCACHE=1" >> ~/.bashrc
 echo "export CCACHE_EXEC=/usr/bin/ccache" >>  ~/.bashrc
 wget https://mesziman.github.io/buildoms.sh 
 echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune;
+git clone -b 10.0 https://github.com/SyberiaProject-Devices/platform_device_xiaomi_cepheus device/xiaomi/cepheus
 set -e;
 source build/envsetup.sh;
 ccache -M 150G;
