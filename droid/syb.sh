@@ -20,37 +20,35 @@ echo 'if [ -d "$HOME/bin" ] ; then' >> ~/.profile
 echo '    PATH="$HOME/bin:$PATH"' >> ~/.profile
 echo 'fi' >> ~/.profile
 source ~/.profile
-#mkdir meme
-#cd meme ; git clone https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-firmware-creator.py memefirm
-#git clone https://github.com/LineageOS/android_vendor_lineage vendor/lineage;
-#git clone https://github.com/mesziman/proprietary_vendor_xiaomi-4 vendor/xiaomi;
-#git clone https://github.com/LineageOS/android_prebuilts_tools-lineage prebuilts/tools-lineage;
-#git clone https://github.com/AndroidDumps/xiaomi_cepheus_dump/ -b cepheus-user-10-QKQ1.190825.002-V11.0.8.0.QFAEUXM-release-keys miui
+mkdir meme
+cd meme ; git clone https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-firmware-creator.py memefirm
+git clone https://github.com/LineageOS/android_vendor_lineage vendor/lineage;
+git clone https://github.com/mesziman/proprietary_vendor_xiaomi-4 -b ten vendor/xiaomi;
+cd /root/meme/vendor/xiaomi;
+git remote add -f  mar https://github.com/markakash/vendor_xiaomi_cepheus
+cd /root/meme/;
+git clone https://github.com/LineageOS/android_prebuilts_tools-lineage prebuilts/tools-lineage;
+wget https://bigota.d.miui.com/V12.0.1.0.QFAEUXM/miui_CEPHEUSEEAGlobal_V12.0.1.0.QFAEUXM_4d28c84f58_10.0.zip
+unzip miui_CEPHEUSEEAGlobal_V12.0.1.0.QFAEUXM_4d28c84f58_10.0.zip
 cd /root/;
-git clone https://github.com/kdrag0n/arm-eabi-gcc;
-git clone https://github.com/kdrag0n/aarch64-elf-gcc;
 mkdir syb
 cd syb
 repo init -u https://github.com/syberia-project/manifest.git -b 10.0
 mkdir -p .repo/local_manifests
-#wget https://mesziman.github.io/syb.xml -O .repo/local_manifests/roomservice.xml
+#wget https://mesziman.github.io/droid/syb.xml -O .repo/local_manifests/roomservice.xml
 echo "export USE_CCACHE=1" >> ~/.bashrc
 echo "export CCACHE_EXEC=/usr/bin/ccache" >>  ~/.bashrc
 wget https://mesziman.github.io/buildoms.sh 
-echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags;
-git clone -b 10.0 https://github.com/SyberiaProject-Devices/platform_device_xiaomi_cepheus device/xiaomi/cepheus
+echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune;
 set -e;
 source build/envsetup.sh;
 ccache -M 150G;
 ln -s /usr/lib/x86_64-linux-gnu/libncurses.so.6 /usr/lib/libncurses.so.5;
 ln -s /usr/lib/x86_64-linux-gnu/libtinfo.so.6 /usr/lib/libtinfo.so.5;
 echo "11.0.0" > prebuilts/clang/host/linux-x86/clang-11/AndroidVersion.txt
-cd /root/syb/device/xiaomi/cepheus;
-git remote add derp https://github.com/DerpFest-Devices/device_xiaomi_cepheus;git fetch derp;
-cd  /root/syb/vendor/xiaomi/cepheus;
-git remote add derp https://github.com/DerpFest-Devices/vendor_xiaomi_cepheus; git fetch derp;
-cd  /root/syb/kernel/xiaomi/cepheus;
-git remote add dark https://github.com/DarkDampSquib/kernel_xiaomi_cepheus ; git fetch dark;
+cd /root/syb;
+sed -i "s/march=armv8.2a/march=armv8.2a+crypto/g" build/soong/cc/config/arm64_device.go;
+sed -i "s/march=armv8.2-a/march=armv8.2-a+crypto/g" build/soong/cc/config/arm_device.go;
 ' >> cacheset
 chmod +x cacheset
 
