@@ -3,7 +3,6 @@
 
 <project name="mesziman/device_xiaomi_sm8150-common-1"  path="device/xiaomi/cepheus" remote="github" revision="syb" />
  <remove-project name="platform/prebuilts/clang/host/linux-x86" />
-  <project name="DerpLab/platform_prebuilts_clang_host_linux-x86" path="prebuilts/clang/host/linux-x86" remote="github" revision="ten" clone-depth="1"/>
 <project name="kdrag0n/proton-clang" path="prebuilts/clang/host/linux-x86/clang-11" remote="github" revision="master" />
 <project name="mesziman/kernel_xiaomi_sm8150-2"  path="kernel/xiaomi/cepheus" remote="github" revision="derp-riced2" />
    <project path="hardware/qcom-caf/sm8150/audio" name="mesziman/platform_hardware_qcom_audio" groups="qcom,qcom_audio,pdk-qcom" remote="github" revision="queen-cake-8150" />
