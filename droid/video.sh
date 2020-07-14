@@ -34,4 +34,4 @@ HandBrakeCLI -i $1 -o x265_"$1" -e x265 -q 22 -E opus -B 96
 
 " >> ~/.bashrc
 
-reboot
+tmux new -s base
