@@ -19,10 +19,19 @@ str="${file// /_}"
 str="${str//-/}"
 strfin=$(echo $str | tr -cd '[:alnum:]._-')
 strfinl=$(echo $strfin | tr '[:upper:]' '[:lower:]')
-ffmpeg -i "$file" -c:v libx265 -preset slower -crf $2 -c:a libopus -b:a 96K "${strfinl%.*}_x265.mkv"
+ffmpeg -i "$file" -c:v libx265 -preset $2 -crf $3 -c:a libopus -b:a 96K "${strfinl%.*}_x265.mkv"
 }
 function batchconvert() {
-for %%a in ("*.mp4") do ffmpeg -i "%%a" -c:v libx265 -preset slow -crf 22 -c:a libopus -b:a 96K "newfiles\%%~na.mp4"
+mkdir new
+for %%a in ("*.mp4")
+do 
+file="%%a"
+str="${file// /_}"
+str="${str//-/}"
+strfin=$(echo $str | tr -cd '[:alnum:]._-')
+strfinl=$(echo $strfin | tr '[:upper:]' '[:lower:]')
+ffmpeg -i "%%a" -c:v libx265 -preset $1 -crf $2 -c:a libopus -b:a 96K "new/${strfinl%.*}_x265.mp4"
+done
 pause
 }
 
