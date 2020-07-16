@@ -1,6 +1,6 @@
   
 sudo apt-get update
-sudo apt-get install --assume-yes ffmpeg transmission-daemon midori xbase-clients tmux handbrake-cli handbrake nginx
+sudo apt-get install --assume-yes ffmpeg transmission-daemon transmission-cli midori xbase-clients tmux handbrake-cli handbrake nginx
 sudo systemctl stop transmission-daemon
 sudo sed -i 's/"rpc-authentication-required": true/"rpc-authentication-required": false/g' /etc/transmission-daemon/settings.json
 sudo sed -i 's/"rpc-whitelist-enabled": true/"rpc-whitelist-enabled": false/g' /etc/transmission-daemon/settings.json
