@@ -23,12 +23,8 @@ mkdir meme
 cd meme ; git clone https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-firmware-creator.py memefirm
 git clone https://github.com/LineageOS/android_vendor_lineage vendor/lineage;
 git clone https://github.com/mesziman/proprietary_vendor_xiaomi-4 -b ten vendor/xiaomi;
-cd /root/meme/vendor/xiaomi;
-git remote add -f  mar https://github.com/markakash/vendor_xiaomi_cepheus
-cd /root/meme/;
 git clone https://github.com/LineageOS/android_prebuilts_tools-lineage prebuilts/tools-lineage;
-wget https://bigota.d.miui.com/V12.0.1.0.QFAEUXM/miui_CEPHEUSEEAGlobal_V12.0.1.0.QFAEUXM_4d28c84f58_10.0.zip
-unzip miui_CEPHEUSEEAGlobal_V12.0.1.0.QFAEUXM_4d28c84f58_10.0.zip
+git clone -b cepheus_eea_12 https://github.com/mesziman/xiaomi_cepheus_dump/  miui
 cd /root/;
 mkdir syb
 cd syb
@@ -38,7 +34,7 @@ mkdir -p .repo/local_manifests
 echo "export USE_CCACHE=1" >> ~/.bashrc
 echo "export CCACHE_EXEC=/usr/bin/ccache" >>  ~/.bashrc
 wget https://mesziman.github.io/buildoms.sh 
-echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune;
+echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags --prune;
 git clone -b 10.0 https://github.com/SyberiaProject-Devices/platform_device_xiaomi_cepheus device/xiaomi/cepheus
 set -e;
 source build/envsetup.sh;
