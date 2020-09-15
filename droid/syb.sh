@@ -22,7 +22,7 @@ source ~/.profile
 mkdir meme
 cd meme ; git clone https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-firmware-creator.py memefirm
 git clone https://github.com/LineageOS/android_vendor_lineage vendor/lineage;
-git clone https://github.com/mesziman/proprietary_vendor_xiaomi-4 -b ten vendor/xiaomi;
+git clone https://github.com/mesziman/vendor_xiaomi_cepheus-5 -b ten vendor/xiaomi;
 git clone https://github.com/LineageOS/android_prebuilts_tools-lineage prebuilts/tools-lineage;
 mkdir miui;cd miui ; wget  https://bigota.d.miui.com/V12.0.2.0.QFAEUXM/miui_CEPHEUSEEAGlobal_V12.0.2.0.QFAEUXM_44dcb66933_10.0.zip
 cd /root/;
