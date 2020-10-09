@@ -19,23 +19,22 @@ echo 'if [ -d "$HOME/bin" ] ; then' >> ~/.profile
 echo '    PATH="$HOME/bin:$PATH"' >> ~/.profile
 echo 'fi' >> ~/.profile
 source ~/.profile
-mkdir meme
-cd meme ; git clone https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-firmware-creator.py memefirm
-git clone https://github.com/LineageOS/android_vendor_lineage vendor/lineage;
-git clone https://github.com/mesziman/vendor_xiaomi_cepheus-5 -b ten vendor/xiaomi;
-git clone https://github.com/LineageOS/android_prebuilts_tools-lineage prebuilts/tools-lineage;
-mkdir miui;cd miui ; wget  https://bigota.d.miui.com/V12.0.2.0.QFAEUXM/miui_CEPHEUSEEAGlobal_V12.0.2.0.QFAEUXM_44dcb66933_10.0.zip
+#mkdir meme
+#cd meme ; git clone https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-firmware-creator.py memefirm
+#git clone https://github.com/LineageOS/android_vendor_lineage vendor/lineage;
+#git clone https://github.com/mesziman/vendor_xiaomi_cepheus-5 -b ten vendor/xiaomi;
+#git clone https://github.com/LineageOS/android_prebuilts_tools-lineage prebuilts/tools-lineage;
+#mkdir miui;cd miui ; wget  https://bigota.d.miui.com/V12.0.2.0.QFAEUXM/miui_CEPHEUSEEAGlobal_V12.0.2.0.QFAEUXM_44dcb66933_10.0.zip
 cd /root/;
 mkdir syb
 cd syb
-repo init -u https://github.com/syberia-project/manifest.git -b 10.0
+repo init --depth=1 -u https://github.com/syberia-project/manifest.git -b 11.0
 mkdir -p .repo/local_manifests
-#wget https://mesziman.github.io/droid/syb.xml -O .repo/local_manifests/roomservice.xml
+wget https://mesziman.github.io/droid/syb.xml -O .repo/local_manifests/roomservice.xml
 echo "export USE_CCACHE=1" >> ~/.bashrc
 echo "export CCACHE_EXEC=/usr/bin/ccache" >>  ~/.bashrc
 wget https://mesziman.github.io/buildoms.sh 
-echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags --prune;
-git clone -b 10.0 https://github.com/SyberiaProject-Devices/platform_device_xiaomi_cepheus device/xiaomi/cepheus
+echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune;
 set -e;
 source build/envsetup.sh;
 ccache -M 150G;
@@ -45,6 +44,9 @@ echo "11.0.0" > prebuilts/clang/host/linux-x86/clang-11/AndroidVersion.txt
 cd /root/syb;
 sed -i "s/march=armv8.2a/march=armv8.2a+crypto/g" build/soong/cc/config/arm64_device.go;
 sed -i "s/march=armv8.2-a/march=armv8.2-a+crypto/g" build/soong/cc/config/arm_device.go;
+
+repopick -t eleven-fod
+repopick 6286
 ' >> cacheset
 chmod +x cacheset
 
