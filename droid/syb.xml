@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-<project name="SyberiaProject-Devices/platform_device_xiaomi_cepheus"  path="device/xiaomi/cepheus" remote="github" revision="10.0" />
- <remove-project name="platform/prebuilts/clang/host/linux-x86" />
-<project name="kdrag0n/proton-clang" path="prebuilts/clang/host/linux-x86/clang-11" remote="github" revision="master" />
-<project name="mesziman/kernel_xiaomi_sm8150-2"  path="kernel/xiaomi/cepheus" remote="github" revision="pelt-upstream-newfod" />
+<project name="SyberiaProject-Devices/platform_device_xiaomi_cepheus"  path="device/xiaomi/cepheus" remote="github" revision="11.0" />
+ <project name="mesziman/vendor_xiaomi_cepheus-5" path="vendor/xiaomi/cepheus" revision="11" remote="gitlab" />
+ <project name="EcrosoftXiao/vendor_gapps" path="vendor/gapps" revision="eleven" remote="github" depth="1" /> 
+ <project name="EcrosoftXiao/vendor_xiaomi_firmware" path="vendor/xiaomi/firmware" revision="master" remote="gitlab" depth="1"  />  
+ <project name="kdrag0n/proton-clang" path="prebuilts/clang/host/linux-x86/clang-11" revision="master" remote="github" /> 
+ <project name="mesziman/kernel_xiaomi_sm8150-2" path="kernel/xiaomi/cepheus" revision="11.0" remote="github" /> 
+ <project name="mesziman/hardware-qcom-display-caf-sm8150" path="hardware/qcom-caf/sm8150/display" revision="11.0" remote="github" />
+ <project name="DarkDampSquib/vendor_MiuiCamera" path="vendor/ANXCamera" revision="master" remote="github" /> 
+ <project name="mesziman/proprietary_vendor_qcom_common" path="vendor/qcom/common" revision="quartz" remote="github" />
+ <project name="mesziman/hardware-qcom-audio-caf-sm8150" path="hardware/qcom-caf/sm8150/audio" revision="11.0" remote="github" />
+ <project name="mesziman/hardware-qcom-media-caf-sm8150" path="hardware/qcom-caf/sm8150/media" revision="11.0" remote="github" />
+<project name="LineageOS/android_hardware_qcom-caf_common" path="hardware/qcom/common" revision="lineage-18.0" remote="github">
+
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8150/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/sm8150/Android.bp" />
+</project>
+ <project path="hardware/qcom-caf/wlan" name="LineageOS/android_hardware_qcom_wlan" groups="qcom_wlan,pdk-qcom" revision="lineage-18.0-caf" />
+ <project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" revision="lineage-18.0" remote="github" />
 
  </manifest>
