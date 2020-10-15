@@ -13,8 +13,9 @@
  <project name="mesziman/proprietary_vendor_qcom_common" path="vendor/qcom/common" revision="quartz" remote="github" />
  <project name="mesziman/hardware-qcom-audio-caf-sm8150" path="hardware/qcom-caf/sm8150/audio" revision="11.0" remote="github" />
  <project name="mesziman/hardware-qcom-media-caf-sm8150" path="hardware/qcom-caf/sm8150/media" revision="11.0" remote="github" />
-<project name="LineageOS/android_hardware_qcom-caf_common" path="hardware/qcom/common" revision="lineage-18.0" remote="github">
-
+<project name="LineageOS/android_hardware_qcom-caf_common" path="hardware/qcom-caf/common" revision="lineage-18.0" remote="github">
+ 
+    <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
     <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8150/Android.mk" />
     <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/sm8150/Android.bp" />
 </project>
