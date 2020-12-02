@@ -44,9 +44,12 @@ echo "11.0.0" > prebuilts/clang/host/linux-x86/clang-11/AndroidVersion.txt
 cd /root/syb;
 sed -i "s/march=armv8.2a/march=armv8.2a+crypto/g" build/soong/cc/config/arm64_device.go;
 sed -i "s/march=armv8.2-a/march=armv8.2-a+crypto/g" build/soong/cc/config/arm_device.go;
+rm -rf device/google
+rm -rf hardware/google/pixel/health
+rm -rf hardware/google/pixel/power-libperfmgr
+#repopick -t eleven-fod
+#repopick 6286
 
-repopick -t eleven-fod
-repopick 6286
 ' >> cacheset
 chmod +x cacheset
 
