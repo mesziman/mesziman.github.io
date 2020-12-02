@@ -4,7 +4,7 @@
 <project name="SyberiaProject-Devices/platform_device_xiaomi_cepheus"  path="device/xiaomi/cepheus" remote="github" revision="11-wip" />
  <project name="mesziman/vendor_xiaomi_cepheus-5" path="vendor/xiaomi/cepheus" revision="11-wip" remote="github" />
  <project name="EcrosoftXiao/vendor_gapps" path="vendor/gapps" revision="eleven" remote="gitlab" depth="1" /> 
- <project name="EcrosoftXiao/android_hardware_xiaomi" path="hardware/xiaomi" revision="eleven" remote="gitlab" depth="1" /> 
+ <project name="EcrosoftXiao/android_hardware_xiaomi" path="hardware/xiaomi" revision="eleven" remote="github" depth="1" /> 
  <project name="EcrosoftXiao/vendor_xiaomi_firmware" path="vendor/xiaomi/firmware" revision="master" remote="gitlab" depth="1"  />  
  <project name="kdrag0n/proton-clang" path="prebuilts/clang/host/linux-x86/clang-11" revision="master" remote="github" depth="1" /> 
  <project name="mesziman/kernel_xiaomi_sm8150-2" path="kernel/xiaomi/cepheus" revision="11.0" remote="github" /> 
