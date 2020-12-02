@@ -2,7 +2,7 @@
 <manifest>
 
 <project name="SyberiaProject-Devices/platform_device_xiaomi_cepheus"  path="device/xiaomi/cepheus" remote="github" revision="11-wip" />
- <project name="mesziman/vendor_xiaomi_cepheus-5" path="vendor/xiaomi/cepheus" revision="11-wip" remote="gitlab" />
+ <project name="mesziman/vendor_xiaomi_cepheus-5" path="vendor/xiaomi/cepheus" revision="11-wip" remote="github" />
  <project name="EcrosoftXiao/vendor_gapps" path="vendor/gapps" revision="eleven" remote="gitlab" depth="1" /> 
  <project name="EcrosoftXiao/android_hardware_xiaomi" path="hardware/xiaomi" revision="eleven" remote="gitlab" depth="1" /> 
  <project name="EcrosoftXiao/vendor_xiaomi_firmware" path="vendor/xiaomi/firmware" revision="master" remote="gitlab" depth="1"  />  
@@ -18,7 +18,9 @@
     <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/sm8150/Android.bp" />
     <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8150/Android.mk" />
 </project>
- 
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-elf" name="arter97/arm64-gcc" remote="github" revision="master" clone-depth="1" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi" name="arter97/arm32-gcc" remote="github" revision="master" clone-depth="1" />
+
  <project path="hardware/qcom-caf/wlan" name="LineageOS/android_hardware_qcom_wlan" remote="github" revision="lineage-18.0-caf" />
  <project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" revision="lineage-18.0" remote="github" />
  
