@@ -42,14 +42,16 @@ ln -s /usr/lib/x86_64-linux-gnu/libncurses.so.6 /usr/lib/libncurses.so.5;
 ln -s /usr/lib/x86_64-linux-gnu/libtinfo.so.6 /usr/lib/libtinfo.so.5;
 echo "11.0.0" > prebuilts/clang/host/linux-x86/clang-11/AndroidVersion.txt
 cd /root/syb;
-sed -i "s/march=armv8.2a/march=armv8.2a+crypto/g" build/soong/cc/config/arm64_device.go;
+sed -i "s/march=armv8.2a/march=armv8.2a+crypto+dotprod/g" build/soong/cc/config/arm64_device.go;
 sed -i "s/march=armv8.2-a/march=armv8.2-a+crypto/g" build/soong/cc/config/arm_device.go;
 rm -rf device/google
 rm -rf hardware/google/pixel/health
 rm -rf hardware/google/pixel/power-libperfmgr
 #repopick -t eleven-fod
 #repopick 6286
-
+cd /root/syb/vendor/qcom/opensource/dataservices; git fetch "https://github.com/LineageOS/android_vendor_qcom_opensource_dataservices" refs/changes/39/272939/2 && git cherry-pick FETCH_HEAD;
+cd /root/syb/vendor/qcom/opensource/interfaces;
+git fetch https://github.com/LineageOS/android_hardware_lineage_interfaces/ 47208dd83c77fbacbc38d3324120b9458966b727 ; git cherry-pick FETCH_HEAD
 ' >> cacheset
 chmod +x cacheset
 
