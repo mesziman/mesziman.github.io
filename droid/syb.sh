@@ -51,7 +51,9 @@ rm -rf hardware/google/pixel/power-libperfmgr
 #repopick 6286
 cd /root/syb/vendor/qcom/opensource/dataservices; git fetch "https://github.com/LineageOS/android_vendor_qcom_opensource_dataservices" refs/changes/39/272939/2 && git cherry-pick FETCH_HEAD;
 cd /root/syb/vendor/qcom/opensource/interfaces;
-git fetch https://github.com/LineageOS/android_hardware_lineage_interfaces/ 47208dd83c77fbacbc38d3324120b9458966b727 ; git cherry-pick FETCH_HEAD
+git remote add -f los https://github.com/LineageOS/android_hardware_lineage_interfaces/ ; git checkout los/lineage-18.0 -- livedisplay;
+
+
 ' >> cacheset
 chmod +x cacheset
 
