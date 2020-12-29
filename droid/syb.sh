@@ -1,5 +1,5 @@
 sudo apt-get update
-sudo apt-get install --assume-yes vim unzip brotli libomp-dev ccache tmux python nginx bc binutils-arm-linux-gnueabi binutils-aarch64-linux-gnu bison build-essential curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-gtk3-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev
+sudo apt-get install --assume-yes git-lfs vim unzip brotli libomp-dev ccache tmux python nginx bc binutils-arm-linux-gnueabi binutils-aarch64-linux-gnu bison build-essential curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-gtk3-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev
 wget mesziman.github.io/tmux.conf -O ~/.tmux.conf
 sudo sed -i 's/location \/.*/location \/ \{\n autoindex on;/g' /etc/nginx/sites-enabled/default
 sudo rm /var/www/html/index.nginx-debian.html
@@ -7,6 +7,8 @@ sudo systemctl restart nginx
 git config --global color.ui true
 git config --global user.name "Gabor Meszaros"
 git config --global user.email "meszaros.gabor.10k@gmail.com"
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
 wget https://dl.google.com/android/repository/platform-tools-latest-linux.zip
 unzip platform-tools-latest-linux.zip -d ~
 mkdir ~/bin
@@ -50,8 +52,8 @@ rm -rf hardware/google/pixel/power-libperfmgr
 #repopick -t eleven-fod
 #repopick 6286
 cd /root/syb/vendor/qcom/opensource/dataservices; git fetch "https://github.com/LineageOS/android_vendor_qcom_opensource_dataservices" refs/changes/39/272939/2 && git cherry-pick FETCH_HEAD;
-cd /root/syb/vendor/qcom/opensource/interfaces;
-git remote add -f los https://github.com/LineageOS/android_hardware_lineage_interfaces/ ; git checkout los/lineage-18.0 -- livedisplay;
+#cd /root/syb/vendor/qcom/opensource/interfaces;
+#git remote add -f los https://github.com/LineageOS/android_hardware_lineage_interfaces/ ; git checkout los/lineage-18.0 -- livedisplay;
 
 
 ' >> cacheset
