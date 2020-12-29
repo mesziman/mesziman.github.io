@@ -18,6 +18,4 @@
   <project path="prebuilts/gcc/linux-x86/arm/arm-eabi" name="arter97/arm32-gcc" remote="github" revision="master" clone-depth="1" />
 <project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" revision="lineage-18.0" remote="github" />
  
- <project name="LineageOS/android_device_qcom_sepolicy_vndr" path="device/qcom/sepolicy_vndr" revision="lineage-18.0" remote="github" />
- 
  </manifest>
