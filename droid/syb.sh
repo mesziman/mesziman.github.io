@@ -52,7 +52,8 @@ rm -rf hardware/google/pixel/power-libperfmgr
 #repopick -t eleven-fod
 #repopick 6286
 cd /root/syb/vendor/qcom/opensource/dataservices; 
-git fetch "https://github.com/LineageOS/android_vendor_qcom_opensource_dataservices" refs/changes/57/262557/3 && git cherry-pick FETCH_HEAD
+git fetch "https://github.com/LineageOS/android_vendor_qcom_opensource_dataservices" refs/changes/57/262557/3 && git cherry-pick FETCH_HEAD;
+git clone https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/dpm-commonsys -b LA.QSSI.11.0.r1-09300-qssi.0 /root/syb/vendor/qcom/opensource/dpm-commonsys;
 #cd /root/syb/vendor/qcom/opensource/interfaces;
 #git remote add -f los https://github.com/LineageOS/android_hardware_lineage_interfaces/ ; git checkout los/lineage-18.0 -- livedisplay;
 
