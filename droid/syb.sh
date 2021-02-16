@@ -22,11 +22,12 @@ echo '    PATH="$HOME/bin:$PATH"' >> ~/.profile
 echo 'fi' >> ~/.profile
 source ~/.profile
 #mkdir meme
-#cd meme ; git clone https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-firmware-creator.py memefirm
-#git clone https://github.com/LineageOS/android_vendor_lineage vendor/lineage;
-#git clone https://github.com/mesziman/vendor_xiaomi_cepheus-5 -b ten vendor/xiaomi;
-#git clone https://github.com/LineageOS/android_prebuilts_tools-lineage prebuilts/tools-lineage;
-#mkdir miui;cd miui ; wget  https://bigota.d.miui.com/V12.0.2.0.QFAEUXM/miui_CEPHEUSEEAGlobal_V12.0.2.0.QFAEUXM_44dcb66933_10.0.zip
+#  mkdir miui;cd miui ; 
+#  wget https://bigota.d.miui.com/21.2.3/miui_CEPHEUS_21.2.3_60881427b7_11.0.zip; cd ..
+#  git clone https://github.com/LineageOS/android_prebuilts_extract-tools prebuilts/extract-tools
+#  git clone https://github.com/LineageOS/android_prebuilts_tools-lineage prebuilts/tools-lineage
+#  git clone https://github.com/LineageOS/android_tools_extract-utils tools/extract-utils
+#  git --depth=1 clone https://github.com/LineageOS/android_vendor_lineage vendor/lineage
 cd /root/;
 mkdir syb
 cd syb
