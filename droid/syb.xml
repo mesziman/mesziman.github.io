@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-<project name="SyberiaProject-Devices/platform_device_xiaomi_cepheus"  path="device/xiaomi/cepheus" remote="github" revision="11-wip" />
- <project name="mesziman/vendor_xiaomi_cepheus-5" path="vendor/xiaomi/cepheus" revision="11-wip" remote="gitlab" />
+<project name="SyberiaProject-Devices/platform_device_xiaomi_cepheus"  path="device/xiaomi/cepheus" remote="github" revision="11-wip2" />
+ <project name="mesziman/vendor_xiaomi_cepheus-5" path="vendor/xiaomi/cepheus" revision="newmiui" remote="gitlab" />
  <project name="EcrosoftXiao/vendor_gapps" path="vendor/gapps" revision="eleven" remote="gitlab" depth="1" /> 
  <project name="mesziman/android_hardware_xiaomi" path="hardware/xiaomi" revision="eleven" remote="github" depth="1" /> 
  <project name="EcrosoftXiao/vendor_xiaomi_firmware" path="vendor/xiaomi/firmware" revision="master" remote="gitlab" depth="1"  />  
  <project name="kdrag0n/proton-clang" path="prebuilts/clang/host/linux-x86/clang-11" revision="master" remote="github" depth="1" /> 
- <project name="mesziman/kernel_xiaomi_sm8150-2" path="kernel/xiaomi/cepheus" revision="eleven-shit-no-lto" remote="github" /> 
+ <project name="mesziman/kernel_xiaomi_sm8150-2" path="kernel/xiaomi/cepheus" revision="eco" remote="github" /> 
  <project name="mesziman/hardware-qcom-display-caf-sm8150" path="hardware/qcom-caf/sm8150/display" revision="11.0" remote="github" />
  <project name="mesziman/proprietary_vendor_qcom_common" path="vendor/qcom/common" revision="quartz" remote="github" />
  <project name="stx-staging/android_hardware_qcom_audio" path="hardware/qcom-caf/sm8150/audio" revision="11-caf-sm8150" remote="github" />
