@@ -22,13 +22,13 @@ echo '    PATH="$HOME/bin:$PATH"' >> ~/.profile
 echo 'fi' >> ~/.profile
 source ~/.profile
 mkdir meme
-cd meme;
-  mkdir miui;cd miui ; 
-  wget https://bigota.d.miui.com/21.2.3/miui_CEPHEUS_21.2.3_60881427b7_11.0.zip; cd ..
-  git clone https://github.com/LineageOS/android_prebuilts_extract-tools prebuilts/extract-tools
-  git clone https://github.com/LineageOS/android_prebuilts_tools-lineage prebuilts/tools-lineage
-  git clone https://github.com/LineageOS/android_tools_extract-utils tools/extract-utils
-  git --depth=1 clone https://github.com/LineageOS/android_vendor_lineage vendor/lineage
+#cd meme;
+  #mkdir miui;cd miui ; 
+  #wget https://bigota.d.miui.com/21.2.3/miui_CEPHEUS_21.2.3_60881427b7_11.0.zip; cd ..
+#  git clone https://github.com/LineageOS/android_prebuilts_extract-tools prebuilts/extract-tools
+ # git clone https://github.com/LineageOS/android_prebuilts_tools-lineage prebuilts/tools-lineage
+  #git clone https://github.com/LineageOS/android_tools_extract-utils tools/extract-utils
+  #git --depth=1 clone https://github.com/LineageOS/android_vendor_lineage vendor/lineage
 cd /root/;
 mkdir syb
 cd syb
@@ -56,6 +56,7 @@ rm -rf hardware/google/pixel/power-libperfmgr
 #repopick eleven-quickwallet
 repopick 7996
 repopick 7961
+repopick 7967
 repopick 7521
 #cd /root/syb/vendor/qcom/opensource/dataservices; 
 #git fetch "https://github.com/LineageOS/android_vendor_qcom_opensource_dataservices" refs/changes/57/262557/3 && git cherry-pick FETCH_HEAD;
