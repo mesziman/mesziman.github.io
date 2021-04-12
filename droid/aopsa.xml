@@ -8,7 +8,7 @@
  <project name="kdrag0n/proton-clang" path="prebuilts/clang/host/linux-x86/clang-11" revision="master" remote="github" depth="1" /> 
  <project name="mesziman/kernel_xiaomi_sm8150-2" path="kernel/xiaomi/cepheus" revision="perf" remote="github" /> 
  <project name="mesziman/hardware-qcom-display-caf-sm8150" path="hardware/qcom-caf/sm8150/display" revision="11.0" remote="github" />
- <project name="stx-staging/android_hardware_qcom_audio" path="hardware/qcom-caf/sm8150/audio" revision="11-caf-sm8150" remote="github" />
+ <project name="stx-staging/android_hardware_qcom_audio" path="vendor/qcom/opensource/audio-hal/primary-hal" revision="11-caf-sm8150" remote="github" />
  <project name="stx-staging/android_hardware_qcom_media" path="hardware/qcom-caf/sm8150/media" revision="11-caf-sm8150" remote="github" />
 
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-elf" name="arter97/arm64-gcc" remote="github" revision="master" clone-depth="1" />
