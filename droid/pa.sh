@@ -22,13 +22,14 @@ echo '    PATH="$HOME/bin:$PATH"' >> ~/.profile
 echo 'fi' >> ~/.profile
 source ~/.profile
 mkdir meme
-#cd meme;
-  #mkdir miui;cd miui ; 
-  #wget https://bigota.d.miui.com/21.2.3/miui_CEPHEUS_21.2.3_60881427b7_11.0.zip; cd ..
-#  git clone https://github.com/LineageOS/android_prebuilts_extract-tools prebuilts/extract-tools
- # git clone https://github.com/LineageOS/android_prebuilts_tools-lineage prebuilts/tools-lineage
-  #git clone https://github.com/LineageOS/android_tools_extract-utils tools/extract-utils
-  #git --depth=1 clone https://github.com/LineageOS/android_vendor_lineage vendor/lineage
+echo '
+mkdir miui;cd miui ; 
+wget https://bigota.d.miui.com/21.4.7/miui_CEPHEUS_21.4.7_345b9722bd_11.0.zip; cd ..
+git clone https://github.com/LineageOS/android_prebuilts_extract-tools prebuilts/extract-tools
+git clone https://github.com/LineageOS/android_prebuilts_tools-lineage prebuilts/tools-lineage
+git clone https://github.com/LineageOS/android_tools_extract-utils tools/extract-utils
+git --depth=1 clone https://github.com/LineageOS/android_vendor_lineage vendor/lineage' >> meme/blob.sh;
+chmod +x meme/blob.sh;
 cd /root/;
 mkdir pa
 cd pa
@@ -52,6 +53,11 @@ sed -i "s/march=armv8.2a/march=armv8.2a+dotprod/g" build/soong/cc/config/arm64_d
 rm -rf device/google
 rm -rf hardware/google/pixel/health
 rm -rf hardware/google/pixel/power-libperfmgr
+rm -rf vendor/qcom/opensouce/commonsys-intf/display;
+git clone https://github.com/lineageos/android_vendor_qcom_opensource_display-commonsys-intf vendor/qcom/opensouce/commonsys-intf/display;
+find vendor/qcom/opensource/audio-hal/primary-hal -iname "*.mk" -exec perl -pi.bak -e's/$\(call project-path-for,qcom-audio\)/vendor\/qcom\/opensource\/audio-hal\/primary-hal/g' {} \;
+find hardware/qcom/media  -iname "*.mk" -exec perl -pi.bak -e's/$\(call project-path-for,qcom-media\)/hardware\/qcom\/media/g' {} \;
+find hardware/qcom/display  -iname "*.mk" -exec perl -pi.bak -e's/$\(call project-path-for,qcom-display\)/hardware\/qcom\/display/g' {} \;
 ' >> cacheset
 chmod +x cacheset
 
