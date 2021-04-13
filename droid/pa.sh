@@ -55,9 +55,9 @@ rm -rf hardware/google/pixel/health
 rm -rf hardware/google/pixel/power-libperfmgr
 rm -rf vendor/qcom/opensouce/commonsys-intf/display;
 git clone https://github.com/lineageos/android_vendor_qcom_opensource_display-commonsys-intf vendor/qcom/opensouce/commonsys-intf/display;
-find vendor/qcom/opensource/audio-hal/primary-hal -iname "*.mk" -exec perl -pi.bak -e's/$\(call project-path-for,qcom-audio\)/vendor\/qcom\/opensource\/audio-hal\/primary-hal/g' {} \;
-find hardware/qcom/media  -iname "*.mk" -exec perl -pi.bak -e's/$\(call project-path-for,qcom-media\)/hardware\/qcom\/media/g' {} \;
-find hardware/qcom/display  -iname "*.mk" -exec perl -pi.bak -e's/$\(call project-path-for,qcom-display\)/hardware\/qcom\/display/g' {} \;
+find vendor/qcom/opensource/audio-hal/primary-hal -iname "*.mk" -exec perl -pi.bak -e's/\$\(call project-path-for,qcom-audio\)/vendor\/qcom\/opensource\/audio-hal\/primary-hal/g' {} \;
+find hardware/qcom/media  -iname "*.mk" -exec perl -pi.bak -e's/\$\(call project-path-for,qcom-media\)/hardware\/qcom\/media/g' {} \;
+find hardware/qcom/display  -iname "*.mk" -exec perl -pi.bak -e's/\$\(call project-path-for,qcom-display\)/hardware\/qcom\/display/g' {} \;
 ' >> cacheset
 chmod +x cacheset
 
