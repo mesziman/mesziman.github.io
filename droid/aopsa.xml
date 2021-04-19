@@ -2,7 +2,7 @@
 <manifest>
 
 <project name="SyberiaProject-Devices/platform_device_xiaomi_cepheus"  path="device/xiaomi/cepheus" remote="github" revision="perf" />
- <project name="mesziman/vendor_xiaomi_cepheus-5" path="vendor/xiaomi/cepheus" revision="pa" remote="gitlab" />
+ <project name="mesziman/vendor_xiaomi_cepheus-5" path="vendor/xiaomi/cepheus" revision="pa-tele" remote="gitlab" />
  <project name="mesziman/android_hardware_xiaomi" path="hardware/xiaomi" revision="eleven" remote="github" depth="1" /> 
  <project name="EcrosoftXiao/vendor_xiaomi_firmware" path="vendor/xiaomi/firmware" revision="master" remote="gitlab" depth="1"  />  
  <project name="kdrag0n/proton-clang" path="prebuilts/clang/host/linux-x86/clang-11" revision="master" remote="github" depth="1" /> 
