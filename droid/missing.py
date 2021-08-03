@@ -10,6 +10,8 @@ parser.add_argument('targetpath',
                     help='A required integer positional argument')
 so_vendor = []
 so_system = []
+so_system_ext = []
+so_product = []
 so_apex = []
 deplist = {}
 EXCLUDE_REGEX="*.policy|*.acdb|*.apk|*.b00|*.b01|*.b02|*.b03|*.b04|*.bin|*.cfg|*.cng|*.conf|*.config|*.dat|*.db|*.elf|*.fw|*.jar|*.json|*.mdt|*.mk|*.pem|*.qwsp|*.rc|*.sql|*.tflite|*.txt|*.widevine|*.wmfw|*.xml"
@@ -46,7 +48,9 @@ def read_dependencies(currentfile):
 
 
 def parse_vendor(path):
+    global so_system_ext
     global so_system
+    global so_product
     global so_vendor
     global so_apex
     global deplist
@@ -58,18 +62,22 @@ def parse_vendor(path):
         for dep in dependency:
         	if dep == "libgcc.so":
         		continue
-	        if dep not in so_apex and dep not in so_vendor and dep not in so_system:
+	        if dep not in so_apex and dep not in so_vendor and dep not in so_system and dep not in so_system_ext and dep not in so_product:
 	            if dep not in deplist:
 	            	deplist[dep] = []
 	            deplist[dep].append(vfile)
 
 
 def parse_target(path):
+    global so_system_ext
     global so_system
+    global so_product
     global so_vendor
     global so_apex
-    so_system = find_name('*.so',  os.path.dirname(os.path.abspath(__file__)) + "/" + path + "/system")
     so_apex = find_name('*.so',  os.path.dirname(os.path.abspath(__file__)) + "/" + path + "/apex")
+    so_product = find_name('*.so',  os.path.dirname(os.path.abspath(__file__)) + "/" + path + "/product")	
+    so_system = find_name('*.so',  os.path.dirname(os.path.abspath(__file__)) + "/" + path + "/system")
+    so_system_ext = find_name('*.so',  os.path.dirname(os.path.abspath(__file__)) + "/" + path + "/system_ext")
     so_vendor = find_name('*.so',  os.path.dirname(os.path.abspath(__file__)) + "/" + path + "/vendor")
 
 def main():
