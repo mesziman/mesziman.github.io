@@ -50,7 +50,7 @@
 					<div class="media flex-column flex-md-row align-items-center">
 						<img class="resume-profile-image mb-3 mb-md-0 mr-md-5 ml-md-0 rounded mx-auto" src="assets/images/profile.jpg" alt="image">
 						<div class="media-body text-left">
-							<p class="mb-0">Hello, I am an enthusiastic developer with 8 years of experience working in agile software development environment, familiar with Scrum and SAFe(Scaled Agile Framework) methodolgies.</p>
+							<p class="mb-0">Hello, I am an enthusiastic developer with <span id="year"></span> years of experience working in agile software development environment, familiar with Scrum and SAFe(Scaled Agile Framework) methodolgies.</p>
 						</div><!--//media-body-->
 					</div>
 				</div><!--//resume-intro-->
@@ -222,6 +222,10 @@
       function printFunction() { 
         window.print(); 
       }
+     var date = new Date(); 
+     
+     date.setFullYear(date.getFullYear() -  2014);
+     document.getElementById("year").innerHTML = date.getFullYear();
     </script>
 </body>
 </html> 
