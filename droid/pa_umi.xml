@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project depth="1" name="AOSPA/android_hardware_xiaomi" path="hardware/xiaomi" remote="aospa" revision="sapphire" />
+  <project name="AOSPA/android_hardware_qcom_audio" path="vendor/qcom/opensource/audio-hal/primary-hal" remote="aospa" revision="sapphire-865" />
+  <project name="AOSPA/android_hardware_qcom_display" path="hardware/qcom/display" remote="aospa" revision="sapphire-865" />
+  <project name="AOSPA/android_hardware_qcom_media" path="hardware/qcom/media" remote="aospa" revision="sapphire-865" />
+  <project name="AOSPA/android_hardware_qcom_gps" path="hardware/qcom/gps" remote="aospa" revision="sapphire-865" />
+  <project name="mesziman/android_device_xiaomi_sm8250-common" path="device/xiaomi/umi" remote="github" revision="apr_me" />
+  <project name="mesziman/android_device_xiaomi_sm8250-common" path="device/xiaomi/sm8250-common" remote="github" revision="apr" />
+  <project name="hmesziman/kernel_xiaomi_sm8250" path="kernel/xiaomi/sm8250-common" remote="github" revision="fixboot"/>
+</manifest>
