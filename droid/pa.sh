@@ -1,6 +1,6 @@
 sudo apt-get update
 sudo apt-get install --assume-yes git-lfs vim unzip brotli libomp-dev ccache tmux python nginx bc binutils-arm-linux-gnueabi binutils-aarch64-linux-gnu bison build-essential curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-gtk3-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev
-wget mesziman.github.io/tmux.conf -O ~/.tmux.conf
+wget https://github.com/gpakosz/.tmux/raw/master/.tmux.conf -O ~/.tmux.conf
 sudo sed -i 's/location \/.*/location \/ \{\n autoindex on;/g' /etc/nginx/sites-enabled/default
 sudo rm /var/www/html/index.nginx-debian.html
 sudo systemctl restart nginx
@@ -33,31 +33,17 @@ chmod +x meme/blob.sh;
 cd /root/;
 mkdir pa
 cd pa
-repo init --depth=1 -u https://github.com/AOSPA/manifest -b ruby
+repo init --depth=1 -u https://github.com/AOSPA/manifest -b sapphire
 mkdir -p .repo/local_manifests
-wget https://mesziman.github.io/droid/aospa.xml -O .repo/local_manifests/roomservice.xml
+wget https://mesziman.github.io/droid/pa_umi.xml -O .repo/local_manifests/roomservice.xml
 echo "export USE_CCACHE=1" >> ~/.bashrc
 echo "export CCACHE_EXEC=/usr/bin/ccache" >>  ~/.bashrc
 wget https://mesziman.github.io/buildoms.sh 
 echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune;
 set -e;
 source build/envsetup.sh;
-mkdir out;
-mount /dev/sdb out;
-ccache -M 150G;
-ln -s /usr/lib/x86_64-linux-gnu/libncurses.so.6 /usr/lib/libncurses.so.5;
-ln -s /usr/lib/x86_64-linux-gnu/libtinfo.so.6 /usr/lib/libtinfo.so.5;
-echo "11.0.0" > prebuilts/clang/host/linux-x86/clang-11/AndroidVersion.txt
-cd /root/syb;
-sed -i "s/march=armv8.2a/march=armv8.2a+dotprod/g" build/soong/cc/config/arm64_device.go;
-rm -rf device/google
-rm -rf hardware/google/pixel/health
-rm -rf hardware/google/pixel/power-libperfmgr
-rm -rf vendor/qcom/opensouce/commonsys-intf/display;
-git clone https://github.com/lineageos/android_vendor_qcom_opensource_display-commonsys-intf vendor/qcom/opensouce/commonsys-intf/display;
-find vendor/qcom/opensource/audio-hal/primary-hal -iname "*.mk" -exec perl -pi.bak -e's/\$\(call project-path-for,qcom-audio\)/vendor\/qcom\/opensource\/audio-hal\/primary-hal/g' {} \;
-find hardware/qcom/media  -iname "*.mk" -exec perl -pi.bak -e's/\$\(call project-path-for,qcom-media\)/hardware\/qcom\/media/g' {} \;
-find hardware/qcom/display  -iname "*.mk" -exec perl -pi.bak -e's/\$\(call project-path-for,qcom-display\)/hardware\/qcom\/display/g' {} \;
+ccache -M 50G;
+cd /root/pa;
 ' >> cacheset
 chmod +x cacheset
 
