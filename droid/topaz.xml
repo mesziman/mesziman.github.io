@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<manifest>
 <project depth="1" name="AOSPA/android_hardware_xiaomi" path="hardware/xiaomi" remote="aospa" revision="sapphire" />
   <project name="AOSPA/android_vendor_nxp_opensource_halimpl" path="vendor/nxp/opensource/halimpl" remote="aospa" revision="topaz-SN100X-legacy" />
   <project name="AOSPA/android_vendor_nxp_opensource_hidlimpl" path="vendor/nxp/opensource/hidlimpl" remote="aospa" revision="topaz-SN100X-legacy" />
