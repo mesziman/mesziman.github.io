@@ -44,7 +44,7 @@ set -e;
 source build/envsetup.sh;
 ccache -M 50G;
 cd /root/pa;
-repopick 25132 23779 23778 25118 25119 23814 23210 25127 23528 24190
+repopick 25108 24256 25132 23779 25140 23778 25118 25119 23814 23210 25127 23528 24190
 ' >> cacheset
 chmod +x cacheset
 
