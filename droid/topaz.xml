@@ -9,7 +9,7 @@
   <project name="AOSPA/android_hardware_qcom_gps" path="hardware/qcom/gps" remote="aospa" revision="topaz-865" />
   <project name="mesziman/android_device_xiaomi_sm8250-common" path="device/xiaomi/umi" remote="github" revision="topaz_me" />
   <project name="mesziman/android_device_xiaomi_sm8250-common" path="device/xiaomi/sm8250-common" remote="github" revision="topaz" />
-  <project name="mesziman/kernel_xiaomi_sm8250" path="kernel/xiaomi/sm8250-common" remote="github" revision="nov"/>
+  <project name="mesziman/kernel_xiaomi_sm8250" path="kernel/xiaomi/sm8250" remote="github" revision="nov"/>
   <project name="mesziman/vendor_xiaomi_umi" path="vendor/xiaomi" remote="gitlab" revision="master"/>
     <project name="mesziman/vendor_xiaomi_umi-miuicamera" path="vendor/xiaomi/miuicamera" remote="gitlab" revision="thirteen"/>
   <!-- Build and Core -->
