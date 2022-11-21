@@ -44,6 +44,9 @@ set -e;
 source build/envsetup.sh;
 ccache -M 50G;
 cd /root/pa;
+cd vendor/aospa; 
+git fetch https://github.com/mesziman/android_vendor_aospa/ de3154edbe640af0a829652cebbae3c9de06e972 && git cherry-pick FETCH_HEAD;
+cd /root/pa;
 repopick 25108 24256 25132 23779 25140 23778 25118 25119 23814 23210 25127 23528 24190 25147 25149 25153 24443 25263 25264 25265
 ' >> cacheset
 chmod +x cacheset
