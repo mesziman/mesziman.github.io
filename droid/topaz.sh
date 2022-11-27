@@ -48,6 +48,8 @@ cd /root/pa;
 cd vendor/aospa; 
 git fetch https://github.com/mesziman/android_vendor_aospa/ de3154edbe640af0a829652cebbae3c9de06e972 && git cherry-pick FETCH_HEAD;
 cd /root/pa;
+cd frameworks/base; git fetch --depth=300 github topaz:topaz;
+cd /root/pa
 repopick 23210 23528 23778 23779 23814 24190 24256 24443 25108 25118 25119 25127 25132 25140 25147 25149 25153 25263 25264 25265
 ' >> cacheset
 chmod +x cacheset
