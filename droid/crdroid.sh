@@ -28,8 +28,10 @@ cd crd
 repo init  --depth=1 -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs
 mkdir -p .repo/local_manifests
 wget https://mesziman.github.io/droid/crdroid.xml -O .repo/local_manifests/roomservice.xml
+mkdir ~/.ccache
 echo "export USE_CCACHE=1" >> ~/.bashrc
 echo "export CCACHE_EXEC=/usr/bin/ccache" >>  ~/.bashrc
+echo "export CCACHE_DIR=~/.ccache" >>  ~/.bashrc
 
 echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune;
 set -e;
