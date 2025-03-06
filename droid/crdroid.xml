@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+<project depth="1" name="LineageOS/android_hardware_xiaomi" path="hardware/xiaomi" remote="aospa" revision="lineage-22.1" />
+
+  
+  <project name="jhchong94/android_device_xiaomi_umi" path="device/xiaomi/umi" remote="github" revision="lineage-22.1" />
+  <project name="mesziman/sm8250los" path="device/xiaomi/sm8250-common" remote="github" revision="losmod" />
+  <project name="mesziman/kernel_xiaomi_sm8250" path="kernel/xiaomi/sm8250" remote="github" revision="los_k"/>
+  <project name="jhchong94/android_vendor_xiaomi_umi" path="vendor/xiaomi/umi" remote="github" revision="lineage-22.1"/>
+  <project name="jhchong94/android_vendor_xiaomi_sm8250-common" path="vendor/xiaomi/sm8250-common" remote="github" revision="lineage-22.1"/>
+</manifest>
