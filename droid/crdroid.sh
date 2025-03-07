@@ -33,7 +33,7 @@ echo "export USE_CCACHE=1" >> ~/.bashrc
 echo "export CCACHE_EXEC=/usr/bin/ccache" >>  ~/.bashrc
 echo "export CCACHE_DIR=~/.ccache" >>  ~/.bashrc
 
-echo 'repo sync -c -j$( nproc --all ) --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune;
+echo 'repo sync -c -j10 --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune;
 set -e;
 source build/envsetup.sh;
 ccache -M 50G;
