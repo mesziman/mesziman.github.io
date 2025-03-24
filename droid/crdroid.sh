@@ -9,6 +9,7 @@ git config --global color.ui true
 git config --global user.name "Gabor Meszaros"
 git config --global user.email "meszaros.gabor.10k@gmail.com"
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 wget https://dl.google.com/android/repository/platform-tools-latest-linux.zip
 unzip platform-tools-latest-linux.zip -d ~
