@@ -41,6 +41,7 @@ source build/envsetup.sh;
 ccache -M 50G;
 cd /root/crd;
 sed -i "s/core_64_bit.mk/core_64_bit_only.mk/" device/xiaomi/cmi/lineage_cmi.mk
+sed -i "s/core_64_bit.mk/core_64_bit_only.mk/" device/xiaomi/cas/lineage_cas.mk
 ' >> cacheset
 chmod +x cacheset
 
