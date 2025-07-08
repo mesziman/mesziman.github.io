@@ -15,6 +15,6 @@
   <project name="hiper25-OpenSource/android_vendor_xiaomi_cas" path="vendor/xiaomi/cas" remote="github" revision="lineage-22.1"/>
 
   
-  <project name="LineageOS/android_device_xiaomi_cmi" path="device/xiaomi/cmi" remote="github" revision="lineage-22.1" />
-  <project name="TheMuppets/proprietary_vendor_xiaomi_cmi" path="vendor/xiaomi/cmi" remote="github" revision="lineage-22.1"/>
+  <project name="LineageOS/android_device_xiaomi_cmi" path="device/xiaomi/cmi" remote="github" revision="lineage-22.2" />
+  <project name="TheMuppets/proprietary_vendor_xiaomi_cmi" path="vendor/xiaomi/cmi" remote="github" revision="lineage-22.2"/>
 </manifest>
