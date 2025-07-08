@@ -27,7 +27,7 @@ source ~/.profile
 cd /root/;
 mkdir crd
 cd crd
-repo init  --depth=1 -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs
+repo init  --depth=1 -u https://github.com/crdroidx/android.git -b 16.0 --git-lfs
 mkdir -p .repo/local_manifests
 wget https://mesziman.github.io/droid/crdroid.xml -O .repo/local_manifests/roomservice.xml
 mkdir ~/.ccache
