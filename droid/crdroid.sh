@@ -40,6 +40,10 @@ set -e;
 source build/envsetup.sh;
 ccache -M 50G;
 cd /root/crd;
+cd /root/crd/vendor/xiaomi/sm8250-common ; 
+git fetch https://github.com/mesziman/android_vendor_xiaomi_sm8250-common/ b279af2cf63479fbbf594f6326e8bc0d7c80ef00 ; git cherry-pick FETCH_HEAD
+git fetch https://github.com/mesziman/android_vendor_xiaomi_sm8250-common/ 2b68e4bcfc0ccce178f57ccbd5decbe1003605eb ; git cherry-pick FETCH_HEAD
+git fetch https://github.com/mesziman/android_vendor_xiaomi_sm8250-common/ 92170d54d276c0a6bd2bbb9705fd2cf27a4cb42c ; git cherry-pick FETCH_HEAD
 sed -i "s/core_64_bit.mk/core_64_bit_only.mk/" device/xiaomi/cmi/lineage_cmi.mk
 sed -i "s/core_64_bit.mk/core_64_bit_only.mk/" device/xiaomi/cas/lineage_cas.mk
 ' >> cacheset
