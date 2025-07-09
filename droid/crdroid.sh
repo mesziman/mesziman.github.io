@@ -38,7 +38,7 @@ echo "export CCACHE_DIR=~/.ccache" >>  ~/.bashrc
 echo 'repo sync -c -j10 --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune;
 set -e;
 source build/envsetup.sh;
-ccache -M 50G;
+ccache -M 100G;
 cd /root/crd;
 cd /root/crd/vendor/xiaomi/sm8250-common ; 
 git fetch https://github.com/mesziman/android_vendor_xiaomi_sm8250-common/ b279af2cf63479fbbf594f6326e8bc0d7c80ef00 ; git cherry-pick FETCH_HEAD
