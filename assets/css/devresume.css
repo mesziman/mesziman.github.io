@@ -18,3 +18,7 @@
   }
   nav, footer { display: none; } /* Hide non-essential stuff */
 }
+@page {
+  size: A4;
+  margin: 10mm;
+}
